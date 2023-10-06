@@ -13,7 +13,7 @@ class MainView: UIView {
         return collectionView
     }()
     
-    let source: [Photo] = Source.randomPhotos(with: 15)
+    let source: [Photo] = Source.randomPhotos(with: 50)
 
     init() {
         super.init(frame: .zero)
@@ -42,7 +42,7 @@ class MainView: UIView {
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-            collectionView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: Constants.borderOffsetXAxis),
             collectionView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
             collectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
         ])
@@ -51,12 +51,15 @@ class MainView: UIView {
     private func setupFlowLayout() -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = .init(width: 100, height: 100)
+        //layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        layout.minimumLineSpacing = 20
+        layout.minimumInteritemSpacing = 10
         return layout
     }
     
 }
 
-//MARK: - CollectionViewDataSource extensions
+//MARK: - CollectionView extensions
 
 extension MainView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -75,6 +78,12 @@ extension MainView: UICollectionViewDataSource {
         
         return cell
     }
-    
-    
+}
+
+//MARK: - Constants
+
+extension MainView {
+    private enum Constants {
+        static let borderOffsetXAxis: CGFloat = 10.0
+    }
 }

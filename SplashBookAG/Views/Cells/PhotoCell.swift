@@ -23,6 +23,7 @@ class PhotoCell: UICollectionViewCell {
         self.contentView.addSubview(imageView)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill
+        imageView.backgroundColor = .systemGray
         self.clipsToBounds = true
         setupConstraints()
     }

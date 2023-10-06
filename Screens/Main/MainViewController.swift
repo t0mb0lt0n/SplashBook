@@ -8,9 +8,11 @@
 import UIKit
 
 class MainViewController: UIViewController {
+    private lazy var mainView = view as! MainView
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view = MainView()
         view.backgroundColor = .secondarySystemBackground
     }
 

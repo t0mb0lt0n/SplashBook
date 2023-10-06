@@ -32,7 +32,7 @@ class MainView: UIView {
     
     private func setupFlowLayout() -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
-        layout.
+        //layout.
         return layout
     }
     

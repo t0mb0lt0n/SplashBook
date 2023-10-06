@@ -15,7 +15,6 @@ class MainView: UIView {
     
     let source: [Photo] = Source.randomPhotos(with: 15)
 
-
     init() {
         super.init(frame: .zero)
         setupViews()
@@ -30,6 +29,7 @@ class MainView: UIView {
     private func setupCollectionView() {
         //collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.register(PhotoCell.self, forCellWithReuseIdentifier: "\(PhotoCell.self)")
     }
     
     private func setupViews() {
@@ -64,7 +64,16 @@ extension MainView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: "(PhotoCell.self)",
+            for: indexPath
+        ) as? PhotoCell else {
+            fatalError("Cell dequeue error")
+        }
+        
+        cell.imageView.image = UIImage(named: source[indexPath.item].imageName)
+        
+        return cell
     }
     
     

@@ -13,6 +13,7 @@
 		11444C5B2ACF3EBB00E90830 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11444C5A2ACF3EBB00E90830 /* MainViewController.swift */; };
 		11444C6D2ACF441C00E90830 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11444C6C2ACF441C00E90830 /* MainView.swift */; };
 		11444C712AD0601E00E90830 /* imageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11444C702AD0601E00E90830 /* imageModel.swift */; };
+		11444C732AD06C6B00E90830 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11444C722AD06C6B00E90830 /* PhotoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		11444C5A2ACF3EBB00E90830 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		11444C6C2ACF441C00E90830 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		11444C702AD0601E00E90830 /* imageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageModel.swift; sourceTree = "<group>"; };
+		11444C722AD06C6B00E90830 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 		11444C662ACF424F00E90830 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				11444C722AD06C6B00E90830 /* PhotoCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11444C5B2ACF3EBB00E90830 /* MainViewController.swift in Sources */,
+				11444C732AD06C6B00E90830 /* PhotoCell.swift in Sources */,
 				11444C6D2ACF441C00E90830 /* MainView.swift in Sources */,
 				11444C462ACF388500E90830 /* AppDelegate.swift in Sources */,
 				11444C712AD0601E00E90830 /* imageModel.swift in Sources */,

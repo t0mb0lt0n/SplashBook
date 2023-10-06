@@ -21,9 +21,6 @@ class MainView: UIView {
         setupViews()
         setupCollectionView()
         setupConstraints()
-        
-       
-        
     }
     
     required init?(coder: NSCoder) {
@@ -63,7 +60,7 @@ class MainView: UIView {
 
 extension MainView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
+        source.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

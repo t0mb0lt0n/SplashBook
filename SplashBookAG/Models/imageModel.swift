@@ -10,16 +10,16 @@ import Foundation
 struct Source {
     static func getAllPhotos() -> [Photo] {
         [
-            .init(id: 1, imageName: "person.crop.circle"),
-            .init(id: 2, imageName: "person.crop.circle.badge.plus"),
-            .init(id: 3, imageName: "person.crop.circle.fill.badge.checkmark"),
-            .init(id: 4, imageName: "person.crop.circle.badge.xmark"),
-            .init(id: 5, imageName: "person.crop.circle.badge.exclamationmark"),
-            .init(id: 6, imageName: "person.crop.circle.badge.questionmark"),
+            .init(id: 1, imageName: "person.crop.circle.badge.moon.fill"),
+            .init(id: 2, imageName: "person.crop.circle.badge.moon.fill"),
+            .init(id: 3, imageName: "person.crop.circle.badge.moon.fill"),
+            .init(id: 4, imageName: "person.crop.circle.badge.moon.fill"),
+            .init(id: 5, imageName: "person.crop.circle.badge.moon.fill"),
+            .init(id: 6, imageName: "person.crop.circle.badge.moon.fill"),
             .init(id: 7, imageName: "person.crop.circle.badge.moon.fill"),
-            .init(id: 8, imageName: "person.crop.circle.badge.exclamationmark.fill"),
-            .init(id: 9, imageName: "person.crop.circle.badge.clock.fil"),
-            .init(id: 10, imageName: "person.crop.circle.badge.checkmar"),
+            .init(id: 8, imageName: "person.crop.circle.badge.moon.fill"),
+            .init(id: 9, imageName: "person.crop.circle.badge.moon.fill"),
+            .init(id: 10, imageName: "person.crop.circle.badge.moon.fill"),
         ]
     }
     

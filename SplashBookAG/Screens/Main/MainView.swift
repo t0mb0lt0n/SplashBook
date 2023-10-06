@@ -50,7 +50,7 @@ class MainView: UIView {
     
     private func setupFlowLayout() -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
-        //layout.
+        layout.itemSize = .init(width: 100, height: 100)
         return layout
     }
     

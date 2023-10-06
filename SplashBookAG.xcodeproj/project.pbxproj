@@ -12,6 +12,7 @@
 		11444C522ACF388600E90830 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11444C502ACF388600E90830 /* LaunchScreen.storyboard */; };
 		11444C5B2ACF3EBB00E90830 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11444C5A2ACF3EBB00E90830 /* MainViewController.swift */; };
 		11444C6D2ACF441C00E90830 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11444C6C2ACF441C00E90830 /* MainView.swift */; };
+		11444C712AD0601E00E90830 /* imageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11444C702AD0601E00E90830 /* imageModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		11444C532ACF388600E90830 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11444C5A2ACF3EBB00E90830 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		11444C6C2ACF441C00E90830 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		11444C702AD0601E00E90830 /* imageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 		11444C672ACF425E00E90830 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				11444C702AD0601E00E90830 /* imageModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				11444C5B2ACF3EBB00E90830 /* MainViewController.swift in Sources */,
 				11444C6D2ACF441C00E90830 /* MainView.swift in Sources */,
 				11444C462ACF388500E90830 /* AppDelegate.swift in Sources */,
+				11444C712AD0601E00E90830 /* imageModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

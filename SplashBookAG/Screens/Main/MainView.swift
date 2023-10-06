@@ -16,14 +16,24 @@ class MainView: UIView {
 
     init() {
         super.init(frame: .zero)
+        setupCollectionView()
         
        
         
     }
     
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setupCollectionView() {
+        
+    }
+    
+    private func setupFlowLayout() -> UICollectionViewFlowLayout {
+        let layout = UICollectionViewFlowLayout()
+        layout.
+        return layout
     }
     
 }

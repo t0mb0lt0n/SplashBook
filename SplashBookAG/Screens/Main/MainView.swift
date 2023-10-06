@@ -12,11 +12,15 @@ class MainView: UIView {
         let collectionView = UICollectionView()
         return collectionView
     }()
+    
+    let source: [Photo] = Source.randomPhotos(with: 15)
 
 
     init() {
         super.init(frame: .zero)
+        setupViews()
         setupCollectionView()
+        setupConstraints()
         
        
         
@@ -27,7 +31,24 @@ class MainView: UIView {
     }
     
     private func setupCollectionView() {
-        
+        //collectionView.delegate = self
+        collectionView.dataSource = self
+    }
+    
+    private func setupViews() {
+        [collectionView].forEach { subView in
+            subView.translatesAutoresizingMaskIntoConstraints = false
+            addSubview(subView)
+        }
+    }
+    
+    private func setupConstraints() {
+        NSLayoutConstraint.activate([
+            collectionView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+        ])
     }
     
     private func setupFlowLayout() -> UICollectionViewFlowLayout {
@@ -35,5 +56,19 @@ class MainView: UIView {
         //layout.
         return layout
     }
+    
+}
+
+//MARK: - CollectionViewDataSource extensions
+
+extension MainView: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        <#code#>
+    }
+    
     
 }

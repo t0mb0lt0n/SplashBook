@@ -36,6 +36,4 @@ class PhotoCell: UICollectionViewCell {
             imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
         ])
     }
-    
-
 }

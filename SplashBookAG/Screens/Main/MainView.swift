@@ -56,7 +56,6 @@ final class MainView: UIView {
         layout.minimumInteritemSpacing = 10
         return layout
     }
-    
 }
 
 //MARK: - CollectionView extensions

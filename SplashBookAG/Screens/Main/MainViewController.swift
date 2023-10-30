@@ -7,8 +7,11 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+final class MainViewController: UIViewController {
     private lazy var mainView = view as! MainView
+    private let mainViewModel = 
+    
+    init()
 
     override func viewDidLoad() {
         super.viewDidLoad()

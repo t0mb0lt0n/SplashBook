@@ -9,9 +9,11 @@ import UIKit
 
 final class MainViewController: UIViewController {
     private lazy var mainView = view as! MainView
-    private let mainViewModel = 
+    private let viewModel: MainViewModel
     
-    init()
+    init(viewModel: MainViewModel) {
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

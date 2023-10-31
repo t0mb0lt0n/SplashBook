@@ -26,9 +26,16 @@ final class MainTabBar: UITabBarController {
         //viewControllers =
     }
     
-    private func setupTabBar() {
-        
+    private func setupTabBar(with viewControllers: inout [UIViewController]) {
+        viewControllers.forEach { vc in
+            <#code#>
+        }
     }
     
-    //private func
+//    private func createNavigationControler(vc: UIViewController,
+//                                           itemName: String,
+//                                           itemImageName: String) -> UINavigationController {
+//        
+//        
+//    }
 }

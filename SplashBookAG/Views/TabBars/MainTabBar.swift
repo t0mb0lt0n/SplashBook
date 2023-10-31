@@ -9,11 +9,11 @@ import Foundation
 import UIKit
 
 final class MainTabBar: UITabBarController {
-    private let vcList: [UIViewController]
+    private var vcList: [UIViewController]
     
     init(with list: [UIViewController] ) {
-        super.init(nibName: nil, bundle: nil)
         self.vcList = list
+        super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {

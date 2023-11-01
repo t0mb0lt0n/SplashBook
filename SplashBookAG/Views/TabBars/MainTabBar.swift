@@ -31,7 +31,7 @@ final class MainTabBar: UITabBarController {
     }
     
     private func setupTabBar(with viewControllers: [UIViewController]) {
-        var navigationVCList: [UINavigationController]
+        var navigationVCList: [UINavigationController] = []
         viewControllers.forEach { vc in
             let navController = createNavigationControler(vc: vc,
                                                           itemTitle: vc.title ?? "EmptyName",

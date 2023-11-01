@@ -10,6 +10,7 @@ import UIKit
 
 final class MainTabBar: UITabBarController {
     private var vcList: [UIViewController]
+    //private lazy var mainTabBarVC: UIViewController
     
     init(with list: [UIViewController] ) {
         self.vcList = list
@@ -22,15 +23,20 @@ final class MainTabBar: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTabBar()
+        setupTabBar(with: vcList)
         //viewControllers =
     }
     
-    private func setupTabBar(with viewControllers: inout [UIViewController]) {
+    private func setupTabBar(with viewControllers: [UIViewController]) {
         viewControllers.forEach { vc in
             let navController = createNavigationControler(vc: vc,
                                                           itemTitle: vc.title ?? "EmptyName",
                                                           itemImageName: "camera.fill")
+            let apperance = UITabBarAppearance()
+            
+            
         }
     }
+    
+    //private func setupTabb
 }

@@ -14,6 +14,7 @@ final class MainViewController: UIViewController {
     init(viewModel: MainViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        title = 
     }
     
     required init?(coder: NSCoder) {

@@ -1,5 +1,5 @@
 //
-//  MainTabBar.swift
+//  MainTabBarController.swift
 //  SplashBookAG
 //
 //  Created by Alexander on 31.10.2023.
@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-final class MainTabBar: UITabBarController {
+final class MainTabBarController: UITabBarController {
     private var vcList: [UIViewController]
     
     init(with list: [UIViewController] ) {

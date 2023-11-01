@@ -23,7 +23,7 @@ extension UITabBarController {
     
     func setupTabBarStyle() {
         let tabBarApperance = UITabBarAppearance()
-        tabBarApperance.backgroundColor = .systemBackground
+        tabBarApperance.backgroundColor = .black
         let tabBarItemApperance = UITabBarItemAppearance()
         tabBarItemApperance.normal.iconColor = .systemGray
         tabBarItemApperance.selected.iconColor = .systemOrange

@@ -26,8 +26,6 @@ final class MainTabBar: UITabBarController {
         super.viewDidLoad()
         setupTabBar(with: vcList)
         setupTabBarStyle()
-        
-        //viewControllers =
     }
     
     private func setupTabBar(with viewControllers: [UIViewController]) {

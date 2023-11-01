@@ -24,6 +24,11 @@ extension UITabBarController {
     private func setupTabBarStyle() {
         let tabBarApperance = UITabBarAppearance()
         tabBarApperance.backgroundColor = .systemBackground
-        
+        let tabBarItemApperance = UITabBarItemAppearance()
+        tabBarItemApperance.normal.iconColor = .systemGray
+        tabBarItemApperance.selected.iconColor = .systemOrange
+        tabBarItemApperance.selected.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.systemOrange]
+        tabBar.scrollEdgeAppearance = tabBarApperance
+        tabBar.scrollEdgeAppearance?.stackedLayoutAppearance = tabBarItemApperance
     }
 }

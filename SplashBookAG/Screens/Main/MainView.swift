@@ -30,6 +30,7 @@ final class MainView: UIView {
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: setupFlowLayout())
         collectionView.dataSource = self
         collectionView.register(PhotoCell.self, forCellWithReuseIdentifier: "\(PhotoCell.self)")
+        collectionView.backgroundColor = .systemBackground
     }
     
     private func setupViews() {

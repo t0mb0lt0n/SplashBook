@@ -15,6 +15,7 @@ final class MainViewController: UIViewController {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
         title = TitleConstants.editoral
+        //view.backgroundColor = .systemBackground
     }
     
     required init?(coder: NSCoder) {

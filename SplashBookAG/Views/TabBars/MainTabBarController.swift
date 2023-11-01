@@ -34,7 +34,6 @@ final class MainTabBarController: UITabBarController {
                                                           itemImageName: "camera.fill")
             navigationControllerList.append(navController)
         }
-        let vcOne = MainViewController(viewModel: .init())
         self.viewControllers = navigationControllerList
     }
 }

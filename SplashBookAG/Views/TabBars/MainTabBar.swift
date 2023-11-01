@@ -31,17 +31,11 @@ final class MainTabBar: UITabBarController {
     }
     
     private func setupTabBar(with viewControllers: [UIViewController]) {
-        var navigationVCList: [UINavigationController] = []
-        viewControllers.forEach { vc in
+            viewControllers.forEach { vc in
             let navController = createNavigationControler(vc: vc,
                                                           itemTitle: vc.title ?? "EmptyName",
                                                           itemImageName: "camera.fill")
-            navigationVCList.append(navController)
-            self.viewControllers?.append(vc)
+            self.viewControllers?.append(navController)
         }
-        self.viewControllers = navigationVCList
-        
     }
-    
-    //private func setupTabb
 }

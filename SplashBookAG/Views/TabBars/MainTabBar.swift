@@ -24,6 +24,8 @@ final class MainTabBar: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTabBar(with: vcList)
+        setupTabBarStyle()
+        
         //viewControllers =
     }
     
@@ -32,9 +34,7 @@ final class MainTabBar: UITabBarController {
             let navController = createNavigationControler(vc: vc,
                                                           itemTitle: vc.title ?? "EmptyName",
                                                           itemImageName: "camera.fill")
-            let apperance = UITabBarAppearance()
-            
-            
+            viewControllers.append(navController)
         }
     }
     

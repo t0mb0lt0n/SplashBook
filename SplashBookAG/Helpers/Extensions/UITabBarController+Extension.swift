@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 extension UITabBarController {
-     func createNavigationControler(vc: UIViewController,
+    func createNavigationControler(vc: UIViewController,
                                    itemTitle: String,
                                    itemImageName: String) -> UINavigationController {
         vc.title = itemTitle
@@ -21,7 +21,7 @@ extension UITabBarController {
         return navController
     }
     
-    private func setupTabBarStyle() {
+    func setupTabBarStyle() {
         let tabBarApperance = UITabBarAppearance()
         tabBarApperance.backgroundColor = .systemBackground
         let tabBarItemApperance = UITabBarItemAppearance()

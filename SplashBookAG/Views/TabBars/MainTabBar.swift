@@ -10,11 +10,9 @@ import UIKit
 
 final class MainTabBar: UITabBarController {
     private var vcList: [UIViewController]
-    //private lazy var mainTabBarVC: UIViewController
     
     init(with list: [UIViewController] ) {
         self.vcList = list
-        //viewControllers = list
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -37,7 +35,6 @@ final class MainTabBar: UITabBarController {
             navigationControllerList.append(navController)
         }
         let vcOne = MainViewController(viewModel: .init())
-        //let vc = view
         self.viewControllers = navigationControllerList
     }
 }

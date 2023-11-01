@@ -14,8 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow()
-        //window?.rootViewController = MainViewController(viewModel: .init())
-        window?.rootViewController = MainTabBar(with: [MainViewController.init(viewModel: .init())])
+        window?.rootViewController = MainTabBar(with: [MainViewController.init(viewModel: .init()), MainViewController.init(viewModel: .init())])
         window?.overrideUserInterfaceStyle = .light
         window?.makeKeyAndVisible()
         return true

@@ -13,6 +13,12 @@ class PhotoCell: UICollectionViewCell {
         return imageView
     }()
     
+    let likeImageView: UIImageView = {
+        let likeImageView = UIImageView()
+        likeImageView.image = UIImage(systemName: "hand.thumbsup.fill")
+        return likeImageView
+    }()
+    
     override init(frame: CGRect) {
         super .init(frame: frame)
         setupCell()

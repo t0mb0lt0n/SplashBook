@@ -51,10 +51,10 @@ final class MainView: UIView {
     
     private func setupFlowLayout() -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = .init(width: 100, height: 100)
+        layout.itemSize = .init(width: 195, height: 200)
         //layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
-        layout.minimumLineSpacing = 20
-        layout.minimumInteritemSpacing = 10
+        layout.minimumLineSpacing = 5
+        layout.minimumInteritemSpacing = 0
         return layout
     }
 }
@@ -84,6 +84,7 @@ extension MainView: UICollectionViewDataSource {
 
 extension MainView {
     private enum Constants {
-        static let borderOffsetXAxis: CGFloat = 10.0
+        static let bordersLineSpacing: CGFloat = 10.0
+        static let itemInterLineSpacing
     }
 }

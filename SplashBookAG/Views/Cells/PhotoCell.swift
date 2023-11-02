@@ -12,20 +12,20 @@ class PhotoCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super .init(frame: frame)
-        setup()
+        setupCell()
+        setupConstraints()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setup() {
+    private func setupCell() {
         self.contentView.addSubview(imageView)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill
         imageView.backgroundColor = .systemGray
         self.clipsToBounds = true
-        setupConstraints()
     }
     
     private func setupConstraints() {

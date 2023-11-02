@@ -43,8 +43,8 @@ final class MainView: UIView {
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-            collectionView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: Constants.borderOffsetXAxis),
-            collectionView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -Constants.borderOffsetXAxis),
+            collectionView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: Constants.borderSpacing),
+            collectionView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -Constants.borderSpacing),
             collectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
         ])
     }
@@ -53,7 +53,7 @@ final class MainView: UIView {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = .init(width: 195, height: 200)
         //layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
-        layout.minimumLineSpacing = 5
+        layout.minimumLineSpacing = 100
         layout.minimumInteritemSpacing = 0
         return layout
     }
@@ -84,7 +84,7 @@ extension MainView: UICollectionViewDataSource {
 
 extension MainView {
     private enum Constants {
-        static let bordersLineSpacing: CGFloat = 10.0
-        static let itemInterLineSpacing
+        static let borderSpacing: CGFloat = 10.0
+        static let itemInterLineSpacing: CGFloat = 0
     }
 }

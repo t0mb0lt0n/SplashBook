@@ -14,6 +14,8 @@ class PhotoCell: UICollectionViewCell {
         super .init(frame: frame)
         setupCell()
         setupConstraints()
+        layer.cornerRadius = 20
+        backgroundColor = .black
     }
     
     required init?(coder: NSCoder) {
@@ -25,6 +27,7 @@ class PhotoCell: UICollectionViewCell {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill
         imageView.backgroundColor = .systemGray
+        layer.cornerRadius = 20
         backgroundColor = .black
         self.clipsToBounds = true
     }

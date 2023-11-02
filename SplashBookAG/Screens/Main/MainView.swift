@@ -43,8 +43,10 @@ final class MainView: UIView {
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-            collectionView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: Constants.borderSpacing),
-            collectionView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -Constants.borderSpacing),
+            collectionView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor,
+                                                    constant: Constants.borderSpacing),
+            collectionView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor,
+                                                     constant: -Constants.borderSpacing),
             collectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
         ])
     }
@@ -53,8 +55,8 @@ final class MainView: UIView {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = .init(width: 195, height: 200)
         //layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
-        layout.minimumLineSpacing = 100
-        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 2
+        layout.minimumInteritemSpacing = 2
         return layout
     }
 }
@@ -62,11 +64,17 @@ final class MainView: UIView {
 //MARK: - CollectionView extensions
 
 extension MainView: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(
+        _ collectionView: UICollectionView,
+        numberOfItemsInSection section: Int
+    ) -> Int {
         source.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(
+        _ collectionView: UICollectionView,
+        cellForItemAt indexPath: IndexPath
+    ) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: "\(PhotoCell.self)",
             for: indexPath
@@ -75,7 +83,6 @@ extension MainView: UICollectionViewDataSource {
         }
         
         cell.imageView.image = UIImage(systemName: source[indexPath.item].imageName)
-        
         return cell
     }
 }
@@ -85,6 +92,7 @@ extension MainView: UICollectionViewDataSource {
 extension MainView {
     private enum Constants {
         static let borderSpacing: CGFloat = 10.0
-        static let itemInterLineSpacing: CGFloat = 0
+        static let lineSpacing: CGFloat = 0
+        static let interItemSpacing: CGFloat = 0
     }
 }

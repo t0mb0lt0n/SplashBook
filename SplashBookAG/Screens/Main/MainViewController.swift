@@ -14,7 +14,7 @@ final class MainViewController: UIViewController {
     init(viewModel: MainViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
-        title = TitleConstants.editoral
+        navigationItem.title = .vcTitleEditoral
         //view.backgroundColor = .systemBackground
     }
     

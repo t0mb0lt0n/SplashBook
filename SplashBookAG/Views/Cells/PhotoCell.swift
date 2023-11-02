@@ -15,7 +15,7 @@ class PhotoCell: UICollectionViewCell {
     
     let likeImageView: UIImageView = {
         let likeImageView = UIImageView()
-        likeImageView.image = UIImage(systemName: "hand.thumbsup.fill")
+        likeImageView.image = UIImage(systemName: "hand.thumbsup.fill")?.withTintColor(.white, renderingMode: .alwaysOriginal)
         return likeImageView
     }()
     
@@ -31,7 +31,9 @@ class PhotoCell: UICollectionViewCell {
     
     private func setupCell() {
         self.contentView.addSubview(imageView)
+        contentView.addSubview(likeImageView)
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        likeImageView.translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = .green
     }
     
@@ -41,6 +43,11 @@ class PhotoCell: UICollectionViewCell {
             imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            
+            likeImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            likeImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 5),
+            likeImageView.widthAnchor.constraint(equalToConstant: 30),
+            likeImageView.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
 }

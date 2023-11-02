@@ -25,14 +25,15 @@ class PhotoCell: UICollectionViewCell {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill
         imageView.backgroundColor = .systemGray
+        backgroundColor = .black
         self.clipsToBounds = true
     }
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             imageView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 100),
+            imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -100),
             imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
         ])
     }

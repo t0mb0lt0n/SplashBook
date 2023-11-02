@@ -53,7 +53,7 @@ final class MainView: UIView {
     
     private func setupFlowLayout() -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = .init(width: 195, height: 200)
+        layout.itemSize = .init(width: 195, height: 150)
         //layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         layout.minimumLineSpacing = 2
         layout.minimumInteritemSpacing = 2
@@ -82,7 +82,7 @@ extension MainView: UICollectionViewDataSource {
             fatalError("Cell dequeue error")
         }
         
-        cell.imageView.image = UIImage(systemName: source[indexPath.item].imageName)
+        cell.imageView.image = UIImage(named: source[indexPath.item].imageName)
         return cell
     }
 }

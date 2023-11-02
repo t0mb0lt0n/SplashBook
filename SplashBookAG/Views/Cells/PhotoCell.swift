@@ -10,7 +10,9 @@ import UIKit
 class PhotoCell: UICollectionViewCell {
     let imageView: UIImageView = {
         var imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFit
+        //imageView.contentMode = .scaleAspectFit
+        //imageView.layer.cornerRadius = 20
+        //imageView.clipsToBounds = true
         return imageView
     }()
     
@@ -25,22 +27,24 @@ class PhotoCell: UICollectionViewCell {
     }
     
     private func setupCell() {
+        //imageView.translatesAutoresizingMaskIntoConstraints = false
         self.contentView.addSubview(imageView)
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleAspectFill
-        imageView.backgroundColor = .black
-        layer.cornerRadius = 20
-        backgroundColor = .black
-        contentMode = .scaleAspectFit
-        self.clipsToBounds = false
+        //imageView.translatesAutoresizingMaskIntoConstraints = false
+        //imageView.contentMode = .scaleAspectFill
+        //imageView.backgroundColor = .black
+        //layer.cornerRadius = 20
+        backgroundColor = .green
+        //contentMode = .scaleAspectFill
+        //self.clipsToBounds = true
     }
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            imageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5),
             imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 0),
             imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 0),
-            imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -5),
         ])
     }
 }

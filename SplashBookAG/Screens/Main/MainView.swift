@@ -60,8 +60,7 @@ final class MainView: UIView {
     }
 }
 
-//MARK: - CollectionView extensions
-
+//MARK: - CollectionView extension
 extension MainView: UICollectionViewDataSource {
     func collectionView(
         _ collectionView: UICollectionView,
@@ -87,7 +86,6 @@ extension MainView: UICollectionViewDataSource {
 }
 
 //MARK: - Constants
-
 extension MainView {
     private enum Constants {
         static let borderSpacing: CGFloat = 10.0

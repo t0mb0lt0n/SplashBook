@@ -8,14 +8,16 @@
 import UIKit
 
 class PhotoCell: UICollectionViewCell {
-    let imageView = UIImageView()
+    let imageView: UIImageView = {
+        var imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        return imageView
+    }()
     
     override init(frame: CGRect) {
         super .init(frame: frame)
         setupCell()
         setupConstraints()
-        layer.cornerRadius = 20
-        backgroundColor = .black
     }
     
     required init?(coder: NSCoder) {
@@ -26,17 +28,18 @@ class PhotoCell: UICollectionViewCell {
         self.contentView.addSubview(imageView)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill
-        imageView.backgroundColor = .systemGray
+        imageView.backgroundColor = .black
         layer.cornerRadius = 20
         backgroundColor = .black
-        self.clipsToBounds = true
+        contentMode = .scaleAspectFit
+        self.clipsToBounds = false
     }
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             imageView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 100),
-            imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -100),
+            imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 0),
+            imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 0),
             imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
         ])
     }

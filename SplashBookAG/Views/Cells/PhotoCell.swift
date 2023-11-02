@@ -44,10 +44,17 @@ class PhotoCell: UICollectionViewCell {
             imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             
-            likeImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            likeImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -Constants.bottomSpacing),
             likeImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 5),
             likeImageView.widthAnchor.constraint(equalToConstant: 30),
             likeImageView.heightAnchor.constraint(equalToConstant: 30)
         ])
+    }
+}
+
+//MARK: - Constants
+extension PhotoCell {
+    private enum Constants {
+        static let bottomSpacing: CGFloat = 5
     }
 }

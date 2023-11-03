@@ -26,8 +26,4 @@ final class MainViewController: UIViewController {
         view = MainView()
         view.backgroundColor = .secondarySystemBackground
     }
-
-    // MARK:
-
-
 }

@@ -21,12 +21,6 @@ class PhotoCell: UICollectionViewCell {
         return label
     }()
     
-    private let likeImageView: UIImageView = {
-        let likeImageView = UIImageView()
-        likeImageView.image = UIImage(systemName: "hand.thumbsup.fill")?.withTintColor(.white, renderingMode: .alwaysOriginal)
-        return likeImageView
-    }()
-    
     override init(frame: CGRect) {
         super .init(frame: frame)
         setupCell()

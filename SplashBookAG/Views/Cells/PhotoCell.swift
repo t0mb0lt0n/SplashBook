@@ -16,6 +16,8 @@ class PhotoCell: UICollectionViewCell {
     let authorNameLabel: UILabel = {
         let label = UILabel()
         label.text = .defaultAuthorName
+        label.textColor = .white
+        label.backgroundColor = .green
         return label
     }()
     
@@ -36,10 +38,11 @@ class PhotoCell: UICollectionViewCell {
     }
     
     private func setupCell() {
-        self.contentView.addSubview(imageView)
-        contentView.addSubview(likeImageView)
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        likeImageView.translatesAutoresizingMaskIntoConstraints = false
+        [imageView,
+         authorNameLabel].forEach { subview in
+            contentView.addSubview(subview)
+            subview.translatesAutoresizingMaskIntoConstraints = false
+        }
         backgroundColor = .green
     }
     
@@ -50,9 +53,14 @@ class PhotoCell: UICollectionViewCell {
             imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             
+            authorNameLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -Constants.bottomSpacing),
+            authorNameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 5),
+            authorNameLabel.widthAnchor.constraint(equalToConstant: 150),
+            authorNameLabel.heightAnchor.constraint(equalToConstant: 30),
+            
             likeImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -Constants.bottomSpacing),
             likeImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 5),
-            likeImageView.widthAnchor.constraint(equalToConstant: 30),
+            likeImageView.widthAnchor.constraint(equalToConstant: 150),
             likeImageView.heightAnchor.constraint(equalToConstant: 30)
         ])
     }

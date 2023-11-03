@@ -7,7 +7,7 @@
 
 extension String {
     static let titleEditoral: String = "Editoral"
-    static let defaultAuthorName: String = "Default Author"
+    static let defaultAuthorName: String = "Author Name"
 }
 
 

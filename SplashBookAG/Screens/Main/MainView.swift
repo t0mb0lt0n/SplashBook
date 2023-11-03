@@ -81,7 +81,7 @@ extension MainView: UICollectionViewDataSource {
         }
         
         cell.setupSubviews(imageView: UIImage(named: source[indexPath.item].imageName)!,
-                           authorNameLabel: "Author Name")
+                           authorNameLabel: .defaultAuthorName)
         return cell
     }
 }

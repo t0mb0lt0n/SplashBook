@@ -9,8 +9,14 @@ import UIKit
 
 class PhotoCell: UICollectionViewCell {
     let imageView: UIImageView = {
-        var imageView = UIImageView()
+        let imageView = UIImageView()
         return imageView
+    }()
+    
+    let authorNameLabel: UILabel = {
+        let label = UILabel()
+        label.text = .defaultAuthorName
+        return label
     }()
     
     let likeImageView: UIImageView = {

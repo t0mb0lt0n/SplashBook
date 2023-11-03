@@ -11,7 +11,8 @@ import UIKit
 extension UITabBarController {
     func createNavigationControler(vc: UIViewController,
                                    itemTitle: String,
-                                   itemImageName: String) -> UINavigationController {
+                                   itemImageName: String
+    ) -> UINavigationController {
         vc.title = itemTitle
         let tabBarItem = UITabBarItem(title: itemTitle,
                                       image: UIImage(systemName: itemImageName),

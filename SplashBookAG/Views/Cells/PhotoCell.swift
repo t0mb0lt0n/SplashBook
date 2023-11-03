@@ -47,6 +47,12 @@ class PhotoCell: UICollectionViewCell {
         backgroundColor = .green
     }
     
+    func setupSubviews(imageView: UIImage, authorNameLabel: String) {
+        self.imageView.image = imageView
+        self.authorNameLabel.text = authorNameLabel
+    }
+    
+    
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             imageView.topAnchor.constraint(equalTo: contentView.topAnchor),

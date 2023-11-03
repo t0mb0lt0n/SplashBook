@@ -80,7 +80,8 @@ extension MainView: UICollectionViewDataSource {
             fatalError("Cell dequeue error")
         }
         
-        cell.imageView.image = UIImage(named: source[indexPath.item].imageName)
+        //cell.imageView.image = UIImage(named: source[indexPath.item].imageName)
+        cell.setupSubviews(imageView: UIImage(named: source[indexPath.item].imageName)!, authorNameLabel: "Author Name")
         return cell
     }
 }

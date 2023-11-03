@@ -8,12 +8,12 @@
 import UIKit
 
 class PhotoCell: UICollectionViewCell {
-    let imageView: UIImageView = {
+    private let imageView: UIImageView = {
         let imageView = UIImageView()
         return imageView
     }()
     
-    let authorNameLabel: UILabel = {
+    private let authorNameLabel: UILabel = {
         let label = UILabel()
         label.text = .defaultAuthorName
         label.textColor = .white

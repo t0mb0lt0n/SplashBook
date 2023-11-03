@@ -53,9 +53,9 @@ class PhotoCell: UICollectionViewCell {
             imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             
             authorNameLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -Constants.bottomSpacing),
-            authorNameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 5),
-            authorNameLabel.widthAnchor.constraint(equalToConstant: 150),
-            authorNameLabel.heightAnchor.constraint(equalToConstant: 30),
+            authorNameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Constants.authorNameLeadingSpacing),
+            authorNameLabel.widthAnchor.constraint(equalToConstant: Constants.authorNameWidth),
+            authorNameLabel.heightAnchor.constraint(equalToConstant: Constants.authorNameHeight),
         ])
     }
 }
@@ -64,5 +64,8 @@ class PhotoCell: UICollectionViewCell {
 extension PhotoCell {
     private enum Constants {
         static let bottomSpacing: CGFloat = 5
+        static let authorNameLeadingSpacing: CGFloat = 5
+        static let authorNameWidth: CGFloat = 150
+        static let authorNameHeight = 30
     }
 }

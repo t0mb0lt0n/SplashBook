@@ -8,7 +8,6 @@
 import Foundation
 
 final class MainViewModel {
-    //private var service
     
     init() {
         

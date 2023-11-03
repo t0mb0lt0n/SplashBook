@@ -17,7 +17,6 @@ class PhotoCell: UICollectionViewCell {
         let label = UILabel()
         label.text = .defaultAuthorName
         label.textColor = .white
-        label.backgroundColor = .green
         return label
     }()
     
@@ -57,11 +56,6 @@ class PhotoCell: UICollectionViewCell {
             authorNameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 5),
             authorNameLabel.widthAnchor.constraint(equalToConstant: 150),
             authorNameLabel.heightAnchor.constraint(equalToConstant: 30),
-            
-            likeImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -Constants.bottomSpacing),
-            likeImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 5),
-            likeImageView.widthAnchor.constraint(equalToConstant: 150),
-            likeImageView.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
 }

@@ -17,6 +17,8 @@ class PhotoCell: UICollectionViewCell {
         let label = UILabel()
         label.text = .defaultAuthorName
         label.textColor = .white
+        label.font = .systemFont(ofSize: Constants.authorNameFontSize, weight: .semibold)
+        //label.backgroundColor = .green
         return label
     }()
     
@@ -63,9 +65,10 @@ class PhotoCell: UICollectionViewCell {
 //MARK: - Constants
 extension PhotoCell {
     private enum Constants {
-        static let authorNameBottomSpacing: CGFloat = 5
-        static let authorNameLeadingSpacing: CGFloat = 5
+        static let authorNameBottomSpacing: CGFloat = 3
+        static let authorNameLeadingSpacing: CGFloat = 3
         static let authorNameWidth: CGFloat = 150
-        static let authorNameHeight: CGFloat = 30
+        static let authorNameHeight: CGFloat = 14
+        static let authorNameFontSize: CGFloat = 14
     }
 }

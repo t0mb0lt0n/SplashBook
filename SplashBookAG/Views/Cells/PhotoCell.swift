@@ -21,7 +21,7 @@ class PhotoCell: UICollectionViewCell {
         return label
     }()
     
-    let likeImageView: UIImageView = {
+    private let likeImageView: UIImageView = {
         let likeImageView = UIImageView()
         likeImageView.image = UIImage(systemName: "hand.thumbsup.fill")?.withTintColor(.white, renderingMode: .alwaysOriginal)
         return likeImageView

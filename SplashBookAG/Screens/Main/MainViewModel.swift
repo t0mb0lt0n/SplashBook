@@ -17,6 +17,6 @@ final class MainViewModel {
     }
     
     init() {
-        //super.init(nibName: nil, bundle: nil)
+        
     }
 }

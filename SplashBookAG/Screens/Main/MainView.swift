@@ -13,7 +13,7 @@ final class MainView: UIView {
         return collectionView
     }()
     
-    let source: [Photo] = Source.randomPhotos(with: 12)
+    let source: [Photo] = Source.randomPhotos(with: 3)
 
     init() {
         super.init(frame: .zero)
@@ -28,8 +28,8 @@ final class MainView: UIView {
     
     private func setupCollectionView() {
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: setupFlowLayout())
-        //collectionView.dataSource = self
         collectionView.register(PhotoCell.self, forCellWithReuseIdentifier: "\(PhotoCell.self)")
+        collectionView.alwaysBounceVertical = 
         collectionView.backgroundColor = .secondarySystemBackground
     }
     
@@ -60,33 +60,8 @@ final class MainView: UIView {
     }
 }
 
-//MARK: - UICollectionView extension
-//extension MainView: UICollectionViewDataSource {
-//    func collectionView(
-//        _ collectionView: UICollectionView,
-//        numberOfItemsInSection section: Int
-//    ) -> Int {
-//        source.count
-//    }
-//
-//    func collectionView(
-//        _ collectionView: UICollectionView,
-//        cellForItemAt indexPath: IndexPath
-//    ) -> UICollectionViewCell {
-//        guard let cell = collectionView.dequeueReusableCell(
-//            withReuseIdentifier: "\(PhotoCell.self)",
-//            for: indexPath
-//        ) as? PhotoCell else {
-//            fatalError("Cell dequeue error")
-//        }
-//
-//        cell.setupSubviews(imageView: UIImage(named: source[indexPath.item].imageName)!,
-//                           authorNameLabel: .defaultAuthorName)
-//        return cell
-//    }
-//}
-
 //MARK: - Constants
+
 extension MainView {
     private enum Constants {
         static let borderSpacing: CGFloat = 10

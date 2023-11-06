@@ -60,7 +60,7 @@ final class MainView: UIView {
     }
 }
 
-//MARK: - CollectionView extension
+//MARK: - UICollectionView extension
 extension MainView: UICollectionViewDataSource {
     func collectionView(
         _ collectionView: UICollectionView,

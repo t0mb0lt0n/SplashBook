@@ -24,6 +24,34 @@ final class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view = MainView()
+        mainView.collectionView.dataSource = self
         view.backgroundColor = .secondarySystemBackground
+    }
+}
+
+//MARK: - UICollectionViewDataSource
+
+extension MainViewController: UICollectionViewDataSource {
+    func collectionView(
+        _ collectionView: UICollectionView,
+        numberOfItemsInSection section: Int
+    ) -> Int {
+        mainView.source.count
+    }
+    
+    func collectionView(
+        _ collectionView: UICollectionView,
+        cellForItemAt indexPath: IndexPath
+    ) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: "\(PhotoCell.self)",
+            for: indexPath
+        ) as? PhotoCell else {
+            fatalError("Cell dequeue error")
+        }
+        
+        cell.setupSubviews(imageView: UIImage(named: mainView.source[indexPath.item].imageName)!,
+                           authorNameLabel: .defaultAuthorName)
+        return cell
     }
 }

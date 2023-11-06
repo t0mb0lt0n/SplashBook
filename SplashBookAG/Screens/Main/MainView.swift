@@ -28,7 +28,7 @@ final class MainView: UIView {
     
     private func setupCollectionView() {
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: setupFlowLayout())
-        collectionView.dataSource = self
+        //collectionView.dataSource = self
         collectionView.register(PhotoCell.self, forCellWithReuseIdentifier: "\(PhotoCell.self)")
         collectionView.backgroundColor = .secondarySystemBackground
     }
@@ -61,30 +61,30 @@ final class MainView: UIView {
 }
 
 //MARK: - UICollectionView extension
-extension MainView: UICollectionViewDataSource {
-    func collectionView(
-        _ collectionView: UICollectionView,
-        numberOfItemsInSection section: Int
-    ) -> Int {
-        source.count
-    }
-    
-    func collectionView(
-        _ collectionView: UICollectionView,
-        cellForItemAt indexPath: IndexPath
-    ) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: "\(PhotoCell.self)",
-            for: indexPath
-        ) as? PhotoCell else {
-            fatalError("Cell dequeue error")
-        }
-        
-        cell.setupSubviews(imageView: UIImage(named: source[indexPath.item].imageName)!,
-                           authorNameLabel: .defaultAuthorName)
-        return cell
-    }
-}
+//extension MainView: UICollectionViewDataSource {
+//    func collectionView(
+//        _ collectionView: UICollectionView,
+//        numberOfItemsInSection section: Int
+//    ) -> Int {
+//        source.count
+//    }
+//
+//    func collectionView(
+//        _ collectionView: UICollectionView,
+//        cellForItemAt indexPath: IndexPath
+//    ) -> UICollectionViewCell {
+//        guard let cell = collectionView.dequeueReusableCell(
+//            withReuseIdentifier: "\(PhotoCell.self)",
+//            for: indexPath
+//        ) as? PhotoCell else {
+//            fatalError("Cell dequeue error")
+//        }
+//
+//        cell.setupSubviews(imageView: UIImage(named: source[indexPath.item].imageName)!,
+//                           authorNameLabel: .defaultAuthorName)
+//        return cell
+//    }
+//}
 
 //MARK: - Constants
 extension MainView {

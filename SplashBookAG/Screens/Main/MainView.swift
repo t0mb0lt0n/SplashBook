@@ -13,7 +13,7 @@ final class MainView: UIView {
         return collectionView
     }()
     
-    let source: [Photo] = Source.randomPhotos(with: 3)
+    //let source: [Photo] = Source.randomPhotos(with: 11)
 
     init() {
         super.init(frame: .zero)
@@ -29,7 +29,7 @@ final class MainView: UIView {
     private func setupCollectionView() {
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: setupFlowLayout())
         collectionView.register(PhotoCell.self, forCellWithReuseIdentifier: "\(PhotoCell.self)")
-        collectionView.alwaysBounceVertical = 
+        collectionView.alwaysBounceVertical = true
         collectionView.backgroundColor = .secondarySystemBackground
     }
     

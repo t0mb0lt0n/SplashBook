@@ -24,8 +24,8 @@ final class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view = MainView()
-        mainView.collectionView.dataSource = self
         view.backgroundColor = .secondarySystemBackground
+        mainView.collectionView.dataSource = self
     }
 }
 

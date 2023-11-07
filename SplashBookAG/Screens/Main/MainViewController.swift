@@ -36,7 +36,7 @@ extension MainViewController: UICollectionViewDataSource {
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int
     ) -> Int {
-        mainView.source.count
+        viewModel.numberOfItems
     }
     
     func collectionView(
@@ -50,7 +50,7 @@ extension MainViewController: UICollectionViewDataSource {
             fatalError("Cell dequeue error")
         }
         
-        cell.setupSubviews(imageView: UIImage(named: mainView.source[indexPath.item].imageName)!,
+        cell.setupSubviews(imageView: UIImage(named: viewModel.source[indexPath.item].imageName)!,
                            authorNameLabel: .defaultAuthorName)
         return cell
     }

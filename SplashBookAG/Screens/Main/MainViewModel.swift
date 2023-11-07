@@ -9,10 +9,9 @@ import Foundation
 
 final class MainViewModel {
     private(set) var source = Source.randomPhotos(with: 11)
-    static let a = 1
     
     var numberOfSections: Int {
-        //source.count
+        source.count
     }
     
     var numberOfItems: Int {

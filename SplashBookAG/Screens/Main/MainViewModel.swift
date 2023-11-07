@@ -11,14 +11,14 @@ final class MainViewModel {
     private(set) var source = Source.randomPhotos(with: 11)
     
     var numberOfSections: Int {
-        source.count
+        1
     }
     
     var numberOfItems: Int {
         source.count
     }
     
-    init() {
+    init(service: ) {
         
     }
 }

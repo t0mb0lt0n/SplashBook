@@ -9,6 +9,7 @@ import Foundation
 
 final class MainViewModel {
     private(set) var source = Source.randomPhotos(with: 11)
+    private let service: ImageService
     
     var numberOfSections: Int {
         1
@@ -18,7 +19,7 @@ final class MainViewModel {
         source.count
     }
     
-    init(service: ) {
-        
+    init(service: ImageService) {
+        self.service = service
     }
 }

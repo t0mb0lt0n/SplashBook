@@ -63,6 +63,7 @@ class PhotoCell: UICollectionViewCell {
 }
 
 //MARK: - Constants
+
 extension PhotoCell {
     private enum Constants {
         static let authorNameBottomSpacing: CGFloat = 5

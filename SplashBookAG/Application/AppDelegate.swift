@@ -10,11 +10,20 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
-
-    func application(_ application: UIApplication,
-                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    private let service = ImageService()
+    
+    func application(
+        _ application: UIApplication,
+        didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+    ) -> Bool {
         window = UIWindow()
-        window?.rootViewController = MainTabBarController(with: [MainViewController.init(viewModel: .init(service: ImageService()))])
+        window?.rootViewController = MainTabBarController(
+            with: [MainViewController(
+                viewModel: .init(
+                    service: service
+                )
+            )]
+        )
         window?.overrideUserInterfaceStyle = .dark
         window?.makeKeyAndVisible()
         return true

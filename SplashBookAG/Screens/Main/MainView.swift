@@ -13,8 +13,6 @@ final class MainView: UIView {
         return collectionView
     }()
     
-    //let source: [Photo] = Source.randomPhotos(with: 11)
-
     init() {
         super.init(frame: .zero)
         setupCollectionView()

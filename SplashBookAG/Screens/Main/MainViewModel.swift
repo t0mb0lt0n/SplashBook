@@ -12,6 +12,10 @@ final class MainViewModel {
     static let a = 1
     
     var numberOfSections: Int {
+        //source.count
+    }
+    
+    var numberOfItems: Int {
         source.count
     }
     

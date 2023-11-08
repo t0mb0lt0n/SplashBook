@@ -46,7 +46,6 @@ class PhotoCell: UICollectionViewCell {
         self.authorNameLabel.text = authorNameLabel
     }
     
-    
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             imageView.topAnchor.constraint(equalTo: contentView.topAnchor),

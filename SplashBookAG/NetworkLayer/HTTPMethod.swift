@@ -23,4 +23,7 @@ extension Struct {
     func a() {
         
     }
+    var property: Int {
+        1
+    }
 }

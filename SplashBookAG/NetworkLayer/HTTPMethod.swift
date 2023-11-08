@@ -14,16 +14,3 @@ enum HTTPMethod: String {
     case delete = "DELETE"
     case patch  = "PATCH"
 }
-
-struct Struct {
-    
-}
-
-extension Struct {
-    func a() {
-        
-    }
-    var property: Int {
-        1
-    }
-}

@@ -14,7 +14,7 @@ final class MainViewController: UIViewController {
     init(viewModel: MainViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
-        title = Title.editoral.rawValue
+        title = .editoralTitle
     }
     
     required init?(coder: NSCoder) {

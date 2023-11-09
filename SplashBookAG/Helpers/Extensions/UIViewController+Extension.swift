@@ -7,8 +7,8 @@
 import UIKit
 
 extension UIViewController {
-    enum TitleConstants {
-        static let editoral: String = "Editoral"
+    enum Title: String {
+        case editoral = "Editoral"
     }
 }
 

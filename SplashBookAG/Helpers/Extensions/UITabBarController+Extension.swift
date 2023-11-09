@@ -14,9 +14,11 @@ extension UITabBarController {
                                    itemImageName: String
     ) -> UINavigationController {
         vc.title = itemTitle
-        let tabBarItem = UITabBarItem(title: itemTitle,
-                                      image: UIImage(systemName: itemImageName),
-                                      tag: 0)
+        let tabBarItem = UITabBarItem(
+            title: itemTitle,
+            image: UIImage(systemName: itemImageName),
+            tag: 0
+        )
         let navController = UINavigationController(rootViewController: vc)
         navController.tabBarItem = tabBarItem
         return navController

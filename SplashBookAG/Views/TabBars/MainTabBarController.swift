@@ -28,11 +28,7 @@ final class MainTabBarController: UITabBarController {
     private func setupTabBar(with viewControllers: [UIViewController]) {
         var navigationControllerList = [UINavigationController]()
         viewControllers.forEach { vc in
-            let navController = createNavigationControler(
-                vc: vc,
-                itemTitle: vc.title ?? "EmptyName",
-                itemImageName: ""
-            )
+            let navController = UINavigationController(rootViewController: vc)
             navigationControllerList.append(navController)
         }
         self.viewControllers = navigationControllerList

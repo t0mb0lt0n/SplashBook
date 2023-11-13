@@ -15,7 +15,7 @@ final class MainViewController: UIViewController {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
         title = .editoralTitle
-        tabBarItem.image = UIImage(systemName: "camera")
+        tabBarItem.image = UIImage(systemName: "camera.fill")
     }
     
     required init?(coder: NSCoder) {

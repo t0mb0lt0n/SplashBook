@@ -17,8 +17,6 @@ final class MainViewModel {
     
     var numberOfItems: Int {
         //source.count
-        11
-        
     }
     
     init(service: ImageService) {

@@ -14,11 +14,16 @@ final class MainViewController: UIViewController {
     init(viewModel: MainViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
-        title = .editoralTitle
+        title = "123"
+        tabBarItem.image = UIImage(systemName: "camera")
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func loadView() {
+        tabBarItem.image = UIImage(systemName: "camera")
     }
     
     override func viewDidLoad() {
@@ -26,6 +31,7 @@ final class MainViewController: UIViewController {
         view = MainView()
         view.backgroundColor = .secondarySystemBackground
         mainView.collectionView.dataSource = self
+        //tabBarItem.image = UIImage(systemName: "camera")
     }
 }
 

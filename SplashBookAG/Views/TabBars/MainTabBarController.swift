@@ -31,7 +31,7 @@ final class MainTabBarController: UITabBarController {
             let navController = createNavigationControler(
                 vc: vc,
                 itemTitle: vc.title ?? "EmptyName",
-                itemImageName: "camera.fill"
+                itemImageName: ""
             )
             navigationControllerList.append(navController)
         }

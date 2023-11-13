@@ -18,11 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     ) -> Bool {
         window = UIWindow()
         window?.rootViewController = MainTabBarController(
-            with: [MainViewController(
-                viewModel: .init(
-                    service: service
-                )
-            )]
+            with: [MainViewController(viewModel: .init(service: service))]
         )
         window?.overrideUserInterfaceStyle = .dark
         window?.makeKeyAndVisible()

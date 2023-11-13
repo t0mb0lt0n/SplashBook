@@ -10,8 +10,8 @@ import UIKit
 final class MainTabBarController: UITabBarController {
     private var vcList: [UIViewController]
     
-    init(with list: [UIViewController] ) {
-        self.vcList = list
+    init(with vcList: [UIViewController] ) {
+        self.vcList = vcList
         super.init(nibName: nil, bundle: nil)
     }
     

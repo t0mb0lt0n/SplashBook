@@ -22,7 +22,11 @@ final class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTabBar(with: vcList)
-        setupTabBarStyle()
+        setupTabBarStyle(
+            backgroundColor: .red,
+            normalItemColor: .systemGray,
+            selectedItemColor: .systemOrange
+        )
     }
     
     private func setupTabBar(with viewControllers: [UIViewController]) {

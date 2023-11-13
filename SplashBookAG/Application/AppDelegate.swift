@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 )
             )]
         )
-        window?.overrideUserInterfaceStyle = .dark
+        window?.overrideUserInterfaceStyle = .light
         window?.makeKeyAndVisible()
         return true
     }

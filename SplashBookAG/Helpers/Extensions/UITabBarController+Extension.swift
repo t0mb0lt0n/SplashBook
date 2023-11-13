@@ -9,23 +9,18 @@ import Foundation
 import UIKit
 
 extension UITabBarController {
-    func createNavigationControler(vc: UIViewController,
-                                   itemTitle: String,
-                                   itemImageName: String
-    ) -> UINavigationController {
-        vc.title = itemTitle
-        let navController = UINavigationController(rootViewController: vc)
-        navController.tabBarItem = tabBarItem
-        return navController
-    }
-    
-    func setupTabBarStyle() {
+    func setupTabBarStyle(
+        backgroundColor: UIColor,
+        normalItemColor: UIColor,
+        selectedItemColor: UIColor
+    ) {
         let tabBarApperance = UITabBarAppearance()
-        tabBarApperance.backgroundColor = .systemBackground
+        tabBarApperance.backgroundColor = backgroundColor.withAlphaComponent(0.1)
         let tabBarItemApperance = UITabBarItemAppearance()
-        tabBarItemApperance.normal.iconColor = .systemRed
-        tabBarItemApperance.selected.iconColor = .systemOrange
-        tabBarItemApperance.selected.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.systemOrange]
+        tabBarItemApperance.normal.iconColor = normalItemColor
+        tabBarItemApperance.selected.iconColor = selectedItemColor
+        tabBarItemApperance.normal.titleTextAttributes = [NSAttributedString.Key.foregroundColor: normalItemColor]
+        tabBarItemApperance.selected.titleTextAttributes = [NSAttributedString.Key.foregroundColor: selectedItemColor]
         tabBar.scrollEdgeAppearance = tabBarApperance
         tabBar.scrollEdgeAppearance?.stackedLayoutAppearance = tabBarItemApperance
     }

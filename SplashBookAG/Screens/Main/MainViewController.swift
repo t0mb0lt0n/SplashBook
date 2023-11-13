@@ -51,7 +51,8 @@ extension MainViewController: UICollectionViewDataSource {
         }
         
         DispatchQueue.main.async {
-            <#code#>
+            cell.setupSubviews(imageView: UIImage(named: self.viewModel.source[indexPath.item].imageName)!,
+                               authorNameLabel: .defaultAuthorName)
         }
         //cell.setupSubviews(imageView: UIImage(named: viewModel.source[indexPath.item].imageName)!,
         //                   authorNameLabel: .defaultAuthorName)

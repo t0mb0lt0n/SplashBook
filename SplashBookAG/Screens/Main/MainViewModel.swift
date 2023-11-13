@@ -8,7 +8,7 @@
 import Foundation
 
 final class MainViewModel {
-    private(set) var source = Source.randomPhotos(with: 11)
+    private(set) var source = Source.randomPhotos(with: 30)
     private let service: ImageService
     
     var numberOfSections: Int {

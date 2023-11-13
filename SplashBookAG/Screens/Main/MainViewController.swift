@@ -50,6 +50,9 @@ extension MainViewController: UICollectionViewDataSource {
             fatalError("Cell dequeue error")
         }
         
+        DispatchQueue.main.async {
+            <#code#>
+        }
         //cell.setupSubviews(imageView: UIImage(named: viewModel.source[indexPath.item].imageName)!,
         //                   authorNameLabel: .defaultAuthorName)
         return cell

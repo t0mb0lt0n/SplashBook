@@ -54,8 +54,6 @@ extension MainViewController: UICollectionViewDataSource {
 //            cell.setupSubviews(imageView: UIImage(named: self.viewModel.source[indexPath.item].imageName)!,
 //                               authorNameLabel: .defaultAuthorName)
 //        }
-        cell.setupSubviews(imageView: UIImage(named: viewModel.source[indexPath.item].imageName)!,
-                           authorNameLabel: .defaultAuthorName)
         return cell
     }
 }

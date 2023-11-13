@@ -23,7 +23,7 @@ final class MainTabBarController: UITabBarController {
         super.viewDidLoad()
         setupTabBar(with: vcList)
         setupTabBarStyle(
-            backgroundColor: .red,
+            backgroundColor: .systemBackground,
             normalItemColor: .systemGray,
             selectedItemColor: .systemOrange
         )

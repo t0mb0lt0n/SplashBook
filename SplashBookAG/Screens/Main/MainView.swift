@@ -65,7 +65,7 @@ extension MainView {
         static let borderSpacing: CGFloat = 10
         static let lineSpacing: CGFloat = 3
         static let interItemSpacing: CGFloat = 3
-        static let itemWidth = 195
-        static let itemHeight = 140
+        static let itemWidth: CGFloat = 195
+        static let itemHeight: CGFloat = 140
     }
 }

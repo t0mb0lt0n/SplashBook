@@ -8,6 +8,6 @@
 import Foundation
 
 struct HTTPRequest {
-    
+    var a = Optional.some("")
     
 }

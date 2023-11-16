@@ -68,7 +68,7 @@ func buyFavoriteSnacks(person: String, machine: VendingBar) throws {
 
 
 var vendBar = VendingBar()
-//try buyFavoriteSnacks(person: "Alice", machine: .init())
+
 
 do {
     try buyFavoriteSnacks(person: "Trevor", machine: .init())

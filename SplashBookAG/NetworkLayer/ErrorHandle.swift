@@ -60,12 +60,3 @@ let favoriteSnacks = [
 ]
 
 
-func buyFavoriteSnacks(person: String, machine: VendingBar) throws {
-    let vendM = machine
-    let snackName = favoriteSnacks[person]
-    try vendM.getItem(named: snackName!, count: 2)
-}
-
-
-var vendBar = VendingBar()
-

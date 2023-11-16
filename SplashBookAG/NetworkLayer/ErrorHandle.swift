@@ -7,6 +7,7 @@
 
 import Foundation
 
+
 enum MachineErrors: Error {
     case missingName
     case priceFail(coinsNeeded: Int)
@@ -32,6 +33,7 @@ class VendingBar {
     }
     
     func getItem(named itemName: String, count: Int) throws {
+        
         guard let item = items[itemName] else {
             throw MachineErrors.missingName
         }
@@ -49,6 +51,25 @@ class VendingBar {
         items[itemName]!.count -= count
         print(items[itemName])
     }
-    
+}
+
+
+let favoriteSnacks = [
+    "Alice": "Twix",
+    "Trevor": "Nuts"
+]
+
+func buyFavoriteSnacks(person: String, machine: VendingBar) throws {
+    let vendM = machine
+    let snackName = favoriteSnacks[person]
+    try vendM.getItem(named: snackName!, count: 2)
+}
+
+
+//try buyFavoriteSnacks(person: "Alice", vendMachine: .init())
+var vendBar = VendingBar()
+do {
+    try buyFavoriteSnacks(person: "Alice", machine: .init())
+} catch {
     
 }

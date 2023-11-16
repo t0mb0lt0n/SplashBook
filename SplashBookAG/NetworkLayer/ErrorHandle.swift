@@ -54,9 +54,3 @@ class VendingBar {
 }
 
 
-let favoriteSnacks = [
-    "Alice": "Twix",
-    "Trevor": "Nuts"
-]
-
-

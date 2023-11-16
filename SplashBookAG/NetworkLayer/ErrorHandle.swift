@@ -33,17 +33,4 @@ class VendingBar {
     }
     
     func getItem(named itemName: String, count: Int) throws {
-        
-        guard let item = items[itemName] else {
-            throw MachineErrors.missingName
-        }
-        
-        guard item.count > 0 else {
-            throw MachineErrors.outOfStock
-        }
-        
-        guard item.price >= deposit else {
-            throw MachineErrors.priceFail(coinsNeeded: deposit - item.price)
-        }
-        
-        deposit -= item.price
+  

@@ -69,15 +69,3 @@ func buyFavoriteSnacks(person: String, machine: VendingBar) throws {
 
 var vendBar = VendingBar()
 
-
-do {
-    try buyFavoriteSnacks(person: "Trevor", machine: .init())
-    
-} catch MachineErrors.outOfStock {
-    print("out of stock")
-} catch MachineErrors.priceFail(let priceNeeded) {
-    print("\(priceNeeded)")
-} catch MachineErrors.missingName {
-    print("name error")
-}
-

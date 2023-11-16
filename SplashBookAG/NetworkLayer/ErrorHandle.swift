@@ -47,10 +47,3 @@ class VendingBar {
         }
         
         deposit -= item.price
-        var newItem = item
-        items[itemName]!.count -= count
-        print(items[itemName])
-    }
-}
-
-

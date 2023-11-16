@@ -73,3 +73,27 @@ do {
 } catch {
     
 }
+
+
+
+func buyFavoriteSnacks(person: String, machine: VendingBar) throws {
+    let vendM = machine
+    let snackName = favoriteSnacks[person]
+    try vendM.getItem(named: snackName!, count: 2)
+}
+
+
+var vendBar = VendingBar()
+//try buyFavoriteSnacks(person: "Alice", machine: .init())
+
+do {
+    try buyFavoriteSnacks(person: "Trevor", machine: .init())
+    
+} catch MachineErrors.outOfStock {
+    print("out of stock")
+} catch MachineErrors.priceFail(let priceNeeded) {
+    print("\(priceNeeded)")
+} catch MachineErrors.missingName {
+    print("name error")
+}
+

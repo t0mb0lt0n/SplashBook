@@ -46,20 +46,3 @@ do {
     }
 }
 
-
-
-
-let manager = NetworkManager()
-
-do {
-    try manager.fetchData("data passed")
-} catch let error as HttpError {
-    switch error {
-    case .serverError500:
-        print("server error")
-    case .notFound404:
-        print("server not found")
-    case .badrequest400:
-        print("bad request")
-    }
-}

@@ -20,7 +20,6 @@ class NetworkManager {
         guard data != "data" else {
             throw HttpError.badrequest400
         }
-        print(data)
         return 0
     }
     

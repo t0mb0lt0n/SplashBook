@@ -36,6 +36,3 @@ class NetworkManager {
         return .success(0)
     }
 }
-
-let manager = NetworkManager()
-

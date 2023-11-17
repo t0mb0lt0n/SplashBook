@@ -40,7 +40,3 @@ struct Photo {
     let imageName: String
 }
 
-struct SectionPhoto {
-    let sectionName: String
-    var photos: [Photo]
-}

@@ -56,14 +56,6 @@ let manager2 = manager.download("data1")
 
 if case let .failure(error) = manager2 {
     print(error)
-}
 
-
-switch manager2 {
-case let .failure(err):
-    print(err)
-case let .success(data):
-    print(data)
-}
 
 //MARK: - тип данных Result позволяет обрабатывать ошибки ассинхронно

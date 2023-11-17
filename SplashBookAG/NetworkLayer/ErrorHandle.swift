@@ -7,8 +7,4 @@ enum HttpError: Error {
     case badrequest400
 }
 
-class NetworkManager {
-    
-    
 
-}

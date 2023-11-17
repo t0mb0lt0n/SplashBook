@@ -39,11 +39,3 @@ class NetworkManager {
 
 let manager = NetworkManager()
 
-do {
-    try manager.fetchData("passed")
-} catch let error as HttpError {
-    switch error {
-    case .serverError500:
-        print("server error")
-    case .notFound404:
-        print("server not found")

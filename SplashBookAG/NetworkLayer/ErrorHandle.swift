@@ -24,15 +24,5 @@ class NetworkManager {
         return 0
     }
     
-    func download(_ data: String?) -> Result<Int, HttpError> {
-        guard let data else {
-            return .failure(.notFound404)
-        }
-        
-        guard data != "data" else {
-            return .failure(.badrequest400)
-        }
-        print(data)
-        return .success(0)
-    }
+
 }

@@ -47,15 +47,3 @@ do {
         print("server error")
     case .notFound404:
         print("server not found")
-    case .badrequest400:
-        print("bad request")
-    }
-}
-
-let manager2 = manager.download("data1")
-
-if case let .failure(error) = manager2 {
-    print(error)
-
-
-//MARK: - тип данных Result позволяет обрабатывать ошибки ассинхронно

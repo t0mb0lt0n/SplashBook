@@ -8,20 +8,7 @@ enum HttpError: Error {
 }
 
 class NetworkManager {
-    func fetchData(_ data: String?) throws -> Int{
-        guard let data, !data.isEmpty else {
-            throw HttpError.serverError500
-        }
-        
-        guard !data.isEmpty else {
-            throw HttpError.notFound404
-        }
-        
-        guard data != "data" else {
-            throw HttpError.badrequest400
-        }
-        return 0
-    }
+    
     
 
 }

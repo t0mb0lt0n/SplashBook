@@ -18,7 +18,6 @@ struct Source {
          .init(id: 6, imageName: "TestImage6"),
          .init(id: 7, imageName: "TestImage7"),
          .init(id: 8, imageName: "TestImage8"),
-         .init(id: 9, imageName: "TestImage9"),
          .init(id: 0, imageName: "TestImage0"),
          .init(id: 1, imageName: "TestImage1"),
          .init(id: 2, imageName: "TestImage2"),

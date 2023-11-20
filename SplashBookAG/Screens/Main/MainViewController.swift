@@ -54,7 +54,6 @@ extension MainViewController: UICollectionViewDataSource {
         DispatchQueue.main.async {
             guard let image = UIImage(named: self.viewModel.source[indexPath.item].imageName) else {
                 print("missed image")
-                throw Errors.imageError
                 return
             }
             cell.setupSubviews(
@@ -64,8 +63,4 @@ extension MainViewController: UICollectionViewDataSource {
         }
         return cell
     }
-}
-
-enum Errors: Error {
-    case imageError
 }

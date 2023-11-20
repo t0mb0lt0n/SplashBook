@@ -52,7 +52,10 @@ extension MainViewController: UICollectionViewDataSource {
         }
         
         DispatchQueue.main.async {
-            guard let image = UIImage(named: self.viewModel.source[indexPath.item].imageName) else { return }
+            guard let image = UIImage(named: self.viewModel.source[indexPath.item].imageName) else {
+                print("missed image")
+                return
+            }
             cell.setupSubviews(
                 imageView: image,
                 authorNameLabel: .defaultAuthorName

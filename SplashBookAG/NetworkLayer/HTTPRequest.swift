@@ -8,6 +8,15 @@
 import Foundation
 
 struct HTTPRequest {
-    var a = Optional.some("")
+    static let timeOutInterval = 5
     
+    static func HttpRequestConfuguration(
+        with path
+    ) {
+        
+        
+        
+        
+        
+    }
 }

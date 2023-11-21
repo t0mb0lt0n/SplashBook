@@ -11,7 +11,9 @@ struct HTTPRequest {
     static let timeOutInterval = 5
     
     static func HttpRequestConfuguration(
-        with path
+        with path: String,
+        initialURL: String,
+        headers: 
     ) {
         
         

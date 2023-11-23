@@ -23,7 +23,11 @@ struct HTTPRequest {
         let request = URLRequest(url: URL(string: "")!)
         let url = try composeURL(with: path, server: "", endPoint: "")
         
-        
+        do {
+            try composeURL(with: path, server: "", endPoint: "")
+        } catch {
+            
+        }
         
         return request
     }

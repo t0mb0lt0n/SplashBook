@@ -8,5 +8,5 @@
 import Foundation
 
 enum URLError: Error {
-    case tunnelError
+    case BadTunnel, BadServer, BadEndPoint
 }

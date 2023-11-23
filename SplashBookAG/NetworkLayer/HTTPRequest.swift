@@ -21,6 +21,10 @@ struct HTTPRequest {
         parameters: HTTPParameters? = nil
     ) throws -> URLRequest {
         let request = URLRequest(url: URL(string: "")!)
+        let url = try composeURL(with: path, server: "", endPoint: "")
+        
+        switch 
+        
         return request
     }
     

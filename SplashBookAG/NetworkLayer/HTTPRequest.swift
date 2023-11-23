@@ -27,23 +27,21 @@ struct HTTPRequest {
         return request
     }
     
-     static func composeURL(
+    static func composeURL(
         with tunnel: String?,
         server: String?,
         endPoint: String?
-     ) throws -> URL {
-         guard let tunnel else {
-             throw URLError.BadTunnel
-         }
-         guard let server else {
-             throw URLError.BadServer
-         }
-         guard let endPoint else {
-             throw URLError.BadEndPoint
-         }
-         //a != nil ? a! : b
-         //var fullName = lastName != nil ? "\(firsName) \(lasName!)" : firstName
-         let finalURL = URL(string: tunnel + server + endPoint) ?? URL(string: "")
-         return finalURL
-     }
+    ) throws -> URL? {
+        guard let tunnel else {
+            throw URLError.BadTunnel
+        }
+        guard let server else {
+            throw URLError.BadServer
+        }
+        guard let endPoint else {
+            throw URLError.BadEndPoint
+        }
+        let finalURL = URL(string: tunnel + server + endPoint)
+        return finalURL
+    }
 }

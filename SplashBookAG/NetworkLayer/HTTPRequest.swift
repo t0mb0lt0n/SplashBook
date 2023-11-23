@@ -23,7 +23,6 @@ struct HTTPRequest {
         
         
         let request = URLRequest(url: URL(string: "")!)
-        
         return request
     }
     

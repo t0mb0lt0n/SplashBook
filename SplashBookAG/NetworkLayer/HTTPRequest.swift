@@ -27,9 +27,9 @@ struct HTTPRequest {
         
     }
     
-    private static func composeURL(
-        with path: String,
-        
-    
+     static func composeURL(
+        with tunnel: String,
+        server: String,
+        endPoint: String
     ) throws -> URL
 }

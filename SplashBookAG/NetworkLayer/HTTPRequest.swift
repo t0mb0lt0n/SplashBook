@@ -19,11 +19,17 @@ struct HTTPRequest {
         initialURL: String,
         headers: HTTPHeaders? = nil,
         parameters: HTTPParameters? = nil
-    ) {
+    ) throws -> URLRequest {
         
         
         
         
         
     }
+    
+    private static func composeURL(
+        with path: String,
+        
+    
+    ) throws -> URL
 }

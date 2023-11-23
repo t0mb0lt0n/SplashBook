@@ -13,10 +13,12 @@ typealias HTTPParameters = [String: Any]?
 struct HTTPRequest {
     static let timeOutInterval = 5
     
-    static func HttpRequestConfuguration(
+    static func HTTPRequestConfuguration(
         with path: String,
+        method: HTTPMethod,
         initialURL: String,
-        headers: Headers
+        headers: HTTPHeaders? = nil,
+        parameters: HTTPParameters? = nil
     ) {
         
         

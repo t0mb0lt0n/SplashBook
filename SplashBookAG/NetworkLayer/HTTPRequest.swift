@@ -20,8 +20,6 @@ struct HTTPRequest {
         headers: HTTPHeaders? = nil,
         parameters: HTTPParameters? = nil
     ) throws -> URLRequest {
-        
-        
         let request = URLRequest(url: URL(string: "")!)
         return request
     }

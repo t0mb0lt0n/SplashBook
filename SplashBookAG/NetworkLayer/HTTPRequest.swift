@@ -7,7 +7,8 @@
 
 import Foundation
 
-typealias Headers = [String: Any]
+typealias HTTPHeaders = [String: Any]?
+typealias HTTPParameters = [String: Any]?
 
 struct HTTPRequest {
     static let timeOutInterval = 5

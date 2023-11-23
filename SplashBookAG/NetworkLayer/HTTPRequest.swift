@@ -22,14 +22,16 @@ struct HTTPRequest {
     ) throws -> URLRequest {
         
         
+        let request = URLRequest(url: URL(string: "")!)
         
-        
-        
+        return request
     }
     
      static func composeURL(
         with tunnel: String,
         server: String,
         endPoint: String
-    ) throws -> URL
+     ) throws -> URL {
+         
+     }
 }

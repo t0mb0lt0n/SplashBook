@@ -24,7 +24,6 @@ struct HTTPRequest {
             guard let url = try composeURL(with: "https://", server: "randomuser.me", endPoint: "/api") else {
                 throw URLError.BadEndPoint
             }
-            //HTTPRequest.composeURL(with: "https://", server: "randomuser.me", endPoint: "/api")
             print("passed")
             let request = URLRequest(url: url)
             return request
@@ -49,7 +48,29 @@ struct HTTPRequest {
             throw URLError.BadEndPoint
         }
         let composedURL = URL(string: tunnel + server + endPoint)
-        //print(composedURL?.baseURL)
         return composedURL
+    }
+    
+    static func configureHTTPRequest(
+      from path: String,
+      baseUrl: String,
+      parameters: HTTPParameters? = nil,
+      headers: HTTPHeaders? = nil,
+      and method: HTTPMethod
+    ) throws -> URLRequest {
+      guard let url = URL(string: baseUrl + path) else {
+        throw HTTPNetworkError.missingURL
+        
+      }
+      var request = URLRequest(
+        url: url, cachePolicy: .reloadIgnoringLocalCacheData,
+        timeoutInterval: timeoutInterval
+      )
+      request.httpMethod = method.rawValue
+      try configureParametersAndHeaders(
+        parameters: parameters,
+        headers: headers, request: &request
+      )
+      return request
     }
 }

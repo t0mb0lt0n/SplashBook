@@ -27,6 +27,7 @@ final class MainViewController: UIViewController {
         view = MainView()
         view.backgroundColor = .secondarySystemBackground
         mainView.collectionView.dataSource = self
+      try? HTTPRequest.HTTPRequestConfuguration(with: "test string", method: .get, initialURL: "")
     }
 }
 

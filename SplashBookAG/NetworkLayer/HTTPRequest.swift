@@ -20,14 +20,21 @@ struct HTTPRequest {
         headers: HTTPHeaders? = nil,
         parameters: HTTPParameters? = nil
     ) throws -> URLRequest {
-        var request = URLRequest(url: URL(string: "") ?? "")
+//        guard var request = URLRequest(url: URL(string: "http")) else {
+//            throw URLError.BadTunnel
+//        }
        // let url = try composeURL(with: path, server: "", endPoint: "")
         
         do {
-            let url = try composeURL(with: path, server: "", endPoint: "")
-            return request = URLRequest(url: url!)
+            guard let url = try composeURL(with: path, server: "", endPoint: "") else {
+                throw URLError.BadTunnel
+            }
+            let request = URLRequest(url: url)
+        
+            return request
         } catch {
             print(error.localizedDescription)
+            return URLRequest(url: URL(string: "")!)
         }
         //let request = URLRequest(url: url)
         
@@ -48,7 +55,7 @@ struct HTTPRequest {
         guard let endPoint else {
             throw URLError.BadEndPoint
         }
-        let finalURL = URL(string: tunnel + server + endPoint)
-        return finalURL
+        let composedURL = URL(string: tunnel + server + endPoint)
+        return composedURL
     }
 }

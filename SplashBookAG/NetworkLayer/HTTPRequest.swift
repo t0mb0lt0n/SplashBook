@@ -20,18 +20,18 @@ struct HTTPRequest {
         headers: HTTPHeaders? = nil,
         parameters: HTTPParameters? = nil
     ) throws -> URLRequest {
-        //let request = URLRequest(url: URL(string: "")!)
+        var request = URLRequest(url: URL(string: "") ?? "")
        // let url = try composeURL(with: path, server: "", endPoint: "")
         
         do {
             let url = try composeURL(with: path, server: "", endPoint: "")
-            print(url!)
+            return request = URLRequest(url: url!)
         } catch {
             print(error.localizedDescription)
         }
-        let request
+        //let request = URLRequest(url: url)
         
-        return request
+        //return request
     }
     
     static func composeURL(

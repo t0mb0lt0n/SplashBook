@@ -21,9 +21,10 @@ struct HTTPRequest {
         parameters: HTTPParameters? = nil
     ) throws -> URLRequest {
         do {
-            guard let url = try composeURL(with: path, server: "test server", endPoint: "/test endPOint") else {
-                throw URLError.BadTunnel
+            guard let url = try composeURL(with: "https://", server: "randomuser.me", endPoint: "/api") else {
+                throw URLError.BadEndPoint
             }
+            //HTTPRequest.composeURL(with: "https://", server: "randomuser.me", endPoint: "/api")
             print("passed")
             let request = URLRequest(url: url)
             return request

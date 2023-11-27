@@ -22,7 +22,7 @@ struct HTTPRequest {
         parameters: HTTPParameters? = nil
     ) throws -> URLRequest {
         guard let url = composeURL(with: tunnel, server: server, endPoint: endPoint) else {
-            throw HTTPNetworkError.urlComposingError
+            throw NetworkFailure.URLComposerError.composingFailed
         }
         print("passed")
         var request = URLRequest(url: url)
@@ -41,26 +41,26 @@ struct HTTPRequest {
         return composedURL
     }
 
-    static func configureHTTPRequest(
-      from path: String,
-      baseUrl: String,
-      parameters: HTTPParameters? = nil,
-      headers: HTTPHeaders? = nil,
-      and method: HTTPMethod
-    ) throws -> URLRequest {
-      guard let url = URL(string: baseUrl + path) else {
-        throw HTTPNetworkError.missingURL
-
-      }
-      var request = URLRequest(
-        url: url, cachePolicy: .reloadIgnoringLocalCacheData,
-        timeoutInterval: timeoutInterval
-      )
-      request.httpMethod = method.rawValue
-      try configureParametersAndHeaders(
-        parameters: parameters,
-        headers: headers, request: &request
-      )
-      return request
-    }
+//    static func configureHTTPRequest(
+//      from path: String,
+//      baseUrl: String,
+//      parameters: HTTPParameters? = nil,
+//      headers: HTTPHeaders? = nil,
+//      and method: HTTPMethod
+//    ) throws -> URLRequest {
+//      guard let url = URL(string: baseUrl + path) else {
+//        throw HTTPNetworkError.missingURL
+//
+//      }
+//      var request = URLRequest(
+//        url: url, cachePolicy: .reloadIgnoringLocalCacheData,
+//        timeoutInterval: timeoutInterval
+//      )
+//      request.httpMethod = method.rawValue
+//      try configureParametersAndHeaders(
+//        parameters: parameters,
+//        headers: headers, request: &request
+//      )
+//      return request
+//    }
 }

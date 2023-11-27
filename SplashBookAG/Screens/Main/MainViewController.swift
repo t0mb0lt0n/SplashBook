@@ -31,7 +31,6 @@ final class MainViewController: UIViewController {
       let a = try! HTTPRequest.composeURL(with: "https://", server: "randomuser.me", endPoint: "/api")
         //print(type(of: a!))
         var b = URLComposer()
-        b.a = 2
     }
 }
 

@@ -22,17 +22,12 @@ struct HTTPRequest {
         headers: HTTPHeaders? = nil,
         parameters: HTTPParameters? = nil
     ) throws -> URLRequest {
-        do {
-            guard let url = try composeURL(with: tunnel, server: server, endPoint: endPoint) else {
-                throw URLError.BadEndPoint
-            }
-            print("passed")
-            let request = URLRequest(url: url)
-            return request
-        } catch {
-            print(error.localizedDescription)
-            return URLRequest(url: URL(string: "https://")!)
+        guard let url = try composeURL(with: tunnel, server: server, endPoint: endPoint) else {
+            throw HTTPNetworkError.urlComposingError
         }
+        print("passed")
+        let request = URLRequest(url: url)
+        return request
     }
     
     static func composeURL(

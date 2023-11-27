@@ -8,9 +8,8 @@
 import Foundation
 
 enum URLError: String, Error {
-    case
-    case BadTunnel = ""
-    case BadServer = ""
-    case BadEndPoint = ""
-    
+    case composingError = "URL Error - Composing Failure"
+    case BadTunnel = "URL Error - Wrong Tunnel"
+    case BadServer = "URL Error - Wrong Server"
+    case BadEndPoint = "URL Error - Wrong EndPoint"
 }

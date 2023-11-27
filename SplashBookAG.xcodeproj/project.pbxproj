@@ -16,6 +16,7 @@
 		11444C732AD06C6B00E90830 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11444C722AD06C6B00E90830 /* PhotoCell.swift */; };
 		1191F2312AFD78EA007CB246 /* URLEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1191F2302AFD78EA007CB246 /* URLEncoder.swift */; };
 		11958DE92B14E86B0089D784 /* HTTPNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11958DE82B14E86B0089D784 /* HTTPNetworkError.swift */; };
+		11958DEB2B150D5A0089D784 /* URLComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11958DEA2B150D5A0089D784 /* URLComposer.swift */; };
 		11F368112AF0422900670733 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F368102AF0422900670733 /* MainViewModel.swift */; };
 		11F368142AF17DD000670733 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F368132AF17DD000670733 /* MainTabBarController.swift */; };
 		11F368162AF1893900670733 /* UITabBarController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F368152AF1893900670733 /* UITabBarController+Extension.swift */; };
@@ -37,6 +38,7 @@
 		11444C722AD06C6B00E90830 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		1191F2302AFD78EA007CB246 /* URLEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLEncoder.swift; sourceTree = "<group>"; };
 		11958DE82B14E86B0089D784 /* HTTPNetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPNetworkError.swift; sourceTree = "<group>"; };
+		11958DEA2B150D5A0089D784 /* URLComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLComposer.swift; sourceTree = "<group>"; };
 		11F368102AF0422900670733 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		11F368132AF17DD000670733 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		11F368152AF1893900670733 /* UITabBarController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+Extension.swift"; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				11F3681F2AFC183200670733 /* HTTPRequest.swift */,
 				1191F2302AFD78EA007CB246 /* URLEncoder.swift */,
 				11958DE82B14E86B0089D784 /* HTTPNetworkError.swift */,
+				11958DEA2B150D5A0089D784 /* URLComposer.swift */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				11444C462ACF388500E90830 /* AppDelegate.swift in Sources */,
 				11444C712AD0601E00E90830 /* imageModel.swift in Sources */,
 				11F3681E2AFC141700670733 /* HTTPMethod.swift in Sources */,
+				11958DEB2B150D5A0089D784 /* URLComposer.swift in Sources */,
 				11958DE92B14E86B0089D784 /* HTTPNetworkError.swift in Sources */,
 				1191F2312AFD78EA007CB246 /* URLEncoder.swift in Sources */,
 				11F3681C2AFAC02700670733 /* ImageService.swift in Sources */,

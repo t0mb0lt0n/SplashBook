@@ -27,7 +27,7 @@ struct HTTPRequest {
         print("passed")
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
-        request.
+        //request.
         return request
     }
     
@@ -40,7 +40,7 @@ struct HTTPRequest {
         print(composedURL)
         return composedURL
     }
-    
+
     static func configureHTTPRequest(
       from path: String,
       baseUrl: String,

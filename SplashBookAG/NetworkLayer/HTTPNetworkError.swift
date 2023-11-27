@@ -13,6 +13,7 @@ enum HTTPNetworkError: String, Error {
     case notFoundClient404 = "HTTP Error 404 - Not Found (Client)"
     case methodNotAllowed405 = "HTTP Error 405 - Method Not Allowed"
     case internalServerError500 = "HTTP Error 500 - Internal Server Error"
-    
-    
+    case badGateway502 = "HTTP Error 502 - Bad Gateway"
+    case networkAuthRequired511 = "HTTP Error 511 - Network Authentication Required"
+    case connectionTimeout599 = "HTTP Error 599 - Network Connection Timeout"
 }

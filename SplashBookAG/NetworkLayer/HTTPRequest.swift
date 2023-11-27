@@ -14,14 +14,16 @@ struct HTTPRequest {
     static let timeOutInterval = 5
     
     static func HTTPRequestConfuguration(
-        with path: String,
+        with tunnel: String,
+        server: String,
+        endPoint: String,
         method: HTTPMethod,
-        initialURL: String,
+        URL: String,
         headers: HTTPHeaders? = nil,
         parameters: HTTPParameters? = nil
     ) throws -> URLRequest {
         do {
-            guard let url = try composeURL(with: "https://", server: "randomuser.me", endPoint: "/api") else {
+            guard let url = try composeURL(with: tunnel, server: server, endPoint: endPoint) else {
                 throw URLError.BadEndPoint
             }
             print("passed")

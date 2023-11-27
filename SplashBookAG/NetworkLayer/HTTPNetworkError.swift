@@ -8,6 +8,7 @@
 import Foundation
 
 enum HTTPNetworkError: String, Error {
+    case missedHeaders = "Error - Missed Headers"
     case badRequest400 = "HTTP Error 400 - Bad Request"
     case requestTimeout408 = "HTTP Error 408 - Request Timeout"
     case notFoundClient404 = "HTTP Error 404 - Not Found (Client)"

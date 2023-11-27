@@ -7,6 +7,10 @@
 
 import Foundation
 
-enum URLError: Error {
-    case BadTunnel, BadServer, BadEndPoint
+enum URLError: String, Error {
+    case
+    case BadTunnel = ""
+    case BadServer = ""
+    case BadEndPoint = ""
+    
 }

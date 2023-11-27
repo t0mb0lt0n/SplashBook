@@ -12,7 +12,11 @@ struct URLComposer {
         for urlRequest: inout URLRequest,
         with parameters: HTTPParameters
     ) throws {
-        
+        if parameters == nil { return }
+        guard let url = urlRequest.url,
+              let existingParameters = parameters else {
+                  throw 
+              }
     }
     
     

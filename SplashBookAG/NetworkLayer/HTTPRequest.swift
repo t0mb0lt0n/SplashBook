@@ -31,43 +31,37 @@ struct HTTPRequest {
     }
     
     static func composeURL(
-        with tunnel: String?,
-        server: String?,
-        endPoint: String?
+        with tunnel: String,
+        server: String,
+        endPoint: String
     ) throws -> URL? {
-        guard let tunnel else {
-            throw URLError.BadTunnel
+        guard let composedURL = URL(string: tunnel + server + endPoint) else {
+            throw HTTPNetworkError.urlComposingError
         }
-        guard let server else {
-            throw URLError.BadServer
-        }
-        guard let endPoint else {
-            throw URLError.BadEndPoint
-        }
-        let composedURL = URL(string: tunnel + server + endPoint)
+        print(composedURL)
         return composedURL
     }
     
-    static func configureHTTPRequest(
-      from path: String,
-      baseUrl: String,
-      parameters: HTTPParameters? = nil,
-      headers: HTTPHeaders? = nil,
-      and method: HTTPMethod
-    ) throws -> URLRequest {
-      guard let url = URL(string: baseUrl + path) else {
-        throw HTTPNetworkError.missingURL
-        
-      }
-      var request = URLRequest(
-        url: url, cachePolicy: .reloadIgnoringLocalCacheData,
-        timeoutInterval: timeoutInterval
-      )
-      request.httpMethod = method.rawValue
-      try configureParametersAndHeaders(
-        parameters: parameters,
-        headers: headers, request: &request
-      )
-      return request
-    }
+//    static func configureHTTPRequest(
+//      from path: String,
+//      baseUrl: String,
+//      parameters: HTTPParameters? = nil,
+//      headers: HTTPHeaders? = nil,
+//      and method: HTTPMethod
+//    ) throws -> URLRequest {
+//      guard let url = URL(string: baseUrl + path) else {
+//        throw HTTPNetworkError.missingURL
+//
+//      }
+//      var request = URLRequest(
+//        url: url, cachePolicy: .reloadIgnoringLocalCacheData,
+//        timeoutInterval: timeoutInterval
+//      )
+//      request.httpMethod = method.rawValue
+//      try configureParametersAndHeaders(
+//        parameters: parameters,
+//        headers: headers, request: &request
+//      )
+//      return request
+//    }
 }

@@ -1,5 +1,5 @@
 //
-//  HTTPNetworkError.swift
+//  NetworkFailure.swift
 //  SplashBookAG
 //
 //  Created by Alexander on 27.11.2023.

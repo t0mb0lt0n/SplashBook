@@ -15,8 +15,8 @@ struct URLComposer {
         if parameters == nil { return }
         guard let url = urlRequest.url,
               let existingParameters = parameters else {
-                  //throw
-            return
+                  throw 
+            
               }
     }
     

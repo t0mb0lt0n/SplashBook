@@ -9,7 +9,12 @@ import Foundation
 
 struct URLEncoder {
     static func encodeURLComponents(from url: URL) -> URLComponents {
-        let urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false)
+        guard let urlComponents = URLComponents(
+            url: url,
+            resolvingAgainstBaseURL: false
+        ) {
+            return URLComponents(string: "")
+        }
         return urlComponents
     }
 }

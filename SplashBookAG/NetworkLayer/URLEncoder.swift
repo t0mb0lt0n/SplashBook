@@ -8,12 +8,12 @@
 import Foundation
 
 struct URLEncoder {
-    static func encodeURLComponents(from url: URL) -> URLComponents {
+    static func encodeURLComponents(from url: URL) throws -> URLComponents {
         guard let urlComponents = URLComponents(
             url: url,
             resolvingAgainstBaseURL: false
-        ) {
-            return URLComponents(string: "")
+        ) else {
+            throw NetworkFailure.URLComposerError.composingFailed
         }
         return urlComponents
     }

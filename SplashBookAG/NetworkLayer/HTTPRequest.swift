@@ -37,7 +37,6 @@ struct HTTPRequest {
         endPoint: String
     ) -> URL? {
         let composedURL = URL(string: tunnel + server + endPoint)
-        print(composedURL)
         return composedURL
     }
 

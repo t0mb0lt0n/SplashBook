@@ -19,12 +19,18 @@ struct URLEncoder {
             throw NetworkFailure.URLEncoderError.missedURL
         }
         
-        if var components = URLComponents(
+        if var urlComponents = URLComponents(
             url: url,
             resolvingAgainstBaseURL: false
         ),
            !safeUnwrappedParameters.isEmpty {
+            urlComponents.queryItems = [URLQueryItem]()
             
+            for (key, value) in safeUnwrappedParameters {
+                let queryItem = URLQueryItem(name: key, value: value as? String)
+                urlComponents.queryItems?.append(queryItem)
+            }
+            urlRequest.url = urlComponents.url
         }
     }
 }

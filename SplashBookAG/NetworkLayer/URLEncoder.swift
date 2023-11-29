@@ -13,9 +13,18 @@ struct URLEncoder {
         with parameters: HTTPParameters
     ) throws {
         if parameters == nil { return }
-        guard let url = urlRequest.url else {
+        guard let url = urlRequest.url,
+              let safeUnwrappedParameters = parameters
+        else {
             throw NetworkFailure.URLEncoderError.missedURL
         }
         
+        if var components = URLComponents(
+            url: url,
+            resolvingAgainstBaseURL: false
+        ),
+           !safeUnwrappedParameters.isEmpty {
+            
+        }
     }
 }

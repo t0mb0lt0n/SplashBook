@@ -12,7 +12,6 @@ struct URLEncoder {
         from urlRequest: inout URLRequest,
         with parameters: HTTPParameters
     ) throws {
-        if parameters == nil { return }
         guard let url = urlRequest.url,
               let safeUnwrappedParameters = parameters
         else {
@@ -39,7 +38,6 @@ struct URLEncoder {
         from urlRequest: inout URLRequest,
         with headers: HTTPHeaders
     ) throws {
-        if headers == nil { return }
         guard let unwrappedHeaders = headers else {
            throw NetworkFailure.URLEncoderError.missedHeaders
         }

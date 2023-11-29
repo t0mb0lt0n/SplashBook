@@ -8,5 +8,14 @@
 import Foundation
 
 struct URLEncoder {
-    sta
+    static func encodeURLParameters(
+        from urlRequest: inout URLRequest,
+        with parameters: HTTPParameters
+    ) throws {
+        if parameters == nil { return }
+        guard let url = urlRequest.url else {
+            throw NetworkFailure.URLEncoderError.missedURL
+        }
+        
+    }
 }

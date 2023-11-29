@@ -22,22 +22,13 @@ struct HTTPRequest {
         parameters: HTTPParameters? = nil
     ) throws -> URLRequest {
         guard let url = composeURL(with: tunnel, server: server, endPoint: endPoint) else {
-            throw NetworkFailure.URLComposerError.composingFailed
+            throw NetworkFailure.URLEncoderError.encodingFailure
         }
         print("passed")
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
         //request.
         return request
-    }
-    
-    static func composeURL(
-        with tunnel: String,
-        server: String,
-        endPoint: String
-    ) -> URL? {
-        let composedURL = URL(string: tunnel + server + endPoint)
-        return composedURL
     }
 
 //    static func configureHTTPRequest(

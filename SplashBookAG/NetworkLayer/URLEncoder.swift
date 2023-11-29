@@ -47,4 +47,11 @@ struct URLEncoder {
             urlRequest.setValue("\(value)", forHTTPHeaderField: key)
         }
     }
+    
+    static func composeURL(
+        with urlString: String
+    ) -> URL {
+        let urlComponents = URL(string: urlString)
+        
+    }
 }

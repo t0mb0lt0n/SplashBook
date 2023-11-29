@@ -21,7 +21,9 @@ struct HTTPRequest {
         headers: HTTPHeaders? = nil,
         parameters: HTTPParameters? = nil
     ) throws -> URLRequest {
-        
+        guard let url = URL(string: tunnel + server + endPoint) else {
+            throw NetworkFailure.URLEncoderError.missedURL
+        }
        
         return request
     }

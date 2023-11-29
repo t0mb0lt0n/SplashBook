@@ -45,11 +45,8 @@ struct URLEncoder {
         }
         
         for (key, value) in unwrappedHeaders {
-            
+            urlRequest.setValue(key, forHTTPHeaderField: "\(value)")
+            //urlRequest.setValue(key, forHTTPHeaderField: value as! String)
         }
-        
-        
-        
-        
     }
 }

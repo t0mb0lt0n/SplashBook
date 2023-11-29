@@ -21,10 +21,11 @@ struct HTTPRequest {
         headers: HTTPHeaders? = nil,
         parameters: HTTPParameters? = nil
     ) throws -> URLRequest {
-        guard let url = composeURL(with: tunnel, server: server, endPoint: endPoint) else {
-            throw NetworkFailure.URLEncoderError.encodingFailure
-        }
+//        guard let url = composeURL(with: tunnel, server: server, endPoint: endPoint) else {
+//            throw NetworkFailure.URLEncoderError.encodingFailure
+//        }
         print("passed")
+        let url = URL(string: "")!
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
         //request.

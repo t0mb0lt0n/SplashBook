@@ -27,10 +27,6 @@ final class MainViewController: UIViewController {
         view = MainView()
         view.backgroundColor = .secondarySystemBackground
         mainView.collectionView.dataSource = self
-      //try? HTTPRequest.HTTPRequestConfuguration(with: "https://", method: .get, initialURL: "")
-      let a = try! HTTPRequest.composeURL(with: "https://", server: "randomuser.me", endPoint: "/api")
-        //print(type(of: a!))
-        var b = URLComposer()
     }
 }
 

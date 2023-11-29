@@ -29,8 +29,27 @@ struct URLEncoder {
             for (key, value) in safeUnwrappedParameters {
                 let queryItem = URLQueryItem(name: key, value: value as? String)
                 urlComponents.queryItems?.append(queryItem)
+                print(urlComponents.url)
             }
             urlRequest.url = urlComponents.url
         }
+    }
+    
+    static func setHeaders(
+        from urlRequest: inout URLRequest,
+        with headers: HTTPHeaders
+    ) throws {
+        if headers == nil { return }
+        guard let unwrappedHeaders = headers else {
+           throw NetworkFailure.URLEncoderError.missedHeaders
+        }
+        
+        for (key, value) in unwrappedHeaders {
+            
+        }
+        
+        
+        
+        
     }
 }

@@ -10,8 +10,8 @@ import Foundation
 enum NetworkFailure {
     enum URLEncoderError: String, Error {
         case missedURL = "Encoder Error - Missed URL"
-        case encodingFailure = "Encoder Error - Encoding Failure"
         case missedHeaders = "Encoder Error - Missed Headers"
+        case encodingFailure = "Encoder Error - Encoding Failure"
     }
     
     enum HTTPError: String, Error {

@@ -24,16 +24,20 @@ struct HTTPRequest {
         guard let url = URL(string: tunnel + server + endPoint) else {
             throw NetworkFailure.URLEncoderError.missedURL
         }
-       
         var request = URLRequest(
             url: url,
             cachePolicy: .reloadIgnoringLocalCacheData,
             timeoutInterval: timeOutInterval
         )
         request.httpMethod = method.rawValue
+        
+        try composeParametersAndHeaders(
+            parameters: parameters,
+            headers: headers,
+            for: &request
+        )
         return request
     }
-    
     
     static func composeParametersAndHeaders(
         parameters: HTTPParameters?,

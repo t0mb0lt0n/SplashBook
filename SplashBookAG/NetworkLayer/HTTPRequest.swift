@@ -11,9 +11,9 @@ typealias HTTPHeaders = [String: Any]?
 typealias HTTPParameters = [String: Any]?
 
 struct HTTPRequest {
-    static let timeOutInterval = 5
+    static let timeOutInterval = 5.0
     
-    static func composeHTTPRequest(
+    static func configureHTTPRequest(
         with tunnel: String,
         server: String,
         endPoint: String,
@@ -25,6 +25,12 @@ struct HTTPRequest {
             throw NetworkFailure.URLEncoderError.missedURL
         }
        
+        var request = URLRequest(
+            url: url,
+            cachePolicy: .reloadIgnoringLocalCacheData,
+            timeoutInterval: timeOutInterval
+        )
+        request.httpMethod = method.rawValue
         return request
     }
     

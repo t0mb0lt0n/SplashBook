@@ -10,6 +10,8 @@ import Foundation
 protocol ImageService {
    func fetchImages(
     for query: String,
+    page: Int,
+    pageSize: Int,
     completion: (Result<Photo, Error>) -> Void
    )
 }

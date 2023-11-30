@@ -16,7 +16,15 @@ protocol ImageService {
    )
 }
 
-final class ImageService {
+final class ImageServiceImpl: ImageService {
+    func fetchImages(
+        for query: String,
+        page: Int,
+        pageSize: Int,
+        completion: (Result<Photo, Error>) -> Void) {
+        
+    }
+    
     
     init() {
         

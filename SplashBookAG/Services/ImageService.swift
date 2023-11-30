@@ -7,6 +7,13 @@
 
 import Foundation
 
+protocol ImageService {
+   func fetchImages(
+    for query: String,
+    
+   )
+}
+
 final class ImageService {
     
     init() {

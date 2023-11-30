@@ -13,7 +13,7 @@ typealias HTTPParameters = [String: Any]?
 struct HTTPRequest {
     static let timeOutInterval = 5.0
     
-    static func configureHTTPRequest(
+    static func configureURLRequest(
         with tunnel: String,
         server: String,
         endPoint: String,

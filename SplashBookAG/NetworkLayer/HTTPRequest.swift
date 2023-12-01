@@ -15,8 +15,8 @@ struct HTTPRequest {
     
     static func configureURLRequest(
         with scheme: String,
-        server: String,
-        endPoint: String,
+        host: String,
+        path: String,
         method: HTTPMethod,
         headers: HTTPHeaders? = nil,
         parameters: HTTPParameters? = nil

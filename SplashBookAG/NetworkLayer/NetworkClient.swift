@@ -16,11 +16,13 @@ final class NetworkClient {
     
     func downloadData<T: Decodable>(
         scheme: String,
+        host: String,
         path: String,
-        method:
+        paremeters: HTTPParameters,
+        completion: @escaping (Result<T, Error>) -> Void
     ) {}
     
     
-    
+    let a = URLComponents()
     
 }

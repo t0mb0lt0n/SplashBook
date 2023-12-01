@@ -8,8 +8,10 @@
 import Foundation
 
 class NetworkClient {
-    private lazy var session: URLSession
+    private var session: URLSession
     
-    init(session: URLSes
+    init(session: URLSession) {
+        self.session = session
+    }
     
 }

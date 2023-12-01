@@ -7,11 +7,20 @@
 
 import Foundation
 
-class NetworkClient {
+final class NetworkClient {
     private var session: URLSession
     
     init(session: URLSession) {
         self.session = session
     }
+    
+    func downloadData<T: Decodable>(
+        scheme: String,
+        path: String,
+        method:
+    ) {}
+    
+    
+    
     
 }

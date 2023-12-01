@@ -14,14 +14,14 @@ struct HTTPRequest {
     static let timeOutInterval = 5.0
     
     static func configureURLRequest(
-        with tunnel: String,
+        with scheme: String,
         server: String,
         endPoint: String,
         method: HTTPMethod,
         headers: HTTPHeaders? = nil,
         parameters: HTTPParameters? = nil
     ) throws -> URLRequest {
-        guard let url = URL(string: tunnel + server + endPoint) else {
+        guard let url = URL(string: scheme + server + endPoint) else {
             throw NetworkFailure.URLEncoderError.missedURL
         }
         var request = URLRequest(

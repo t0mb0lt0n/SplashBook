@@ -20,9 +20,15 @@ final class NetworkClient {
         path: String,
         paremeters: HTTPParameters,
         completion: @escaping (Result<T, Error>) -> Void
-    ) {}
+    ) {
+        
+        
+    }
+    
+    private func execute() {
+        
+    }
     
     
-    let a = URLComponents()
     
 }

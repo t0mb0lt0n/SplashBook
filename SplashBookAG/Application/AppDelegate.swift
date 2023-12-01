@@ -10,7 +10,7 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
-    private let service = ImageService()
+    private let service = ImageServiceImpl()
     
     func application(
         _ application: UIApplication,

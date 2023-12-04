@@ -28,7 +28,7 @@ final class NetworkClient {
                 path: path,
                 method: .get
             )
-            
+            execute(with: request, completion: comletion)
         } catch {
             comletion(.failure(NetworkFailure.HTTPError.badRequest400))
         }
@@ -42,23 +42,21 @@ final class NetworkClient {
         DispatchQueue.global(qos: .background).async {
             self.session.dataTask(with: request) { data, response, error in
                 DispatchQueue.main.async {
-                    <#code#>
-                }
-                if let error = error {
-                    DispatchQueue.main.async {
+                    if let error = error {
                         completion(.failure(error))
                     }
-                }
-                if let data = data {
-                    let jsonDecoder = JSONDecoder()
-                    do {
-                        let decodedData = try jsonDecoder.decode(T.self, from: data)
-                        completion(.success(decodedData))
-                    } catch {
-                        completion(.failure(NetworkFailure.JSONDecoderError.decodingFailure))
+                    if let data = data {
+                        let jsonDecoder = JSONDecoder()
+                        do {
+                            let decodedData = try jsonDecoder.decode(T.self, from: data)
+                            completion(.success(decodedData))
+                        } catch {
+                            completion(.failure(NetworkFailure.JSONDecoderError.decodingFailure))
+                        }
                     }
                 }
             }
+            .resume()
         }
     }
     

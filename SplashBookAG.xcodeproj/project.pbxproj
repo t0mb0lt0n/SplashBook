@@ -187,11 +187,11 @@
 		11444C6B2ACF434B00E90830 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				116332AE2B1A5B7F00A938EB /* NetworkClient.swift */,
 				11F3681D2AFC141700670733 /* HTTPMethod.swift */,
 				11F3681F2AFC183200670733 /* HTTPRequest.swift */,
 				1191F2302AFD78EA007CB246 /* URLEncoder.swift */,
 				11958DE82B14E86B0089D784 /* NetworkFailure.swift */,
-				116332AE2B1A5B7F00A938EB /* NetworkClient.swift */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";

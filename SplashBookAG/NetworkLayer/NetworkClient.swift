@@ -41,15 +41,25 @@ final class NetworkClient {
     ) {
         DispatchQueue.global(qos: .background).async {
             self.session.dataTask(with: request) { data, response, error in
+                DispatchQueue.main.async {
+                    <#code#>
+                }
+                if let error = error {
+                    DispatchQueue.main.async {
+                        completion(.failure(error))
+                    }
+                }
                 if let data = data {
                     let jsonDecoder = JSONDecoder()
-                    let decodedData = try jsonDecoder.decode(T, from: data)
-                    completion(.success(decodedData))
+                    do {
+                        let decodedData = try jsonDecoder.decode(T.self, from: data)
+                        completion(.success(decodedData))
+                    } catch {
+                        completion(.failure(NetworkFailure.JSONDecoderError.decodingFailure))
+                    }
                 }
-                
             }
         }
-        
     }
     
     

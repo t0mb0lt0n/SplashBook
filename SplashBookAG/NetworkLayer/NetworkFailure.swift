@@ -24,4 +24,8 @@ enum NetworkFailure {
         case networkAuthRequired511 = "HTTP Error 511 - Network Authentication Required"
         case connectionTimeout599 = "HTTP Error 599 - Network Connection Timeout"
     }
+    
+    enum JSONDecoderError: String, Error {
+        case decodingFailure = "JSON Decoder Error - decoding fail"
+    }
 }

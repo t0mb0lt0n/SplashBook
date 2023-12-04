@@ -35,15 +35,17 @@ final class NetworkClient {
         
     }
     
-    
-    
     func execute<T: Decodable>(
         with request: URLRequest,
         completion: @escaping (Result<T, Error>) -> Void
     ) {
         DispatchQueue.global(qos: .background).async {
             self.session.dataTask(with: request) { data, response, error in
-                
+                if let data = data {
+                    let jsonDecoder = JSONDecoder()
+                    let decodedData = try jsonDecoder.decode(T, from: data)
+                    completion(.success(decodedData))
+                }
                 
             }
         }

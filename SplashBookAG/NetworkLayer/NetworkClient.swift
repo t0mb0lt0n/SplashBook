@@ -39,7 +39,6 @@ final class NetworkClient {
         with request: URLRequest,
         completion: @escaping (Result<T, Error>) -> Void
     ) {
-        DispatchQueue.global(qos: .background).async {
             self.session.dataTask(with: request) { data, response, error in
                 DispatchQueue.main.async {
                     if let error = error {
@@ -58,7 +57,6 @@ final class NetworkClient {
             }
             .resume()
         }
-    }
     
     
 }

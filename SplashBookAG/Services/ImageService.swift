@@ -33,4 +33,9 @@ final class ImageServiceImpl: ImageService {
     
 }
 
-
+extension ImageServiceImpl {
+    private enum Constant {
+        static let apiKey = "Some api key"
+        static let baseURL = "Some base URL"
+    }
+}

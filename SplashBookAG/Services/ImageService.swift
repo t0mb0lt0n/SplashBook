@@ -17,6 +17,12 @@ protocol ImageService {
 }
 
 final class ImageServiceImpl: ImageService {
+    private let networkClient: NetworkClient
+    
+    init(networkClient: NetworkClient) {
+        self.networkClient = networkClient
+    }
+    
     func fetchImages(
         for query: String,
         page: Int,
@@ -25,8 +31,6 @@ final class ImageServiceImpl: ImageService {
         
     }
     
-    
-    init() {
-        
-    }
 }
+
+

@@ -31,7 +31,7 @@ struct HTTPRequest {
         )
         request.httpMethod = method.rawValue
         
-        try composeParametersAndHeaders(
+        try prepareParametersAndHeaders(
             parameters: parameters,
             headers: headers,
             for: &request
@@ -39,7 +39,7 @@ struct HTTPRequest {
         return request
     }
     
-    static func composeParametersAndHeaders(
+    static func prepareParametersAndHeaders(
         parameters: HTTPParameters?,
         headers: HTTPHeaders?,
         for request: inout URLRequest

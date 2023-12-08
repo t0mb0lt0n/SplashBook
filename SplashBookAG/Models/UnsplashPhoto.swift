@@ -14,7 +14,7 @@ struct UnsplashPhoto: Decodable {
     let altDescription: String
     let likes: Int
     let likedByUser: Bool
-    let unsplashPhotoLinks: UnsplashPhotoLinks
     let urls: UnsplashPhotoURLs
+    let unsplashPhotoLinks: UnsplashPhotoLinks
     let unsplashUser: UnsplashUser
 }

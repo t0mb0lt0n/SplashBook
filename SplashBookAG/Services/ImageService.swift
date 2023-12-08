@@ -43,7 +43,6 @@ final class ImageServiceImpl: ImageService {
             parameters: parameters,
             completion: completion
         )
-        
     }
     
 }

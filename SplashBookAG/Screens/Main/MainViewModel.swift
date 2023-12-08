@@ -19,6 +19,17 @@ final class MainViewModel {
         source.count
     }
     
+    func findPhotos() {
+        service.searchImages(for: "tree", page: 1, pageSize: 20) { result in
+            switch result {
+            case .success(let photos):
+                print(photos)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
     init(service: ImageService) {
         self.service = service
     }

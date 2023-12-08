@@ -19,7 +19,7 @@ final class NetworkClient {
         host: String,
         path: String,
         parameters: HTTPParameters,
-        comletion: @escaping (Result<T, Error>) -> Void
+        completion: @escaping (Result<T, Error>) -> Void
     ) {
         do {
             let request = try HTTPRequest.configureURLRequest(
@@ -28,9 +28,9 @@ final class NetworkClient {
                 path: path,
                 method: .get
             )
-            execute(with: request, completion: comletion)
+            execute(with: request, completion: completion)
         } catch {
-            comletion(.failure(NetworkFailure.HTTPError.badRequest400))
+            completion(.failure(NetworkFailure.HTTPError.badRequest400))
         }
         
     }

@@ -12,7 +12,7 @@ protocol ImageService {
         for query: String,
         page: Int,
         pageSize: Int,
-        completion: (Result<Photo, Error>) -> Void
+        completion: @escaping (Result<UnsplashPhoto, Error>) -> Void
     )
 }
 
@@ -27,7 +27,7 @@ final class ImageServiceImpl: ImageService {
         for query: String,
         page: Int,
         pageSize: Int,
-        completion: (Result<Photo, Error>) -> Void
+        completion: @escaping (Result<UnsplashPhoto, Error>) -> Void
     ) {
         let parameters = [
             "client_id": Constants.clientID,
@@ -35,6 +35,14 @@ final class ImageServiceImpl: ImageService {
             "page": page,
             "per_page": pageSize
         ] as [String: Any]
+        
+        networkClient.downloadData(
+            scheme: "https",
+            host: "api.unsplash.com",
+            path: "/search/photos",
+            parameters: parameters,
+            completion: completion
+        )
         
     }
     

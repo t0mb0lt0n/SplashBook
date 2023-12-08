@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct UnsplashPhotoLinks: Decodable {
+    let selfLink: String
+    let html: String
+    let download: String
+    let downloadLocation: String
+}

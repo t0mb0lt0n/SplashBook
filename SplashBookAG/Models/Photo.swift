@@ -8,5 +8,13 @@
 import Foundation
 
 struct UnsplashPhoto: Decodable {
-    let 
+    let width: Int
+    let height: Int
+    let description: String
+    let altDescription: String
+    let likes: Int
+    let likedByUser: Bool
+    let photoDownloadLinks: PhotoDownloadLinks
+    let urls: UnsplashPhotoURLs
+    let unsplashUser: UnsplashUser
 }

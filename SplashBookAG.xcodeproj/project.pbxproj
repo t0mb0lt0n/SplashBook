@@ -21,6 +21,7 @@
 		11958DE92B14E86B0089D784 /* NetworkFailure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11958DE82B14E86B0089D784 /* NetworkFailure.swift */; };
 		11C4EFB72B2367B2005CEDAC /* UnsplashPhotoLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C4EFB62B2367B2005CEDAC /* UnsplashPhotoLinks.swift */; };
 		11C4EFB92B2368EB005CEDAC /* UnsplashPhotoURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C4EFB82B2368EB005CEDAC /* UnsplashPhotoURLs.swift */; };
+		11C4EFBB2B236969005CEDAC /* UnsplashUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C4EFBA2B236969005CEDAC /* UnsplashUser.swift */; };
 		11F368112AF0422900670733 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F368102AF0422900670733 /* MainViewModel.swift */; };
 		11F368142AF17DD000670733 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F368132AF17DD000670733 /* MainTabBarController.swift */; };
 		11F368162AF1893900670733 /* UITabBarController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F368152AF1893900670733 /* UITabBarController+Extension.swift */; };
@@ -47,6 +48,7 @@
 		11958DE82B14E86B0089D784 /* NetworkFailure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFailure.swift; sourceTree = "<group>"; };
 		11C4EFB62B2367B2005CEDAC /* UnsplashPhotoLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashPhotoLinks.swift; sourceTree = "<group>"; };
 		11C4EFB82B2368EB005CEDAC /* UnsplashPhotoURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashPhotoURLs.swift; sourceTree = "<group>"; };
+		11C4EFBA2B236969005CEDAC /* UnsplashUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashUser.swift; sourceTree = "<group>"; };
 		11F368102AF0422900670733 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		11F368132AF17DD000670733 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		11F368152AF1893900670733 /* UITabBarController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+Extension.swift"; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				1191B7162B224D150020F7B9 /* SearchResponse.swift */,
 				11C4EFB62B2367B2005CEDAC /* UnsplashPhotoLinks.swift */,
 				11C4EFB82B2368EB005CEDAC /* UnsplashPhotoURLs.swift */,
+				11C4EFBA2B236969005CEDAC /* UnsplashUser.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				11F3681A2AF2F1AD00670733 /* String+Extension.swift in Sources */,
 				11444C5B2ACF3EBB00E90830 /* MainViewController.swift in Sources */,
 				11F368202AFC183200670733 /* HTTPRequest.swift in Sources */,
+				11C4EFBB2B236969005CEDAC /* UnsplashUser.swift in Sources */,
 				11444C732AD06C6B00E90830 /* PhotoCell.swift in Sources */,
 				11F368142AF17DD000670733 /* MainTabBarController.swift in Sources */,
 				11444C6D2ACF441C00E90830 /* MainView.swift in Sources */,

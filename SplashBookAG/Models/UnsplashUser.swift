@@ -18,6 +18,7 @@ struct UnsplashUser: Decodable {
     let bio: String
     let location: String
     let profileImage: UnsplashUserProfileImage
-    
-    
+    let instagramUsername: String
+    let totalLikes: Int
+    let totalPhotos: Int
 }

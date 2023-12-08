@@ -19,6 +19,7 @@
 		1191B7172B224D150020F7B9 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1191B7162B224D150020F7B9 /* SearchResponse.swift */; };
 		1191F2312AFD78EA007CB246 /* URLEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1191F2302AFD78EA007CB246 /* URLEncoder.swift */; };
 		11958DE92B14E86B0089D784 /* NetworkFailure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11958DE82B14E86B0089D784 /* NetworkFailure.swift */; };
+		11C4EFB72B2367B2005CEDAC /* UnsplashPhotoLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C4EFB62B2367B2005CEDAC /* UnsplashPhotoLinks.swift */; };
 		11F368112AF0422900670733 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F368102AF0422900670733 /* MainViewModel.swift */; };
 		11F368142AF17DD000670733 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F368132AF17DD000670733 /* MainTabBarController.swift */; };
 		11F368162AF1893900670733 /* UITabBarController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F368152AF1893900670733 /* UITabBarController+Extension.swift */; };
@@ -43,6 +44,7 @@
 		1191B7162B224D150020F7B9 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		1191F2302AFD78EA007CB246 /* URLEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLEncoder.swift; sourceTree = "<group>"; };
 		11958DE82B14E86B0089D784 /* NetworkFailure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFailure.swift; sourceTree = "<group>"; };
+		11C4EFB62B2367B2005CEDAC /* UnsplashPhotoLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashPhotoLinks.swift; sourceTree = "<group>"; };
 		11F368102AF0422900670733 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		11F368132AF17DD000670733 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		11F368152AF1893900670733 /* UITabBarController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+Extension.swift"; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				11444C702AD0601E00E90830 /* imageModel.swift */,
 				1191B7142B224CFC0020F7B9 /* UnsplashPhoto.swift */,
 				1191B7162B224D150020F7B9 /* SearchResponse.swift */,
+				11C4EFB62B2367B2005CEDAC /* UnsplashPhotoLinks.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11C4EFB72B2367B2005CEDAC /* UnsplashPhotoLinks.swift in Sources */,
 				1191B7152B224CFC0020F7B9 /* UnsplashPhoto.swift in Sources */,
 				11F3681A2AF2F1AD00670733 /* String+Extension.swift in Sources */,
 				11444C5B2ACF3EBB00E90830 /* MainViewController.swift in Sources */,

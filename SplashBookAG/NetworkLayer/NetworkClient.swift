@@ -26,7 +26,9 @@ final class NetworkClient {
                 with: scheme,
                 host: host,
                 path: path,
-                method: .get
+                method: .get,
+                headers: nil,
+                parameters: parameters
             )
             execute(with: request, completion: completion)
         } catch {
@@ -46,6 +48,7 @@ final class NetworkClient {
                     }
                     if let data = data {
                         let jsonDecoder = JSONDecoder()
+                        jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
                         do {
                             let decodedData = try jsonDecoder.decode(T.self, from: data)
                             completion(.success(decodedData))

@@ -27,6 +27,7 @@ final class MainViewController: UIViewController {
         view = MainView()
         view.backgroundColor = .secondarySystemBackground
         mainView.collectionView.dataSource = self
+        viewModel.findPhotos()
     }
 }
 

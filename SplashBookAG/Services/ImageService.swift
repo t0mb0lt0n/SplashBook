@@ -37,14 +37,13 @@ final class ImageServiceImpl: ImageService {
         ] as [String: Any]
         
         networkClient.downloadData(
-            scheme: "https",
+            scheme: "https://",
             host: "api.unsplash.com",
             path: "/search/photos",
             parameters: parameters,
             completion: completion
         )
     }
-    
 }
 
 extension ImageServiceImpl {

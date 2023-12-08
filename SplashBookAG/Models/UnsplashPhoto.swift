@@ -1,5 +1,5 @@
 //
-//  Photo.swift
+//  UnsplashPhoto.swift
 //  SplashBookAG
 //
 //  Created by Alexander on 07.12.2023.
@@ -14,7 +14,7 @@ struct UnsplashPhoto: Decodable {
     let altDescription: String
     let likes: Int
     let likedByUser: Bool
-    let photoDownloadLinks: PhotoDownloadLinks
+    let unsplashPhotoLinks: UnsplashPhotoLinks
     let urls: UnsplashPhotoURLs
     let unsplashUser: UnsplashUser
 }

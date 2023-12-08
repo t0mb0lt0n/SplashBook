@@ -15,5 +15,9 @@ struct UnsplashUser: Decodable {
     let lastName: String
     let twitterUsername: String
     let portfolioURL: String
+    let bio: String
+    let location: String
+    let profileImage: UnsplashUserProfileImage
+    
     
 }

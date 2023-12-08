@@ -20,7 +20,7 @@ final class MainViewModel {
     }
     
     func findPhotos() {
-        service.searchImages(for: "tree", page: 1, pageSize: 20) { [weak self] result in
+        service.searchImages(for: "tree", page: 1, pageSize: 20) { result in
             switch result {
             case .success(let photos):
                 print(photos)

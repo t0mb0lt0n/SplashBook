@@ -10,7 +10,6 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
-    //private let service = ImageServiceImpl(networkClient: .init(session: .))
     
     func application(
     _ application: UIApplication,

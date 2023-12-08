@@ -12,7 +12,7 @@ protocol ImageService {
         for query: String,
         page: Int,
         pageSize: Int,
-        completion: @escaping (Result<UnsplashPhoto, Error>) -> Void
+        completion: @escaping (Result<UnsplashSearchResponse, Error>) -> Void
     )
 }
 
@@ -27,7 +27,7 @@ final class ImageServiceImpl: ImageService {
         for query: String,
         page: Int,
         pageSize: Int,
-        completion: @escaping (Result<UnsplashPhoto, Error>) -> Void
+        completion: @escaping (Result<UnsplashSearchResponse, Error>) -> Void
     ) {
         let parameters = [
             "client_id": Constants.clientID,

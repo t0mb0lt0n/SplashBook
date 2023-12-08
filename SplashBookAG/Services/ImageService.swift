@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ImageService {
-    func ыуImages(
+    func searchImages(
         for query: String,
         page: Int,
         pageSize: Int,
@@ -23,19 +23,27 @@ final class ImageServiceImpl: ImageService {
         self.networkClient = networkClient
     }
     
-    func fetchImages(
+    func searchImages(
         for query: String,
         page: Int,
         pageSize: Int,
-        completion: (Result<Photo, Error>) -> Void) {
+        completion: (Result<Photo, Error>) -> Void
+    ) {
+        let parameters = [
+            "client_id": Constants.clientID,
+            "query": query,
+            "page": page,
+            "per_page": pageSize
+        ] as [String: Any]
         
     }
     
 }
 
 extension ImageServiceImpl {
-    private enum Constant {
+    private enum Constants {
         static let apiKey = "Some api key"
-        static let baseURL = "Some base URL"
+        static let baseURL = "https://api.unsplash.com"
+        static let clientID = "T8KSuS49xCEo9qYDLmYLohNwB95ePuJvqMIUrH5aQKg"
     }
 }

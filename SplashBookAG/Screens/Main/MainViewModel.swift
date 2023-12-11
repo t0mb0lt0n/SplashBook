@@ -21,7 +21,7 @@ final class MainViewModel {
     
     func findPhotos() {
         service.searchImages(
-            for: "park",
+            for: "New York",
             page: 30,
             pageSize: 30
         ) { result in

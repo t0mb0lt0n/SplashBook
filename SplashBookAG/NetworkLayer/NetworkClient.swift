@@ -41,30 +41,31 @@ final class NetworkClient {
         with request: URLRequest,
         completion: @escaping (Result<T, Error>) -> Void
     ) {
-            self.session.dataTask(with: request) { data, response, error in
-                DispatchQueue.main.async {
-                    if let error = error {
-                        completion(.failure(error))
-                    }
-                    if let data = data {
-                        print("data passed")
-                        print(data)
-                        let jsonDecoder = JSONDecoder()
-                        jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
-                        do {
-                            let decodedData = try jsonDecoder.decode(T.self, from: data)
-                            //let decodedData = decode(data)
-                            completion(.success(decodedData))
-                        } catch {
-                            completion(.failure(NetworkFailure.JSONDecoderError.decodingFailure))
-                        }
+        self.session.dataTask(with: request) { data, response, error in
+            DispatchQueue.main.async {
+                if let error = error {
+                    completion(.failure(error))
+                }
+                if let data = data {
+                    print("data passed")
+                    print(data)
+                    let jsonDecoder = JSONDecoder()
+                    jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
+                    do {
+                        let decodedData = try jsonDecoder.decode(T.self, from: data)
+                        //let decodedData = decode(data)
+                        completion(.success(decodedData))
+                    } catch {
+                        completion(.failure(NetworkFailure.JSONDecoderError.decodingFailure))
                     }
                 }
             }
-            .resume()
         }
+        .resume()
+    }
+    
     func decode<T: Decodable>(_ data: Data) -> T? {
-      try? JSONDecoder().decode(T.self, from: data)
+        try? JSONDecoder().decode(T.self, from: data)
     }
     
     

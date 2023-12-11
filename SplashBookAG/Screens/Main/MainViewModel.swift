@@ -8,26 +8,27 @@
 import Foundation
 
 final class MainViewModel {
-    private(set) var source = Source.randomPhotos(with: 30)
     private let service: ImageService
+    private(set) var photos: [UnsplashPhoto] = .init()
     
     var numberOfSections: Int {
         1
     }
     
     var numberOfItems: Int {
-        source.count
+        photos.count
     }
     
     func findPhotos() {
         service.searchImages(
             for: "New York",
-            page: 30,
-            pageSize: 30
+            page: 2,
+            pageSize: 2
         ) { result in
             switch result {
             case .success(let photos):
-                print(photos.results)
+                //print(photos.results)
+                print(photos.results.count)
             case .failure(let error):
                 print(error.localizedDescription)
             }

@@ -47,13 +47,11 @@ final class NetworkClient {
                     completion(.failure(error))
                 }
                 if let data = data {
-                    print("data passed")
                     print(data)
                     let jsonDecoder = JSONDecoder()
                     jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
                     do {
                         let decodedData = try jsonDecoder.decode(T.self, from: data)
-                        //let decodedData = decode(data)
                         completion(.success(decodedData))
                     } catch {
                         completion(.failure(NetworkFailure.JSONDecoderError.decodingFailure))

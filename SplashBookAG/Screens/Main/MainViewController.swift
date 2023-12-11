@@ -28,6 +28,8 @@ final class MainViewController: UIViewController {
         view.backgroundColor = .secondarySystemBackground
         mainView.collectionView.dataSource = self
         viewModel.findPhotos()
+        mainView.collectionView.reloadData()
+        print("----------------------\(viewModel.photos.count)")
     }
 }
 
@@ -53,15 +55,23 @@ extension MainViewController: UICollectionViewDataSource {
         }
         
         DispatchQueue.main.async {
-            guard let image = UIImage(named: self.viewModel.source[indexPath.item].imageName) else {
-                print("missed image")
+            guard let image = UIImage(named: self.viewModel.photos[indexPath.item].unsplashPhotoLinks.download) else {
+                print("--------------missed image------------")
                 return
             }
+//            guard let image = UIImage(named: self.viewModel.source[indexPath.item].imageName) else {
+//                print("missed image")
+//                return
+//            }
             cell.setupSubviews(
                 imageView: image,
                 authorNameLabel: .defaultAuthorName
             )
+            print("----------------------\(self.viewModel.photos.count)")
+            self.mainView.collectionView.reloadData()
         }
+        self.mainView.collectionView.reloadData()
+        print("----------------------\(self.viewModel.photos.count)")
         return cell
     }
 }

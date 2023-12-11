@@ -13,9 +13,9 @@ struct UnsplashPhoto: Decodable {
     let description: String?
     let altDescription: String?
     let urls: UnsplashPhotoURLs
-    //let unsplashPhotoLinks: UnsplashPhotoLinks
     let likes: Int
-    //let likedByUser: String
+    let unsplashPhotoLinks: UnsplashPhotoLinks
+    let likedByUser: String
     //let unsplashUser: UnsplashUser
     
     enum CodingKeys: String, CodingKey {
@@ -25,6 +25,7 @@ struct UnsplashPhoto: Decodable {
         case altDescription
         case urls
         case likes
+        case unsplashPhotoLinks = "links"
         //case likedByUser
         //case unsplashPhotoLinks = "links"
         //case unsplashUser = "user"

@@ -10,9 +10,9 @@ import Foundation
 struct UnsplashPhoto: Decodable {
     let width: Int
     let height: Int
-    let description: String
-    let altDescription: String
-    //let urls: UnsplashPhotoURLs
+    let description: String?
+    let altDescription: String?
+    let urls: UnsplashPhotoURLs
     //let unsplashPhotoLinks: UnsplashPhotoLinks
     let likes: Int
     //let likedByUser: String
@@ -23,7 +23,7 @@ struct UnsplashPhoto: Decodable {
         case height
         case description
         case altDescription
-        //case urls
+        case urls
         case likes
         //case likedByUser
         //case unsplashPhotoLinks = "links"

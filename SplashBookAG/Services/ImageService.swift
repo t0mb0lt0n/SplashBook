@@ -36,6 +36,7 @@ final class ImageServiceImpl: ImageService {
             "per_page": pageSize
         ] as [String: Any]
         
+        print(parameters)
         networkClient.downloadData(
             scheme: "https://",
             host: "api.unsplash.com",

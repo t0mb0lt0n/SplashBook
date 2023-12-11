@@ -168,8 +168,8 @@
 			isa = PBXGroup;
 			children = (
 				11444C702AD0601E00E90830 /* imageModel.swift */,
-				1191B7142B224CFC0020F7B9 /* UnsplashPhoto.swift */,
 				1191B7162B224D150020F7B9 /* UnsplashSearchResponse.swift */,
+				1191B7142B224CFC0020F7B9 /* UnsplashPhoto.swift */,
 				11C4EFB62B2367B2005CEDAC /* UnsplashPhotoLinks.swift */,
 				11C4EFB82B2368EB005CEDAC /* UnsplashPhotoURLs.swift */,
 				11C4EFBA2B236969005CEDAC /* UnsplashUser.swift */,

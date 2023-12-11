@@ -20,10 +20,14 @@ final class MainViewModel {
     }
     
     func findPhotos() {
-        service.searchImages(for: "tree", page: 1, pageSize: 20) { result in
+        service.searchImages(
+            for: "park",
+            page: 30,
+            pageSize: 30
+        ) { result in
             switch result {
             case .success(let photos):
-                print(photos)
+                print(photos.results)
             case .failure(let error):
                 print(error.localizedDescription)
             }

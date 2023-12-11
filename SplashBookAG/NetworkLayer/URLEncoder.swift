@@ -26,7 +26,7 @@ struct URLEncoder {
             urlComponents.queryItems = [URLQueryItem]()
             
             for (key, value) in safeUnwrappedParameters {
-                let queryItem = URLQueryItem(name: key, value: value as? String)
+                let queryItem = URLQueryItem(name: key, value: "\(value)")
                 urlComponents.queryItems?.append(queryItem)
                 print(urlComponents.url)
             }

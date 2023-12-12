@@ -27,9 +27,19 @@ final class MainViewController: UIViewController {
         view = MainView()
         view.backgroundColor = .secondarySystemBackground
         mainView.collectionView.dataSource = self
+        setupViewModel()
         viewModel.findPhotos()
-        mainView.collectionView.reloadData()
         print("----------------------\(viewModel.photos.count)")
+    }
+    
+    private func setupViewModel() {
+        viewModel.reloadClosure = { [weak self] in
+            self?.updateContent()
+        }
+    }
+    
+    private func updateContent() {
+        mainView.collectionView.reloadData()
     }
 }
 
@@ -54,24 +64,22 @@ extension MainViewController: UICollectionViewDataSource {
             fatalError("Cell dequeue error")
         }
         
-        DispatchQueue.main.async {
-            guard let image = UIImage(named: self.viewModel.photos[indexPath.item].unsplashPhotoLinks.download) else {
-                print("--------------missed image------------")
-                return
-            }
-//            guard let image = UIImage(named: self.viewModel.source[indexPath.item].imageName) else {
-//                print("missed image")
-//                return
-//            }
-            cell.setupSubviews(
-                imageView: image,
-                authorNameLabel: .defaultAuthorName
-            )
-            print("----------------------\(self.viewModel.photos.count)")
-            self.mainView.collectionView.reloadData()
-        }
-        self.mainView.collectionView.reloadData()
-        print("----------------------\(self.viewModel.photos.count)")
+        let urlStr = URL(string: viewModel.photos[indexPath.row].urls.small)
+        guard let data: Data = try? Data(contentsOf: urlStr!) else {
+            print("cell empty")
+            return cell }
+        guard  let image = UIImage(data: data) else {
+            print("cell empty")
+            return cell}
+        
+        let authorName = viewModel.photos[indexPath.row].unsplashUser.name ?? "default author name"
+        
+        cell.setupSubviews(
+            imageView: image,
+            authorNameLabel: authorName
+        )
         return cell
     }
 }
+
+

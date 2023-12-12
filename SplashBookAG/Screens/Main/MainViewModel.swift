@@ -10,6 +10,7 @@ import Foundation
 final class MainViewModel {
     private let service: ImageService
     private(set) var photos: [UnsplashPhoto] = .init()
+    var reloadClosure: (() -> Void)?
     
     var numberOfSections: Int {
         1
@@ -17,6 +18,10 @@ final class MainViewModel {
     
     var numberOfItems: Int {
         photos.count
+    }
+    
+    init(service: ImageService) {
+        self.service = service
     }
     
     func findPhotos() {
@@ -27,15 +32,12 @@ final class MainViewModel {
         ) { result in
             switch result {
             case .success(let photos):
-                //print(photos.results)
-                print(photos.results.count)
+                self.photos = photos.results
+                self.reloadClosure?()
+                print(self.photos.count)
             case .failure(let error):
                 print(error.localizedDescription)
             }
         }
-    }
-    
-    init(service: ImageService) {
-        self.service = service
     }
 }

@@ -11,7 +11,7 @@ final class MainView: UIView {
     lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView()
         //collectionView.contentInsetAdjustmentBehavior = .always
-        collectionView.preferredLayoutAttributesFitting = .auto
+        
         return collectionView
     }()
     

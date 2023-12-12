@@ -21,6 +21,20 @@ class PhotoCell: UICollectionViewCell {
         return label
     }()
     
+    private let likeImage: UIImageView = {
+        let imageView = UIImageView()
+        let likeImage = UIImage(systemName: "heart.fill")?.withTintColor(.systemOrange, renderingMode: .alwaysOriginal)
+        imageView.image = likeImage
+        return imageView
+    }()
+    
+    private let likeCountLabel: UILabel = {
+        let label = UILabel()
+        label.text = "1000"
+        label.textColor = .systemOrange
+        return label
+    }()
+    
     override init(frame: CGRect) {
         super .init(frame: frame)
         setupCell()
@@ -33,12 +47,14 @@ class PhotoCell: UICollectionViewCell {
     
     private func setupCell() {
         [imageView,
-         authorNameLabel
+         authorNameLabel,
+         likeImage,
+         likeCountLabel
         ].forEach { subview in
             contentView.addSubview(subview)
             subview.translatesAutoresizingMaskIntoConstraints = false
         }
-        backgroundColor = .green
+        //backgroundColor = .green
     }
     
     func setupSubviews(imageView: UIImage, authorNameLabel: String) {
@@ -51,12 +67,22 @@ class PhotoCell: UICollectionViewCell {
             imageView.topAnchor.constraint(equalTo: contentView.topAnchor),
             imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: Constants.imageViewBottomSpacing),
             
-            authorNameLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -Constants.authorNameBottomSpacing),
+            authorNameLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: Constants.authorNameBottomSpacing),
             authorNameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Constants.authorNameLeadingSpacing),
             authorNameLabel.widthAnchor.constraint(equalToConstant: Constants.authorNameWidth),
             authorNameLabel.heightAnchor.constraint(equalToConstant: Constants.authorNameHeight),
+            
+            likeImage.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: Constants.authorNameBottomSpacing),
+            likeImage.leadingAnchor.constraint(equalTo: authorNameLabel.trailingAnchor, constant: 5),
+            likeImage.widthAnchor.constraint(equalToConstant: 14),
+            likeImage.heightAnchor.constraint(equalToConstant: 14),
+            
+            likeCountLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: Constants.authorNameBottomSpacing),
+            likeCountLabel.leadingAnchor.constraint(equalTo: likeImage.trailingAnchor, constant: 3),
+            likeCountLabel.widthAnchor.constraint(equalToConstant: 100),
+            likeCountLabel.heightAnchor.constraint(equalToConstant: 14),
         ])
     }
 }
@@ -65,9 +91,10 @@ class PhotoCell: UICollectionViewCell {
 
 extension PhotoCell {
     private enum Constants {
-        static let authorNameBottomSpacing: CGFloat = 5
-        static let authorNameLeadingSpacing: CGFloat = 5
-        static let authorNameWidth: CGFloat = 150
+        static let imageViewBottomSpacing: CGFloat = -22
+        static let authorNameBottomSpacing: CGFloat = -5
+        static let authorNameLeadingSpacing: CGFloat = 0
+        static let authorNameWidth: CGFloat = 120
         static let authorNameHeight: CGFloat = 14
         static let authorNameFontSize: CGFloat = 14
     }

@@ -24,13 +24,13 @@ final class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.changeNavigationBarStyle(to: <#T##UIColor#>)
+        navigationController?.navigationBar.changeNavigationBarStyle(to: Constants.systemOrange)
         view = MainView()
         view.backgroundColor = .secondarySystemBackground
         mainView.collectionView.dataSource = self
         setupViewModel()
         viewModel.findPhotos()
-        print("----------------------\(viewModel.photos.count)")
+        print("------viewDidLoad--------\(viewModel.photos.count)")
     }
     
     private func setupViewModel() {

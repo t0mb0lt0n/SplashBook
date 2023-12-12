@@ -34,7 +34,6 @@ final class NetworkClient {
         } catch {
             completion(.failure(NetworkFailure.HTTPError.badRequest400))
         }
-        
     }
     
     func execute<T: Decodable>(

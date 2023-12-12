@@ -44,14 +44,6 @@ struct URLEncoder {
         
         for (key, value) in unwrappedHeaders {
             urlRequest.setValue(value as? String, forHTTPHeaderField: key)
-            //urlRequest.setValue("\(value)", forHTTPHeaderField: key)
         }
     }
-    
-//    static func composeURL(
-//        with urlString: String
-//    ) -> URL {
-//        let urlComponents = URL(string: urlString)
-//
-//    }
 }

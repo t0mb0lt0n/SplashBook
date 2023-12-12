@@ -10,7 +10,8 @@ import UIKit
 final class MainView: UIView {
     lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView()
-        collectionView.contentInsetAdjustmentBehavior = .always
+        //collectionView.contentInsetAdjustmentBehavior = .always
+        collectionView.preferredLayoutAttributesFitting = .auto
         return collectionView
     }()
     
@@ -30,6 +31,7 @@ final class MainView: UIView {
         collectionView.register(PhotoCell.self, forCellWithReuseIdentifier: "\(PhotoCell.self)")
         collectionView.alwaysBounceVertical = true
         collectionView.backgroundColor = .secondarySystemBackground
+        
     }
     
     private func setupViews() {
@@ -53,6 +55,7 @@ final class MainView: UIView {
         layout.itemSize = .init(width: Constants.itemWidth, height: Constants.itemHeight)
         layout.minimumLineSpacing = Constants.lineSpacing
         layout.minimumInteritemSpacing = Constants.interItemSpacing
+        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         return layout
     }
 }

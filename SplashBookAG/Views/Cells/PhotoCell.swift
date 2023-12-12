@@ -55,7 +55,7 @@ class PhotoCell: UICollectionViewCell {
             contentView.addSubview(subview)
             subview.translatesAutoresizingMaskIntoConstraints = false
         }
-        //backgroundColor = .green
+        backgroundColor = .green
     }
     
     func setupSubviews(imageView: UIImage, authorNameLabel: String) {

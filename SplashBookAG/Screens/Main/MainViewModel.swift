@@ -27,8 +27,8 @@ final class MainViewModel {
     func findPhotos() {
         service.searchImages(
             for: "New York",
-            page: 2,
-            pageSize: 2
+            page: 1,
+            pageSize: 30
         ) { result in
             switch result {
             case .success(let photos):

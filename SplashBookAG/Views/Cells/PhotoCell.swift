@@ -10,6 +10,7 @@ import UIKit
 class PhotoCell: UICollectionViewCell {
     private let imageView: UIImageView = {
         let imageView = UIImageView()
+        //imageView.contentMode = .scaleAspectFit
         return imageView
     }()
     
@@ -91,7 +92,7 @@ class PhotoCell: UICollectionViewCell {
 
 extension PhotoCell {
     private enum Constants {
-        static let imageViewBottomSpacing: CGFloat = -22
+        static let imageViewBottomSpacing: CGFloat = 0
         static let authorNameBottomSpacing: CGFloat = -5
         static let authorNameLeadingSpacing: CGFloat = 0
         static let authorNameWidth: CGFloat = 120

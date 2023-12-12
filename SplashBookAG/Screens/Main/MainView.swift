@@ -10,6 +10,7 @@ import UIKit
 final class MainView: UIView {
     lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView()
+        collectionView.contentInsetAdjustmentBehavior = .always
         return collectionView
     }()
     
@@ -41,10 +42,8 @@ final class MainView: UIView {
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-            collectionView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor,
-                                                    constant: Constants.borderSpacing),
-            collectionView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor,
-                                                     constant: -Constants.borderSpacing),
+            collectionView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: Constants.borderSpacing),
+            collectionView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: Constants.borderSpacing),
             collectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
         ])
     }
@@ -62,7 +61,7 @@ final class MainView: UIView {
 
 extension MainView {
     private enum Constants {
-        static let borderSpacing: CGFloat = 10
+        static let borderSpacing: CGFloat = -10
         static let lineSpacing: CGFloat = 3
         static let interItemSpacing: CGFloat = 3
         static let itemWidth: CGFloat = 195

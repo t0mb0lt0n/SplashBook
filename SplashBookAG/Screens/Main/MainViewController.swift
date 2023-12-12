@@ -24,7 +24,7 @@ final class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.changeNavigationBarStyle()
+        navigationController?.navigationBar.changeNavigationBarStyle(to: <#T##UIColor#>)
         view = MainView()
         view.backgroundColor = .secondarySystemBackground
         mainView.collectionView.dataSource = self
@@ -80,6 +80,13 @@ extension MainViewController: UICollectionViewDataSource {
             authorNameLabel: authorName
         )
         return cell
+    }
+}
+
+extension MainViewController {
+    private enum Constants {
+        static let systemOrange: UIColor = .systemOrange
+        static let systemDefault: UIColor = .white
     }
 }
 

@@ -15,7 +15,6 @@ final class MainViewController: UIViewController {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
         title = .editoralTitle
-        navigationController?.navigationBar.changeNavigationBarStyle()
         tabBarItem.image = UIImage(systemName: "camera.fill")
     }
     
@@ -25,6 +24,7 @@ final class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.changeNavigationBarStyle()
         view = MainView()
         view.backgroundColor = .secondarySystemBackground
         mainView.collectionView.dataSource = self

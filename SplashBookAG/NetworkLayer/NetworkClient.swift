@@ -64,6 +64,4 @@ final class NetworkClient {
     func decode<T: Decodable>(_ data: Data) -> T? {
         try? JSONDecoder().decode(T.self, from: data)
     }
-    
-    
 }

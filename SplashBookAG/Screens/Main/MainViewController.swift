@@ -87,8 +87,9 @@ extension MainViewController: UICollectionViewDataSource {
 
 extension MainViewController {
     private enum Constants {
-        static let systemOrange: UIColor = .systemOrange
-        static let systemDefault: UIColor = .white
+        static let systemColorOrange: UIColor = .systemOrange
+        static let systemColorDefaultWhite: UIColor = .white
+        
     }
 }
 

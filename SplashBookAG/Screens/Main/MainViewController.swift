@@ -24,7 +24,9 @@ final class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.changeNavigationBarStyle(to: Constants.systemOrange)
+        navigationController?.navigationBar.changeNavigationBarStyle(
+            to: Constants.systemOrange
+        )
         view = MainView()
         view.backgroundColor = .secondarySystemBackground
         mainView.collectionView.dataSource = self

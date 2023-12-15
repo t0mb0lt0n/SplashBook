@@ -62,15 +62,15 @@ final class MainView: UIView {
         //Item
         let singleItem = NSCollectionLayoutItem(
             layoutSize: NSCollectionLayoutSize(
-                widthDimension: .fractionalWidth(1/2),
-                heightDimension: .fractionalHeight(1/3)
+                widthDimension: .absolute(100),
+                heightDimension: .absolute(200)
             )
         )
         
         let dubleItem = NSCollectionLayoutItem(
             layoutSize: NSCollectionLayoutSize(
-                widthDimension: .absolute(250),
-                heightDimension: .absolute(150)
+                widthDimension: .absolute(300),
+                heightDimension: .absolute(200)
             )
         )
         
@@ -91,10 +91,10 @@ final class MainView: UIView {
         
         let verticalStackGroup = NSCollectionLayoutGroup.vertical(
             layoutSize: NSCollectionLayoutSize(
-                widthDimension: .fractionalWidth(1),
-                heightDimension: .fractionalHeight(1)
+                widthDimension: .absolute(300),
+                heightDimension: .absolute(200)
             ),
-            subitems: [dubleItem, dubleItem]
+            subitems: [dubleItem]
         )
         
         let horizontalStackGroup = NSCollectionLayoutGroup.horizontal(
@@ -111,7 +111,7 @@ final class MainView: UIView {
                 heightDimension: .fractionalHeight(1)
             ),
             subitems: [
-                horizontalStackGroup,
+                singleItem,
                 verticalStackGroup
             ]
         )

@@ -26,7 +26,7 @@ final class MainView: UIView {
     }
     
     private func setupCollectionView() {
-        collectionView = UICollectionView(frame: .zero, collectionViewLayout: setupFlowLayout())
+        collectionView = UICollectionView(frame: .zero, collectionViewLayout: setupCompositionalLayout())
         collectionView.register(PhotoCell.self, forCellWithReuseIdentifier: "\(PhotoCell.self)")
         collectionView.alwaysBounceVertical = true
         collectionView.backgroundColor = .secondarySystemBackground
@@ -58,17 +58,38 @@ final class MainView: UIView {
         return layout
     }
     
-    func setupCompositionalLayout() -> UICollectionViewCompositionalLayout
+    func setupCompositionalLayout() -> UICollectionViewCompositionalLayout {
+        //Item
+        let item = NSCollectionLayoutItem(
+            layoutSize: NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(1/2),
+                heightDimension: .fractionalHeight(1)
+            )
+        )
+        //Group
+        let group = NSCollectionLayoutGroup.horizontal(
+            layoutSize: NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(1),
+                heightDimension: .fractionalHeight(2/5)
+            ),
+            subitem: item,
+            count: 2
+        )
+        //Sections
+        let section = NSCollectionLayoutSection(group: group)
+        //Return
+        return UICollectionViewCompositionalLayout(section: section)
+    }
 }
 
 //MARK: - Constants
 
 extension MainView {
     private enum Constants {
-        static let borderSpacing: CGFloat = 0
-        static let lineSpacing: CGFloat = 0
-        static let interItemSpacing: CGFloat = 0
-        static let itemWidth: CGFloat = 10
-        static let itemHeight: CGFloat = 10
+        static let borderSpacing: CGFloat = 1
+        static let lineSpacing: CGFloat = 1
+        static let interItemSpacing: CGFloat = 1
+        static let itemWidth: CGFloat = 50
+        static let itemHeight: CGFloat = 50
     }
 }

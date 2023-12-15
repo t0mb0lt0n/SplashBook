@@ -62,7 +62,7 @@ final class MainView: UIView {
         //Item
         let item = NSCollectionLayoutItem(
             layoutSize: NSCollectionLayoutSize(
-                widthDimension: .fractionalWidth(2/3),
+                widthDimension: .fractionalWidth(1/2),
                 heightDimension: .fractionalHeight(1)
             )
         )
@@ -73,6 +73,8 @@ final class MainView: UIView {
             bottom: 3,
             trailing: 3
         )
+        
+        
         
         let verticalStackItem = NSCollectionLayoutItem(
             layoutSize: NSCollectionLayoutSize(
@@ -89,8 +91,8 @@ final class MainView: UIView {
         //Group
         let verticalStackGroup = NSCollectionLayoutGroup.vertical(
             layoutSize: NSCollectionLayoutSize(
-                widthDimension: .fractionalWidth(1/3),
-                heightDimension: .fractionalHeight(1)
+                widthDimension: .fractionalWidth(1/2),
+                heightDimension: .absolute(185)
             ),
             repeatingSubitem: verticalStackItem,
             count: 2
@@ -98,28 +100,16 @@ final class MainView: UIView {
         
         let group = NSCollectionLayoutGroup.horizontal(
             layoutSize: NSCollectionLayoutSize(
-                widthDimension: .fractionalWidth(1),
-                heightDimension: .fractionalHeight(3/5)
+                widthDimension: .fractionalWidth(0.7),
+                heightDimension: .fractionalHeight(1/2)
             ),
             subitems: [
                 item,
                 verticalStackGroup
             ]
         )
-        verticalStackItem.contentInsets = NSDirectionalEdgeInsets(
-            top: 3,
-            leading: 3,
-            bottom: 3,
-            trailing: 3
-        )
-        
-        verticalStackGroup.contentInsets = NSDirectionalEdgeInsets(
-            top: 3,
-            leading: 3,
-            bottom:3,
-            trailing: 3
-        )
-        
+        let section = NSCollectionLayoutSection(group: group)
+        let compositionLayout = UICollectionViewCompositionalLayout(section: section)
 //        let group = NSCollectionLayoutGroup.horizontal(
 //            layoutSize: NSCollectionLayoutSize(
 //                widthDimension: .fractionalWidth(1),
@@ -129,9 +119,9 @@ final class MainView: UIView {
 //            count: 2
 //        )
         //Sections
-        let section = NSCollectionLayoutSection(group: group)
+        //let section = NSCollectionLayoutSection(group: group)
         //Return
-        return UICollectionViewCompositionalLayout(section: section)
+        return compositionLayout
     }
 }
 

@@ -57,16 +57,18 @@ final class MainView: UIView {
         layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         return layout
     }
+    
+    func setupCompositionalLayout() -> UICollectionViewCompositionalLayout
 }
 
 //MARK: - Constants
 
 extension MainView {
     private enum Constants {
-        static let borderSpacing: CGFloat = -10
-        static let lineSpacing: CGFloat = 3
-        static let interItemSpacing: CGFloat = 3
-        static let itemWidth: CGFloat = 195
-        static let itemHeight: CGFloat = 140
+        static let borderSpacing: CGFloat = 0
+        static let lineSpacing: CGFloat = 0
+        static let interItemSpacing: CGFloat = 0
+        static let itemWidth: CGFloat = 10
+        static let itemHeight: CGFloat = 10
     }
 }

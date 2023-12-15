@@ -62,19 +62,46 @@ final class MainView: UIView {
         //Item
         let item = NSCollectionLayoutItem(
             layoutSize: NSCollectionLayoutSize(
-                widthDimension: .fractionalWidth(1/2),
+                widthDimension: .fractionalWidth(2/3),
                 heightDimension: .fractionalHeight(1)
             )
         )
+        
+        let verticalStackItem = NSCollectionLayoutItem(
+            layoutSize: NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(1),
+                heightDimension: .fractionalHeight(1/2)
+            )
+        )
         //Group
+        let verticalStackGroup = NSCollectionLayoutGroup.vertical(
+            layoutSize: NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(1/3),
+                heightDimension: .fractionalHeight(1)
+            ),
+            repeatingSubitem: verticalStackItem,
+            count: 2
+        )
+        
         let group = NSCollectionLayoutGroup.horizontal(
             layoutSize: NSCollectionLayoutSize(
                 widthDimension: .fractionalWidth(1),
-                heightDimension: .fractionalHeight(2/5)
+                heightDimension: .fractionalHeight(3/5)
             ),
-            subitem: item,
-            count: 2
+            subitems: [
+                item,
+                verticalStackGroup
+            ]
         )
+        
+//        let group = NSCollectionLayoutGroup.horizontal(
+//            layoutSize: NSCollectionLayoutSize(
+//                widthDimension: .fractionalWidth(1),
+//                heightDimension: .fractionalHeight(2/5)
+//            ),
+//            subitem: item,
+//            count: 2
+//        )
         //Sections
         let section = NSCollectionLayoutSection(group: group)
         //Return

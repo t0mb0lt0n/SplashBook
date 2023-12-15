@@ -25,7 +25,12 @@ class PhotoCell: UICollectionViewCell {
     
     private let likeImage: UIImageView = {
         let imageView = UIImageView()
-        let likeImage = UIImage(systemName: "heart")?.withTintColor(.systemOrange, renderingMode: .alwaysOriginal)
+        let likeImage = UIImage(
+            systemName: "heart"
+        )?.withTintColor(
+            .systemOrange,
+            renderingMode: .alwaysOriginal
+        )
         imageView.image = likeImage
         return imageView
     }()

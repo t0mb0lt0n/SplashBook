@@ -94,20 +94,18 @@ final class MainView: UIView {
                 widthDimension: .fractionalWidth(1),
                 heightDimension: .fractionalHeight(1)
             ),
-            repeatingSubitem: verticalItem,
-            count: 1
+            subitems: [verticalItem]
         )
         
         let horizontalStackGroup = NSCollectionLayoutGroup.horizontal(
             layoutSize: NSCollectionLayoutSize(
                 widthDimension: .fractionalWidth(1/2),
-                heightDimension: .fractionalHeight(1/4)
+                heightDimension: .fractionalHeight(1/3)
             ),
-            repeatingSubitem: horizontalItem,
-            count: 3
+            subitems: [horizontalItem]
         )
         
-        let group = NSCollectionLayoutGroup.horizontal(
+        let group = NSCollectionLayoutGroup.vertical(
             layoutSize: NSCollectionLayoutSize(
                 widthDimension: .fractionalWidth(1),
                 heightDimension: .fractionalHeight(1)

@@ -67,6 +67,13 @@ final class MainView: UIView {
             )
         )
         
+        item.contentInsets = NSDirectionalEdgeInsets(
+            top: 3,
+            leading: 3,
+            bottom:3,
+            trailing: 3
+        )
+        
         let verticalStackItem = NSCollectionLayoutItem(
             layoutSize: NSCollectionLayoutSize(
                 widthDimension: .fractionalWidth(1),

@@ -60,40 +60,51 @@ final class MainView: UIView {
     
     func setupCompositionalLayout() -> UICollectionViewCompositionalLayout {
         //Item
-        let item = NSCollectionLayoutItem(
+        let verticalItem = NSCollectionLayoutItem(
+            layoutSize: NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(1/3),
+                heightDimension: .fractionalHeight(1/2)
+            )
+        )
+        
+        let horizontalItem = NSCollectionLayoutItem(
             layoutSize: NSCollectionLayoutSize(
                 widthDimension: .fractionalWidth(1/2),
                 heightDimension: .fractionalHeight(1/3)
             )
         )
         
-        item.contentInsets = NSDirectionalEdgeInsets(
+        verticalItem.contentInsets = NSDirectionalEdgeInsets(
             top: 3,
             leading: 3,
             bottom: 3,
             trailing: 3
         )
         
-        let verticalStackItem = NSCollectionLayoutItem(
-            layoutSize: NSCollectionLayoutSize(
-                widthDimension: .fractionalWidth(1),
-                heightDimension: .fractionalHeight(1/2)
-            )
-        )
-        verticalStackItem.contentInsets = NSDirectionalEdgeInsets(
+        horizontalItem.contentInsets = NSDirectionalEdgeInsets(
             top: 3,
             leading: 3,
             bottom: 3,
             trailing: 3
         )
         //Group
+        
         let verticalStackGroup = NSCollectionLayoutGroup.vertical(
+            layoutSize: NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(1),
+                heightDimension: .fractionalHeight(1)
+            ),
+            repeatingSubitem: verticalItem,
+            count: 1
+        )
+        
+        let horizontalStackGroup = NSCollectionLayoutGroup.horizontal(
             layoutSize: NSCollectionLayoutSize(
                 widthDimension: .fractionalWidth(1/2),
                 heightDimension: .fractionalHeight(1/4)
             ),
-            repeatingSubitem: verticalStackItem,
-            count: 2
+            repeatingSubitem: horizontalItem,
+            count: 3
         )
         
         let group = NSCollectionLayoutGroup.horizontal(
@@ -102,8 +113,8 @@ final class MainView: UIView {
                 heightDimension: .fractionalHeight(1)
             ),
             subitems: [
-                item,
-                verticalStackGroup
+                verticalStackGroup,
+                horizontalStackGroup
             ]
         )
         let section = NSCollectionLayoutSection(group: group)

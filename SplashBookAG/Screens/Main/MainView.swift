@@ -62,15 +62,15 @@ final class MainView: UIView {
         //Item
         let verticalItem = NSCollectionLayoutItem(
             layoutSize: NSCollectionLayoutSize(
-                widthDimension: .fractionalWidth(1/3),
-                heightDimension: .fractionalHeight(1/2)
+                widthDimension: .absolute(200),
+                heightDimension: .absolute(100)
             )
         )
         
         let horizontalItem = NSCollectionLayoutItem(
             layoutSize: NSCollectionLayoutSize(
-                widthDimension: .fractionalWidth(1/2),
-                heightDimension: .fractionalHeight(1/3)
+                widthDimension: .absolute(150),
+                heightDimension: .absolute(250)
             )
         )
         
@@ -89,7 +89,15 @@ final class MainView: UIView {
         )
         //Group
         
-        let verticalStackGroup = NSCollectionLayoutGroup.vertical(
+        let verticalStackGroup = NSCollectionLayoutGroup.horizontal(
+            layoutSize: NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(1),
+                heightDimension: .fractionalHeight(1)
+            ),
+            subitems: [horizontalItem, horizontalItem]
+        )
+        
+        let horizontalStackGroup = NSCollectionLayoutGroup.horizontal(
             layoutSize: NSCollectionLayoutSize(
                 widthDimension: .fractionalWidth(1),
                 heightDimension: .fractionalHeight(1)
@@ -97,22 +105,14 @@ final class MainView: UIView {
             subitems: [verticalItem]
         )
         
-        let horizontalStackGroup = NSCollectionLayoutGroup.horizontal(
-            layoutSize: NSCollectionLayoutSize(
-                widthDimension: .fractionalWidth(1/2),
-                heightDimension: .fractionalHeight(1/3)
-            ),
-            subitems: [horizontalItem]
-        )
-        
-        let group = NSCollectionLayoutGroup.vertical(
+        let group = NSCollectionLayoutGroup.horizontal(
             layoutSize: NSCollectionLayoutSize(
                 widthDimension: .fractionalWidth(1),
                 heightDimension: .fractionalHeight(1)
             ),
             subitems: [
-                verticalStackGroup,
-                horizontalStackGroup
+                horizontalStackGroup,
+                verticalStackGroup
             ]
         )
         let section = NSCollectionLayoutSection(group: group)

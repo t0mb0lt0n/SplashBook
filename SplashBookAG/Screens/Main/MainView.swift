@@ -10,7 +10,6 @@ import UIKit
 final class MainView: UIView {
     lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView()
-        
         return collectionView
     }()
     
@@ -62,7 +61,7 @@ final class MainView: UIView {
         //Item
         let singleItem = NSCollectionLayoutItem(
             layoutSize: NSCollectionLayoutSize(
-                widthDimension: .absolute(100),
+                widthDimension: .absolute(130),
                 heightDimension: .absolute(200)
             )
         )
@@ -80,39 +79,16 @@ final class MainView: UIView {
             bottom: 3,
             trailing: 3
         )
-        
-        dubleItem.contentInsets = NSDirectionalEdgeInsets(
-            top: 3,
-            leading: 3,
-            bottom: 3,
-            trailing: 3
-        )
         //Group
-        
-        let verticalStackGroup = NSCollectionLayoutGroup.vertical(
-            layoutSize: NSCollectionLayoutSize(
-                widthDimension: .absolute(300),
-                heightDimension: .absolute(200)
-            ),
-            subitems: [dubleItem]
-        )
-        
-        let horizontalStackGroup = NSCollectionLayoutGroup.horizontal(
-            layoutSize: NSCollectionLayoutSize(
-                widthDimension: .fractionalWidth(1),
-                heightDimension: .fractionalHeight(1)
-            ),
-            subitems: [singleItem]
-        )
         
         let group = NSCollectionLayoutGroup.horizontal(
             layoutSize: NSCollectionLayoutSize(
                 widthDimension: .fractionalWidth(1),
-                heightDimension: .fractionalHeight(1)
+                heightDimension: .absolute(200)
             ),
             subitems: [
                 singleItem,
-                verticalStackGroup
+                dubleItem
             ]
         )
         let section = NSCollectionLayoutSection(group: group)

@@ -110,17 +110,6 @@ final class MainView: UIView {
         )
         let section = NSCollectionLayoutSection(group: group)
         let compositionLayout = UICollectionViewCompositionalLayout(section: section)
-//        let group = NSCollectionLayoutGroup.horizontal(
-//            layoutSize: NSCollectionLayoutSize(
-//                widthDimension: .fractionalWidth(1),
-//                heightDimension: .fractionalHeight(2/5)
-//            ),
-//            subitem: item,
-//            count: 2
-//        )
-        //Sections
-        //let section = NSCollectionLayoutSection(group: group)
-        //Return
         return compositionLayout
     }
 }

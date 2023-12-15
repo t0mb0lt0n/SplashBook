@@ -60,21 +60,21 @@ final class MainView: UIView {
     
     func setupCompositionalLayout() -> UICollectionViewCompositionalLayout {
         //Item
-        let verticalItem = NSCollectionLayoutItem(
+        let singleItem = NSCollectionLayoutItem(
             layoutSize: NSCollectionLayoutSize(
-                widthDimension: .absolute(200),
-                heightDimension: .absolute(100)
+                widthDimension: .fractionalHeight(1),
+                heightDimension: .fractionalHeight(1/2)
             )
         )
         
-        let horizontalItem = NSCollectionLayoutItem(
+        let dubleItem = NSCollectionLayoutItem(
             layoutSize: NSCollectionLayoutSize(
                 widthDimension: .absolute(150),
                 heightDimension: .absolute(250)
             )
         )
         
-        verticalItem.contentInsets = NSDirectionalEdgeInsets(
+        singleItem.contentInsets = NSDirectionalEdgeInsets(
             top: 3,
             leading: 3,
             bottom: 3,

@@ -70,7 +70,7 @@ final class MainView: UIView {
         item.contentInsets = NSDirectionalEdgeInsets(
             top: 3,
             leading: 3,
-            bottom:3,
+            bottom: 3,
             trailing: 3
         )
         
@@ -79,6 +79,12 @@ final class MainView: UIView {
                 widthDimension: .fractionalWidth(1),
                 heightDimension: .fractionalHeight(1/2)
             )
+        )
+        verticalStackItem.contentInsets = NSDirectionalEdgeInsets(
+            top: 3,
+            leading: 3,
+            bottom: 3,
+            trailing: 3
         )
         //Group
         let verticalStackGroup = NSCollectionLayoutGroup.vertical(
@@ -99,6 +105,19 @@ final class MainView: UIView {
                 item,
                 verticalStackGroup
             ]
+        )
+        verticalStackItem.contentInsets = NSDirectionalEdgeInsets(
+            top: 3,
+            leading: 3,
+            bottom: 3,
+            trailing: 3
+        )
+        
+        verticalStackGroup.contentInsets = NSDirectionalEdgeInsets(
+            top: 3,
+            leading: 3,
+            bottom:3,
+            trailing: 3
         )
         
 //        let group = NSCollectionLayoutGroup.horizontal(

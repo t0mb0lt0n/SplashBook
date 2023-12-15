@@ -63,7 +63,7 @@ final class MainView: UIView {
         let item = NSCollectionLayoutItem(
             layoutSize: NSCollectionLayoutSize(
                 widthDimension: .fractionalWidth(1/2),
-                heightDimension: .fractionalHeight(1)
+                heightDimension: .fractionalHeight(1/3)
             )
         )
         
@@ -73,8 +73,6 @@ final class MainView: UIView {
             bottom: 3,
             trailing: 3
         )
-        
-        
         
         let verticalStackItem = NSCollectionLayoutItem(
             layoutSize: NSCollectionLayoutSize(
@@ -92,7 +90,7 @@ final class MainView: UIView {
         let verticalStackGroup = NSCollectionLayoutGroup.vertical(
             layoutSize: NSCollectionLayoutSize(
                 widthDimension: .fractionalWidth(1/2),
-                heightDimension: .absolute(185)
+                heightDimension: .fractionalHeight(1/4)
             ),
             repeatingSubitem: verticalStackItem,
             count: 2
@@ -100,8 +98,8 @@ final class MainView: UIView {
         
         let group = NSCollectionLayoutGroup.horizontal(
             layoutSize: NSCollectionLayoutSize(
-                widthDimension: .fractionalWidth(0.7),
-                heightDimension: .fractionalHeight(1/2)
+                widthDimension: .fractionalWidth(1),
+                heightDimension: .fractionalHeight(1)
             ),
             subitems: [
                 item,

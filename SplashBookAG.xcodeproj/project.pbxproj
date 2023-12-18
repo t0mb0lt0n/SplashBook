@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1101BDA22B30DA57002C071D /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1101BDA12B30DA57002C071D /* UIImageView+Extension.swift */; };
 		11444C462ACF388500E90830 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11444C452ACF388500E90830 /* AppDelegate.swift */; };
 		11444C4F2ACF388600E90830 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11444C4E2ACF388600E90830 /* Assets.xcassets */; };
 		11444C522ACF388600E90830 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11444C502ACF388600E90830 /* LaunchScreen.storyboard */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1101BDA12B30DA57002C071D /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		11444C422ACF388500E90830 /* SplashBookAG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplashBookAG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11444C452ACF388500E90830 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11444C4E2ACF388600E90830 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				11F368152AF1893900670733 /* UITabBarController+Extension.swift */,
 				11F368192AF2F1AD00670733 /* String+Extension.swift */,
 				11B7C3152B28D4BE002330E4 /* UINavigationBar+Extension.swift */,
+				1101BDA12B30DA57002C071D /* UIImageView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				1191F2312AFD78EA007CB246 /* URLEncoder.swift in Sources */,
 				1191B7172B224D150020F7B9 /* UnsplashSearchResponse.swift in Sources */,
 				116332AF2B1A5B7F00A938EB /* NetworkClient.swift in Sources */,
+				1101BDA22B30DA57002C071D /* UIImageView+Extension.swift in Sources */,
 				11F3681C2AFAC02700670733 /* ImageService.swift in Sources */,
 				11F368112AF0422900670733 /* MainViewModel.swift in Sources */,
 				11F368162AF1893900670733 /* UITabBarController+Extension.swift in Sources */,

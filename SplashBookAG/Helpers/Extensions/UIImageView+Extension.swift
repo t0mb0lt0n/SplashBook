@@ -29,4 +29,22 @@ extension UIImageView {
             )
         }
     }
+    
+    private var currentTask: URLSessionTask? {
+        get {
+            objc_getAssociatedObject(
+                self,
+                &UIImageView.taskKey
+            ) as? URLSessionTask
+        }
+        
+        set {
+            objc_setAssociatedObject(
+                self,
+                &UIImageView.taskKey,
+                newValue,
+                .OBJC_ASSOCIATION_RETAIN_NONATOMIC
+            )
+        }
+    }
 }

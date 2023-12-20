@@ -52,7 +52,12 @@ extension UIImageView {
         currentTask = nil
         
         guard let urlString = urlString else { return }
-        if let cachedImage = ImageCache.shared
+        if let cachedImage = ImageCache.shared.image(forKey: urlString) {
+            self.image = cachedImage
+            return
+        }
         
+        guard let url = URL(string: urlString) else { return }
+        currentURL = url
     }
 }

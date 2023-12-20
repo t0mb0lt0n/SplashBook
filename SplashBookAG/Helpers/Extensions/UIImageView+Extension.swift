@@ -9,5 +9,19 @@ import Foundation
 import UIKit
 
 extension UIImageView {
+    static var urlKey = 0
+    static var taskKey = 0
     
+    private var currentURL: URL? {
+        get {
+            objc_getAssociatedObject(
+                self,
+                &UIImageView.urlKey
+            ) as? URL
+        }
+        
+        set {
+            
+        }
+    }
 }

@@ -21,7 +21,12 @@ extension UIImageView {
         }
         
         set {
-            
+            objc_setAssociatedObject(
+                self,
+                &UIImageView.urlKey,
+                newValue,
+                .OBJC_ASSOCIATION_RETAIN_NONATOMIC
+            )
         }
     }
 }

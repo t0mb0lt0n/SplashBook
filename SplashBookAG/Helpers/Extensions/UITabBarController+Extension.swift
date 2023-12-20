@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 extension UITabBarController {
-    func setupTabBarStyle(
+    final func setupTabBarStyle(
         backgroundColor: UIColor,
         normalItemColor: UIColor,
         selectedItemColor: UIColor

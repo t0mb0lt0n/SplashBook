@@ -9,6 +9,7 @@ import UIKit
 
 final class ImageCache {
     private let cache = NSCache<NSString, UIImage>()
+    static let shared = ImageCache()
     
     private init() { }
     

@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 extension UINavigationBar {
-    func changeNavigationBarStyle(to color: UIColor) {
+   final func changeNavigationBarStyle(to color: UIColor) {
         self.titleTextAttributes = [NSAttributedString.Key.foregroundColor: color]
     }
 }

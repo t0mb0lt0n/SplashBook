@@ -32,7 +32,6 @@ final class MainViewController: UIViewController {
         mainView.collectionView.dataSource = self
         setupViewModel()
         viewModel.findPhotos()
-        print("------viewDidLoad--------\(viewModel.photos.count)")
     }
     
     private func setupViewModel() {

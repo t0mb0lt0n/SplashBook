@@ -26,7 +26,7 @@ final class MainViewModel {
     
     func findPhotos() {
         service.searchImages(
-            for: "New York",
+            for: Constants.request,
             page: 1,
             pageSize: 30
         ) { result in
@@ -39,5 +39,13 @@ final class MainViewModel {
                 print(error.localizedDescription)
             }
         }
+    }
+}
+
+//MARK: Constants
+
+extension MainViewModel {
+    private enum Constants {
+        static let request: String = "New York"
     }
 }

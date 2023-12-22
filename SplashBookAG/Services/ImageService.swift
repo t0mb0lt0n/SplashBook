@@ -49,7 +49,7 @@ final class ImageServiceImpl: ImageService {
 
 extension ImageServiceImpl {
     private enum Constants {
-        static let apiKey = "Some api key"
+        static let apiKey = "Some API Key"
         static let baseURL = "https://api.unsplash.com"
         static let clientID = "T8KSuS49xCEo9qYDLmYLohNwB95ePuJvqMIUrH5aQKg"
     }

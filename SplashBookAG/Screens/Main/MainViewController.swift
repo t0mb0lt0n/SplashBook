@@ -84,6 +84,12 @@ extension MainViewController: UICollectionViewDataSource {
     }
 }
 
+extension MainViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("Cell Selected")
+    }
+}
+
 extension MainViewController {
     private enum Constants {
         static let systemColorOrange: UIColor = .systemOrange

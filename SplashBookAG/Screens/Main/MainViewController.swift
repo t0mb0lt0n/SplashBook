@@ -85,8 +85,13 @@ extension MainViewController: UICollectionViewDataSource {
     }
 }
 
+//MARK: - UICollectionViewDelegate
+
 extension MainViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    func collectionView(
+        _ collectionView: UICollectionView,
+        didSelectItemAt indexPath: IndexPath
+    ) {
         print("Cell Selected")
     }
 }

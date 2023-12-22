@@ -30,6 +30,7 @@ final class MainViewController: UIViewController {
         view = MainView()
         view.backgroundColor = .secondarySystemBackground
         mainView.collectionView.dataSource = self
+        mainView.collectionView.delegate = self
         setupViewModel()
         viewModel.findPhotos()
     }

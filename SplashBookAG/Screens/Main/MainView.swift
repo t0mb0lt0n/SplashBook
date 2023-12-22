@@ -25,8 +25,14 @@ final class MainView: UIView {
     }
     
     private func setupCollectionView() {
-        collectionView = UICollectionView(frame: .zero, collectionViewLayout: setupCompositionalLayout())
-        collectionView.register(PhotoCell.self, forCellWithReuseIdentifier: "\(PhotoCell.self)")
+        collectionView = UICollectionView(
+            frame: .zero,
+            collectionViewLayout: setupFlowLayout()
+        )
+        collectionView.register(
+            PhotoCell.self,
+            forCellWithReuseIdentifier: "\(PhotoCell.self)"
+        )
         collectionView.alwaysBounceVertical = true
         collectionView.backgroundColor = .secondarySystemBackground
         

@@ -60,11 +60,14 @@ extension UIImageView {
         guard let url = URL(string: urlString) else { return }
         currentURL = url
         
-        let task = URLSession.shared.dataTask(with: url) { []data, response, error in
-            self.currentTask = nil
+        let task = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
+            self?.currentTask = nil
             if let error = error {
-                
+                print(error.localizedDescription)
+                return
             }
+            
+            guard let data = data, let downloadedImage = UIImage(data: data) else { return }
         }
         
     }

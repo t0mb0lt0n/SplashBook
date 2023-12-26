@@ -70,24 +70,7 @@ extension MainViewController: UICollectionViewDataSource {
         }
         
         let photo = viewModel.photos[indexPath.row]
-        
         cell.setupCellSubviews(for: photo)
-        
-        
-//        let urlStr = URL(string: viewModel.photos[indexPath.row].urls.small)
-//        guard let data: Data = try? Data(contentsOf: urlStr!) else {
-//            print("cell empty")
-//            return cell }
-//        guard  let image = UIImage(data: data) else {
-//            print("cell empty")
-//            return cell}
-//
-//        let authorName = viewModel.photos[indexPath.row].unsplashUser.name ?? "default author name"
-//
-//        cell.setupSubviews(
-//            imageView: image,
-//            authorNameLabel: authorName
-//        )
         return cell
     }
 }

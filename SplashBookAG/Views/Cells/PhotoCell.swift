@@ -37,7 +37,7 @@ class PhotoCell: UICollectionViewCell {
     
     private let likeCountLabel: UILabel = {
         let label = UILabel()
-        label.text = "10000"
+        //label.text = "10000"
         label.textColor = .systemOrange
         return label
     }()
@@ -46,6 +46,11 @@ class PhotoCell: UICollectionViewCell {
         super .init(frame: frame)
         setupCell()
         setupConstraints()
+    }
+    
+    override func prepareForReuse() {
+        imageView.image = nil
+        super.prepareForReuse()
     }
     
     required init?(coder: NSCoder) {
@@ -67,6 +72,7 @@ class PhotoCell: UICollectionViewCell {
     func setupCellSubviews(for image: UnsplashPhoto) {
         self.imageView.loadImageAsync(from: image.urls.small)
         self.authorNameLabel.text = image.unsplashUser.name
+        self.likeCountLabel.text = "\(image.likes)"
     }
     
     private func setupConstraints() {

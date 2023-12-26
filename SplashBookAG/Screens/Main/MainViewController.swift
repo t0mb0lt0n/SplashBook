@@ -61,7 +61,7 @@ extension MainViewController: UICollectionViewDataSource {
         cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
         
-        let photo = viewModel.photos[indexPath.row]
+        //let photo = viewModel.photos[indexPath.row]
         guard let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: "\(PhotoCell.self)",
             for: indexPath
@@ -69,9 +69,10 @@ extension MainViewController: UICollectionViewDataSource {
             fatalError("Cell dequeue error")
         }
         
-//        let photo = viewModel.photos[indexPath.row]
+        let photo = viewModel.photos[indexPath.row]
         
         cell.setupCellSubviews(for: photo)
+        
         
 //        let urlStr = URL(string: viewModel.photos[indexPath.row].urls.small)
 //        guard let data: Data = try? Data(contentsOf: urlStr!) else {

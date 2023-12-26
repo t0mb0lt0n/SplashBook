@@ -73,10 +73,14 @@ extension UIImageView {
             
             if url == self?.currentURL {
                 DispatchQueue.main.async {
+                    print("Image downloaded")
                     self?.image = downloadedImage
                 }
+                sleep(1)
             }
         }
+        currentTask = task
+        task.resume()
     }
 }
             

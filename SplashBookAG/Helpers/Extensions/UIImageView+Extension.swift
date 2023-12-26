@@ -62,6 +62,7 @@ extension UIImageView {
         let task = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
             self?.currentTask = nil
             if let error = error {
+                //error handle needed
                 print(error.localizedDescription)
                 return
             }

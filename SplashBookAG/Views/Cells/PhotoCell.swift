@@ -64,9 +64,9 @@ class PhotoCell: UICollectionViewCell {
         backgroundColor = .green
     }
     
-    func setupSubviews(imageView: UIImage, authorNameLabel: String) {
-        self.imageView.image = imageView
-        self.authorNameLabel.text = authorNameLabel
+    func setupCellSubviews(for image: UnsplashPhoto) {
+        self.imageView.loadImageAsync(from: image.urls.small)
+        self.authorNameLabel.text = image.unsplashUser.name
     }
     
     private func setupConstraints() {

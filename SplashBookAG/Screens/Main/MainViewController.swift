@@ -60,6 +60,8 @@ extension MainViewController: UICollectionViewDataSource {
         _ collectionView: UICollectionView,
         cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
+        
+        let photo = viewModel.photos[indexPath.row]
         guard let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: "\(PhotoCell.self)",
             for: indexPath
@@ -67,20 +69,24 @@ extension MainViewController: UICollectionViewDataSource {
             fatalError("Cell dequeue error")
         }
         
-        let urlStr = URL(string: viewModel.photos[indexPath.row].urls.small)
-        guard let data: Data = try? Data(contentsOf: urlStr!) else {
-            print("cell empty")
-            return cell }
-        guard  let image = UIImage(data: data) else {
-            print("cell empty")
-            return cell}
+//        let photo = viewModel.photos[indexPath.row]
         
-        let authorName = viewModel.photos[indexPath.row].unsplashUser.name ?? "default author name"
+        cell.setupCellSubviews(for: photo)
         
-        cell.setupSubviews(
-            imageView: image,
-            authorNameLabel: authorName
-        )
+//        let urlStr = URL(string: viewModel.photos[indexPath.row].urls.small)
+//        guard let data: Data = try? Data(contentsOf: urlStr!) else {
+//            print("cell empty")
+//            return cell }
+//        guard  let image = UIImage(data: data) else {
+//            print("cell empty")
+//            return cell}
+//
+//        let authorName = viewModel.photos[indexPath.row].unsplashUser.name ?? "default author name"
+//
+//        cell.setupSubviews(
+//            imageView: image,
+//            authorNameLabel: authorName
+//        )
         return cell
     }
 }

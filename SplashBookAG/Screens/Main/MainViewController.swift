@@ -26,6 +26,7 @@ final class MainViewController: UIViewController {
         super.loadView()
         view = MainView()
         setupViewModel()
+        viewModel.findPhotos()
     }
     
     override func viewDidLoad() {
@@ -76,6 +77,10 @@ extension MainViewController: UICollectionViewDataSource {
         }
         cell.setupCellSubviews(for: photo)
         return cell
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        1
     }
 }
 

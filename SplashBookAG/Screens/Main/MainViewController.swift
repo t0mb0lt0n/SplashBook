@@ -25,8 +25,10 @@ final class MainViewController: UIViewController {
     override func loadView() {
         super.loadView()
         view = MainView()
-        setupViewModel()
+        //setupViewModel()
         viewModel.findPhotos()
+        mainView.collectionView.dataSource = self
+        mainView.collectionView.delegate = self
     }
     
     override func viewDidLoad() {
@@ -34,12 +36,11 @@ final class MainViewController: UIViewController {
         navigationController?.navigationBar.changeNavigationBarStyle(
             to: Constants.systemColorOrange
         )
-        //view = MainView()
         view.backgroundColor = .secondarySystemBackground
-        mainView.collectionView.dataSource = self
-        mainView.collectionView.delegate = self
-        //setupViewModel()
-        viewModel.findPhotos()
+        setupViewModel()
+//        mainView.collectionView.dataSource = self
+//        mainView.collectionView.delegate = self
+        //viewModel.findPhotos()
     }
     
     private func setupViewModel() {

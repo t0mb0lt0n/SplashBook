@@ -22,16 +22,22 @@ final class MainViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func loadView() {
+        super.loadView()
+        view = MainView()
+        setupViewModel()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.changeNavigationBarStyle(
             to: Constants.systemColorOrange
         )
-        view = MainView()
+        //view = MainView()
         view.backgroundColor = .secondarySystemBackground
         mainView.collectionView.dataSource = self
         mainView.collectionView.delegate = self
-        setupViewModel()
+        //setupViewModel()
         viewModel.findPhotos()
     }
     

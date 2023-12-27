@@ -35,7 +35,6 @@ final class MainView: UIView {
         )
         collectionView.alwaysBounceVertical = true
         collectionView.backgroundColor = .secondarySystemBackground
-        
     }
     
     private func setupViews() {

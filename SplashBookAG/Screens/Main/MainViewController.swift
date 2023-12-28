@@ -25,16 +25,18 @@ final class MainViewController: UIViewController {
     override func loadView() {
         super.loadView()
         view = MainView()
+        setupViewModel()
         mainView.collectionView.dataSource = self
         mainView.collectionView.delegate = self
-        //
         viewModel.findPhotos()
+        updateContent()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         //setupViewModel()
-        //viewModel.findPhotos()
+//viewModel.findPhotos()
+        updateContent()
     }
     
     override func viewDidLoad() {
@@ -45,8 +47,11 @@ final class MainViewController: UIViewController {
         view.backgroundColor = .secondarySystemBackground
         //setupViewModel()
         //viewModel.findPhotos()
-        setupViewModel()
+        //setupViewModel()
+        updateContent()
+        
         //viewModel.findPhotos()
+        updateContent()
     }
     
     private func setupViewModel() {
@@ -98,7 +103,7 @@ extension MainViewController: UICollectionViewDelegate {
         _ collectionView: UICollectionView,
         didSelectItemAt indexPath: IndexPath
     ) {
-        print("Cell Selected")
+        //updateContent()
     }
 }
 

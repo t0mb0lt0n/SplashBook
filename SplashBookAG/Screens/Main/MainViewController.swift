@@ -25,10 +25,16 @@ final class MainViewController: UIViewController {
     override func loadView() {
         super.loadView()
         view = MainView()
-        //setupViewModel()
-        viewModel.findPhotos()
         mainView.collectionView.dataSource = self
         mainView.collectionView.delegate = self
+        //
+        viewModel.findPhotos()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //setupViewModel()
+        //viewModel.findPhotos()
     }
     
     override func viewDidLoad() {
@@ -37,9 +43,9 @@ final class MainViewController: UIViewController {
             to: Constants.systemColorOrange
         )
         view.backgroundColor = .secondarySystemBackground
+        //setupViewModel()
+        //viewModel.findPhotos()
         setupViewModel()
-//        mainView.collectionView.dataSource = self
-//        mainView.collectionView.delegate = self
         //viewModel.findPhotos()
     }
     

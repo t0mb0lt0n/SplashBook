@@ -76,7 +76,7 @@ extension UIImageView {
                     print("Image downloaded")
                     self?.image = downloadedImage
                 }
-                sleep(1)
+                //sleep(1)
             }
         }
         currentTask = task

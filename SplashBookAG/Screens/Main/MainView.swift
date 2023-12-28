@@ -59,7 +59,6 @@ final class MainView: UIView {
         //layout.itemSize = .init(width: Constants.itemWidth, height: Constants.itemHeight)
         layout.minimumLineSpacing = Constants.lineSpacing
         layout.minimumInteritemSpacing = Constants.interItemSpacing
-        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         return layout
     }
     

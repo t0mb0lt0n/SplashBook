@@ -35,7 +35,6 @@ final class MainViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         //setupViewModel()
-//viewModel.findPhotos()
         updateContent()
     }
     

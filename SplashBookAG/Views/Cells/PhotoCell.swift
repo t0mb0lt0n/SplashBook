@@ -70,9 +70,10 @@ class PhotoCell: UICollectionViewCell {
     }
     
     func setupCellSubviews(for image: UnsplashPhoto) {
-        self.imageView.loadImageAsync(from: image.urls.small)
+        //self.imageView.loadImageAsync(from: image.urls.small)
         self.authorNameLabel.text = image.unsplashUser.name
         self.likeCountLabel.text = "\(image.likes)"
+        self.imageView.loadImageAsync(from: image.urls.small)
     }
     
     private func setupConstraints() {

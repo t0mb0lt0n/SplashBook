@@ -25,7 +25,7 @@ final class MainViewController: UIViewController {
     override func loadView() {
         super.loadView()
         view = MainView()
-        viewModel.findPhotos()
+        //viewModel.findPhotos()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,16 +40,24 @@ final class MainViewController: UIViewController {
         view.backgroundColor = .secondarySystemBackground
         mainView.collectionView.dataSource = self
         mainView.collectionView.delegate = self
+        
+        viewModel.findPhotos()
         setupViewModel()
     }
     
     override func viewDidAppear(_ animated: Bool) {
 //        viewModel.findPhotos()
+        setupViewModel()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        setupViewModel()
     }
     
     private func setupViewModel() {
         viewModel.reloadClosure = { [weak self] in
             self?.updateContent()
+            print("reload closure")
         }
     }
     

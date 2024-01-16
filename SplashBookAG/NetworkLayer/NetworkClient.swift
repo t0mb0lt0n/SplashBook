@@ -52,6 +52,7 @@ final class NetworkClient {
                     do {
                         let decodedData = try jsonDecoder.decode(T.self, from: data)
                         completion(.success(decodedData))
+                        print("ex")
                     } catch {
                         completion(.failure(NetworkFailure.JSONDecoderError.decodingFailure))
                     }

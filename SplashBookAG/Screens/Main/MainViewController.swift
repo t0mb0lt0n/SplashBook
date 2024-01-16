@@ -44,7 +44,7 @@ final class MainViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        viewModel.findPhotos()
+//        viewModel.findPhotos()
     }
     
     private func setupViewModel() {
@@ -96,7 +96,7 @@ extension MainViewController: UICollectionViewDelegate {
         _ collectionView: UICollectionView,
         didSelectItemAt indexPath: IndexPath
     ) {
-        //updateContent()
+        updateContent()
     }
 }
 

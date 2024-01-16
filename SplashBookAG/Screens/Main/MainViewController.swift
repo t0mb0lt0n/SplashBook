@@ -30,7 +30,6 @@ final class MainViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        updateContent()
     }
     
     override func viewDidLoad() {
@@ -42,12 +41,10 @@ final class MainViewController: UIViewController {
         mainView.collectionView.dataSource = self
         mainView.collectionView.delegate = self
         setupViewModel()
-        updateContent()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         viewModel.findPhotos()
-        updateContent()
     }
     
     private func setupViewModel() {
@@ -99,7 +96,7 @@ extension MainViewController: UICollectionViewDelegate {
         _ collectionView: UICollectionView,
         didSelectItemAt indexPath: IndexPath
     ) {
-        updateContent()
+        //updateContent()
     }
 }
 

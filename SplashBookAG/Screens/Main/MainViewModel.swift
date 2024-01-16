@@ -32,7 +32,8 @@ final class MainViewModel {
         ) { result in
             switch result {
             case .success(let photos):
-                self.photos = photos.results
+                //self.photos = photos.results
+                self.photos.append(contentsOf: photos.results)
                 self.reloadClosure?()
                 print(self.photos.count)
             case .failure(let error):

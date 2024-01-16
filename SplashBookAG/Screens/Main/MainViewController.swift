@@ -44,13 +44,9 @@ final class MainViewController: UIViewController {
             to: Constants.systemColorOrange
         )
         view.backgroundColor = .secondarySystemBackground
-        //setupViewModel()
-        //viewModel.findPhotos()
-        //setupViewModel()
+     
         updateContent()
-        
-        //viewModel.findPhotos()
-        updateContent()
+      
     }
     
     private func setupViewModel() {

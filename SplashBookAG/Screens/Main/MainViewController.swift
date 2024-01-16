@@ -25,16 +25,11 @@ final class MainViewController: UIViewController {
     override func loadView() {
         super.loadView()
         view = MainView()
-        setupViewModel()
-        mainView.collectionView.dataSource = self
-        mainView.collectionView.delegate = self
         viewModel.findPhotos()
-        updateContent()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //setupViewModel()
         updateContent()
     }
     
@@ -44,9 +39,15 @@ final class MainViewController: UIViewController {
             to: Constants.systemColorOrange
         )
         view.backgroundColor = .secondarySystemBackground
-     
+        mainView.collectionView.dataSource = self
+        mainView.collectionView.delegate = self
+        setupViewModel()
         updateContent()
-      
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        viewModel.findPhotos()
+        updateContent()
     }
     
     private func setupViewModel() {
@@ -98,7 +99,7 @@ extension MainViewController: UICollectionViewDelegate {
         _ collectionView: UICollectionView,
         didSelectItemAt indexPath: IndexPath
     ) {
-        //updateContent()
+        updateContent()
     }
 }
 

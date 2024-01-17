@@ -83,8 +83,8 @@ extension MainViewController: UICollectionViewDataSource {
         ) as? PhotoCell else {
             fatalError("Cell dequeue error")
         }
-        cell.setupCellSubviews(for: photo) { isDownloaded in
-            self.viewModel.isContentDownloaded = isDownloaded
+        cell.setupCellSubviews(for: photo) { [ weak self ] isDownloaded in
+            self?.viewModel.isContentDownloaded = isDownloaded
         }
         return cell
     }

@@ -18,7 +18,6 @@ final class MainViewModel {
         
         set {
             reloadClosure?()
-            
             print(self.isContentDownloaded)
         }
     }

@@ -25,7 +25,7 @@ final class MainViewController: UIViewController {
     override func loadView() {
         super.viewDidLoad()
         view = MainView()
-        //imageView.loadImageAsync(from: image.urls.small)
+        
         setupMainView()
         setupViewModel()
         viewModel.findPhotos()

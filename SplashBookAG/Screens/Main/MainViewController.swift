@@ -46,9 +46,7 @@ final class MainViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
     }
     
-    override func viewDidLayoutSubviews() {
-
-    }
+  
     
     private func setupMainView() {
         mainView.collectionView.dataSource = self
@@ -93,7 +91,6 @@ extension MainViewController: UICollectionViewDataSource {
         cell.setupCellSubviews(for: photo) { isDownloaded in
             self.viewModel.isContentDownloaded = isDownloaded
         }
-        //collectionView.reloadData()
         return cell
     }
     

@@ -50,10 +50,6 @@ final class MainViewModel {
             }
         }
     }
-    
-    func downloadFoundedImage() {
-        //imageView.loadImageAsync(from: image.urls.small)
-    }
 }
 
 //MARK: - Constants

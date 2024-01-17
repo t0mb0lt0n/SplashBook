@@ -17,9 +17,7 @@ final class MainViewModel {
         }
         
         set {
-            guard newValue else { return }
             reloadClosure?()
-            self.isContentDownloaded = false
             print(self.isContentDownloaded)
         }
     }

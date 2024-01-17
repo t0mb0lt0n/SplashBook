@@ -77,7 +77,6 @@ extension UIImageView {
                     self?.image = downloadedImage
                     completion(true)
                 }
-                //completion(true)
             }
         }
         currentTask = task

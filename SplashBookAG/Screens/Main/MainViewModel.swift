@@ -11,6 +11,16 @@ final class MainViewModel {
     private let service: ImageService
     private(set) var photos: [UnsplashPhoto] = .init()
     var reloadClosure: (() -> Void)?
+    var isContentDownloaded: Bool {
+        get {
+            return false
+        }
+        
+        set {
+            guard newValue else { return }
+            reloadClosure?()
+        }
+    }
     
     var numberOfSections: Int {
         1
@@ -39,6 +49,10 @@ final class MainViewModel {
                 print(error.localizedDescription)
             }
         }
+    }
+    
+    func downloadFoundedImage() {
+        //imageView.loadImageAsync(from: image.urls.small)
     }
 }
 

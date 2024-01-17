@@ -47,7 +47,7 @@ extension UIImageView {
         }
     }
     
-    final func loadImageAsync(from urlString: String?) {
+    final func loadImageAsync(from urlString: String?, completion: @escaping (Bool) -> Void?) {
         currentTask?.cancel()
         currentTask = nil
         
@@ -76,6 +76,7 @@ extension UIImageView {
                     print("Image downloaded")
                     self?.image = downloadedImage
                 }
+                completion(true)
                 //sleep(1)
             }
         }

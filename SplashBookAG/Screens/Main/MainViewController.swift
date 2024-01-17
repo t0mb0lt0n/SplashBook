@@ -24,11 +24,11 @@ final class MainViewController: UIViewController {
     
     override func loadView() {
         super.viewDidLoad()
-        viewModel.findPhotos()
         view = MainView()
+        //imageView.loadImageAsync(from: image.urls.small)
         setupMainView()
         setupViewModel()
-        //viewModel.findPhotos()
+        viewModel.findPhotos()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -90,7 +90,10 @@ extension MainViewController: UICollectionViewDataSource {
         ) as? PhotoCell else {
             fatalError("Cell dequeue error")
         }
-        cell.setupCellSubviews(for: photo)
+        cell.setupCellSubviews(for: photo) { isDownloaded in
+            self.viewModel.isContentDownloaded = isDownloaded
+        }
+        //collectionView.reloadData()
         return cell
     }
     

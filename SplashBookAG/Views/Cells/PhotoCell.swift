@@ -46,6 +46,7 @@ class PhotoCell: UICollectionViewCell {
         super .init(frame: frame)
         setupCell()
         setupConstraints()
+        
     }
     
     override func prepareForReuse() {
@@ -69,11 +70,12 @@ class PhotoCell: UICollectionViewCell {
         backgroundColor = .green
     }
     
-    func setupCellSubviews(for image: UnsplashPhoto) {
+    func setupCellSubviews(for image: UnsplashPhoto, completion: @escaping (Bool) -> Void? ) {
         //self.imageView.loadImageAsync(from: image.urls.small)
         self.authorNameLabel.text = image.unsplashUser.name
         self.likeCountLabel.text = "\(image.likes)"
-        self.imageView.loadImageAsync(from: image.urls.small)
+        self.imageView.loadImageAsync(from: image.urls.small, completion: completion)
+        //sleep(1)
     }
     
     private func setupConstraints() {

@@ -59,48 +59,47 @@ final class MainView: UIView {
         layout.minimumLineSpacing = Constants.lineSpacing
         layout.minimumInteritemSpacing = Constants.interItemSpacing
         layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
-       
         return layout
     }
     
-    func setupCompositionalLayout() -> UICollectionViewCompositionalLayout {
-        //Item
-        let singleItem = NSCollectionLayoutItem(
-            layoutSize: NSCollectionLayoutSize(
-                widthDimension: .absolute(130),
-                heightDimension: .absolute(200)
-            )
-        )
-        
-        let dubleItem = NSCollectionLayoutItem(
-            layoutSize: NSCollectionLayoutSize(
-                widthDimension: .absolute(300),
-                heightDimension: .absolute(200)
-            )
-        )
-        
-        singleItem.contentInsets = NSDirectionalEdgeInsets(
-            top: 3,
-            leading: 3,
-            bottom: 3,
-            trailing: 3
-        )
-        //Group
-        
-        let group = NSCollectionLayoutGroup.horizontal(
-            layoutSize: NSCollectionLayoutSize(
-                widthDimension: .fractionalWidth(1),
-                heightDimension: .absolute(200)
-            ),
-            subitems: [
-                singleItem,
-                dubleItem
-            ]
-        )
-        let section = NSCollectionLayoutSection(group: group)
-        let compositionLayout = UICollectionViewCompositionalLayout(section: section)
-        return compositionLayout
-    }
+//    func setupCompositionalLayout() -> UICollectionViewCompositionalLayout {
+//        //Item
+//        let singleItem = NSCollectionLayoutItem(
+//            layoutSize: NSCollectionLayoutSize(
+//                widthDimension: .absolute(130),
+//                heightDimension: .absolute(200)
+//            )
+//        )
+//
+//        let dubleItem = NSCollectionLayoutItem(
+//            layoutSize: NSCollectionLayoutSize(
+//                widthDimension: .absolute(300),
+//                heightDimension: .absolute(200)
+//            )
+//        )
+//
+//        singleItem.contentInsets = NSDirectionalEdgeInsets(
+//            top: 3,
+//            leading: 3,
+//            bottom: 3,
+//            trailing: 3
+//        )
+//        //Group
+//
+//        let group = NSCollectionLayoutGroup.horizontal(
+//            layoutSize: NSCollectionLayoutSize(
+//                widthDimension: .fractionalWidth(1),
+//                heightDimension: .absolute(200)
+//            ),
+//            subitems: [
+//                singleItem,
+//                dubleItem
+//            ]
+//        )
+//        let section = NSCollectionLayoutSection(group: group)
+//        let compositionLayout = UICollectionViewCompositionalLayout(section: section)
+//        return compositionLayout
+//    }
 }
 
 //MARK: - Constants

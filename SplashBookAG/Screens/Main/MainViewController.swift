@@ -25,7 +25,6 @@ final class MainViewController: UIViewController {
     override func loadView() {
         super.viewDidLoad()
         view = MainView()
-        
         setupMainView()
         setupViewModel()
         viewModel.findPhotos()
@@ -41,7 +40,6 @@ final class MainViewController: UIViewController {
             to: Constants.systemColorOrange
         )
         view.backgroundColor = .secondarySystemBackground
-        //viewModel.findPhotos()
         
     }
     

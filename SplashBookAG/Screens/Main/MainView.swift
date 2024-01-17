@@ -55,11 +55,11 @@ final class MainView: UIView {
     
     private func setupFlowLayout() -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
-        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
-        //layout.itemSize = .init(width: Constants.itemWidth, height: Constants.itemHeight)
+        layout.scrollDirection = .vertical
         layout.minimumLineSpacing = Constants.lineSpacing
         layout.minimumInteritemSpacing = Constants.interItemSpacing
-        layout.scrollDirection = .vertical
+        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        //layout.itemSize = .init(width: Constants.itemWidth, height: Constants.itemHeight)
         return layout
     }
     

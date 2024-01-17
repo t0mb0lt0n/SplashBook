@@ -47,11 +47,11 @@ final class MainViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
 //        viewModel.findPhotos()
-        setupViewModel()
+       // setupViewModel()
     }
     
     override func viewDidLayoutSubviews() {
-        setupViewModel()
+       // setupViewModel()
     }
     
     private func setupViewModel() {

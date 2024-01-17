@@ -23,9 +23,12 @@ final class MainViewController: UIViewController {
     }
     
     override func loadView() {
-        super.loadView()
-        view = MainView()
+        super.viewDidLoad()
         viewModel.findPhotos()
+        view = MainView()
+        setupMainView()
+        setupViewModel()
+        //viewModel.findPhotos()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,10 +41,8 @@ final class MainViewController: UIViewController {
             to: Constants.systemColorOrange
         )
         view.backgroundColor = .secondarySystemBackground
-        mainView.collectionView.dataSource = self
-        mainView.collectionView.delegate = self
-        setupViewModel()
-        viewModel.findPhotos()
+        //viewModel.findPhotos()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -51,6 +52,10 @@ final class MainViewController: UIViewController {
 
     }
     
+    private func setupMainView() {
+        mainView.collectionView.dataSource = self
+        mainView.collectionView.delegate = self
+    }
     private func setupViewModel() {
         viewModel.reloadClosure = { [weak self] in
             self?.updateContent()

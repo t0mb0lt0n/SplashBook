@@ -75,9 +75,9 @@ extension UIImageView {
                 DispatchQueue.main.async {
                     print("Image downloaded")
                     self?.image = downloadedImage
+                    completion(true)
                 }
-                completion(true)
-                //sleep(1)
+                //completion(true)
             }
         }
         currentTask = task

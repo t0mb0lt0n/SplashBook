@@ -101,7 +101,6 @@ extension MainViewController: UICollectionViewDelegate {
         _ collectionView: UICollectionView,
         didSelectItemAt indexPath: IndexPath
     ) {
-        updateContent()
     }
 }
 

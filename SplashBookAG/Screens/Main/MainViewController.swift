@@ -64,7 +64,9 @@ final class MainViewController: UIViewController {
     }
     
     private func updateContent() {
-        mainView.collectionView.reloadData()
+        DispatchQueue.main.async {
+            self.mainView.collectionView.reloadData()
+        }
     }
 }
 

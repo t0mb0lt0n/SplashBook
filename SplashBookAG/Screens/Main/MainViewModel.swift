@@ -35,12 +35,14 @@ final class MainViewModel {
     }
     
     func findPhotos() {
+        self.reloadClosure?()
         service.searchImages(
             for: Constants.request,
             page: 1,
-            pageSize: 30
+            pageSize: 1
         ) { result in
             self.continueDownloading(true)
+            
             switch result {
             case .success(let photos):
                 self.photos = photos.results
@@ -50,6 +52,7 @@ final class MainViewModel {
                 print(error.localizedDescription)
             }
         }
+        self.reloadClosure?()
     }
     
     func continueDownloading(_ isDownloading: Bool) {
@@ -63,5 +66,7 @@ final class MainViewModel {
 extension MainViewModel {
     private enum Constants {
         static let request: String = "New York"
+        static let startPage = 1
+        static let pageSize = 2
     }
 }

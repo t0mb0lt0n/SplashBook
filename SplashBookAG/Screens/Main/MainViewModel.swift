@@ -10,6 +10,8 @@ import Foundation
 final class MainViewModel {
     private let service: ImageService
     private(set) var photos: [UnsplashPhoto] = .init()
+    private(set) var stillDownloading = false
+    private var currentPage = Constants.startPage
     var reloadClosure: (() -> Void)?
     var isContentDownloaded: Bool = false {
         didSet {
@@ -19,8 +21,6 @@ final class MainViewModel {
  
         }
     }
-    
-    var stillDownloading = false
     
     var numberOfSections: Int {
         1
@@ -39,7 +39,7 @@ final class MainViewModel {
         service.searchImages(
             for: Constants.request,
             page: 1,
-            pageSize: 1
+            pageSize: Constants.pageSize
         ) { result in
             self.continueDownloading(true)
             

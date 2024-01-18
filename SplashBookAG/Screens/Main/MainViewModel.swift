@@ -13,14 +13,14 @@ final class MainViewModel {
     var reloadClosure: (() -> Void)?
     var isContentDownloaded: Bool = false {
         didSet {
-            reloadClosure?()
+            //reloadClosure?()
             isContentDownloaded = false
             print(self.isContentDownloaded)
  
         }
     }
     
-    var setealDownloading = false
+    var stillDownloading = false
     
     var numberOfSections: Int {
         1
@@ -40,11 +40,11 @@ final class MainViewModel {
             page: 1,
             pageSize: 30
         ) { result in
-            
+            self.continueDownloading(true)
             switch result {
             case .success(let photos):
                 self.photos = photos.results
-                self.reloadClosure?()
+                //self.reloadClosure?()
                 print(self.photos.count)
             case .failure(let error):
                 print(error.localizedDescription)
@@ -53,7 +53,8 @@ final class MainViewModel {
     }
     
     func continueDownloading(_ isDownloading: Bool) {
-        self.setealDownloading = isDownloading
+        self.stillDownloading = isDownloading
+        self.reloadClosure?()
     }
 }
 

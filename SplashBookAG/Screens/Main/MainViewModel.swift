@@ -12,12 +12,15 @@ final class MainViewModel {
     private(set) var photos: [UnsplashPhoto] = .init()
     var reloadClosure: (() -> Void)?
     var isContentDownloaded: Bool = false {
-       didSet {
+        didSet {
             reloadClosure?()
+            isContentDownloaded = false
             print(self.isContentDownloaded)
-            //didset
+ 
         }
     }
+    
+    var setealDownloading = false
     
     var numberOfSections: Int {
         1
@@ -37,6 +40,7 @@ final class MainViewModel {
             page: 1,
             pageSize: 30
         ) { result in
+            
             switch result {
             case .success(let photos):
                 self.photos = photos.results
@@ -46,6 +50,10 @@ final class MainViewModel {
                 print(error.localizedDescription)
             }
         }
+    }
+    
+    func continueDownloading(_ isDownloading: Bool) {
+        self.setealDownloading = isDownloading
     }
 }
 

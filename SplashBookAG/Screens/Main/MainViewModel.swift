@@ -11,14 +11,11 @@ final class MainViewModel {
     private let service: ImageService
     private(set) var photos: [UnsplashPhoto] = .init()
     var reloadClosure: (() -> Void)?
-    var isContentDownloaded: Bool {
-        get {
-            return false
-        }
-        
-        set {
+    var isContentDownloaded: Bool = false {
+       didSet {
             reloadClosure?()
             print(self.isContentDownloaded)
+            //didset
         }
     }
     

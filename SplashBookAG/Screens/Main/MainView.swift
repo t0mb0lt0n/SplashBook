@@ -83,8 +83,7 @@ final class MainView: UIView {
 //            lead
 //            subitems: [
 //        let section = NSCollectionLayoutSection(group: group)
-//        let compositionLayout = UICollectionViewCompositionalLayout(section: section)
-//        return compositionLayout
+//     
 //    }
 }
 

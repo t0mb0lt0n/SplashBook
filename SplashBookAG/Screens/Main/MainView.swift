@@ -70,8 +70,6 @@ final class MainView: UIView {
 //                heightDimension: .absolute(200)
 //            )
 //        )
-//
-//
 
 }
 

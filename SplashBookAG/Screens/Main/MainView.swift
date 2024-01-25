@@ -78,10 +78,7 @@ final class MainView: UIView {
 //            )
 //        )
 //
-//        singleItem.contentInsets = NSDirectionalEdgeInsets(
-//            top: 3,
-//            lead
-//   
+/
 //
 //    }
 }

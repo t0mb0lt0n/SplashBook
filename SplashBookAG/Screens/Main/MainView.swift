@@ -80,11 +80,7 @@ final class MainView: UIView {
 //
 //        singleItem.contentInsets = NSDirectionalEdgeInsets(
 //            top: 3,
-//            leading: 3,
-// 
-//        let group = NSCollectionLayoutGroup.horizontal(
-//            layoutSize: NSCollectionLayoutSize(
-//
+//            lead
 //            subitems: [
 //        let section = NSCollectionLayoutSection(group: group)
 //        let compositionLayout = UICollectionViewCompositionalLayout(section: section)

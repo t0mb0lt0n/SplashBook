@@ -81,9 +81,8 @@ final class MainView: UIView {
 //        singleItem.contentInsets = NSDirectionalEdgeInsets(
 //            top: 3,
 //            lead
-//            subitems: [
-//        let section = NSCollectionLayoutSection(group: group)
-//     
+//   
+//
 //    }
 }
 

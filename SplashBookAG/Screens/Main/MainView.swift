@@ -88,11 +88,8 @@ final class MainView: UIView {
 //
 //        let group = NSCollectionLayoutGroup.horizontal(
 //            layoutSize: NSCollectionLayoutSize(
-//                widthDimension: .fractionalWidth(1),
-//                heightDimension: .absolute(200)
-//            ),
+//   
 //            subitems: [
-=
 //        let section = NSCollectionLayoutSection(group: group)
 //        let compositionLayout = UICollectionViewCompositionalLayout(section: section)
 //        return compositionLayout

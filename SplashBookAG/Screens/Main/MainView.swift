@@ -76,11 +76,7 @@ final class MainView: UIView {
 //                widthDimension: .absolute(300),
 //                heightDimension: .absolute(200)
 //            )
-//        )
-//
-/
-//
-//    }
+
 }
 
 //MARK: - Constants

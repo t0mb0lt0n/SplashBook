@@ -74,8 +74,7 @@ final class MainView: UIView {
 //        let dubleItem = NSCollectionLayoutItem(
 //            layoutSize: NSCollectionLayoutSize(
 //                widthDimension: .absolute(300),
-//                heightDimension: .absolute(200)
-//            )
+/
 
 }
 

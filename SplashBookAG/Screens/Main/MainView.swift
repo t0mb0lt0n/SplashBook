@@ -92,10 +92,7 @@ final class MainView: UIView {
 //                heightDimension: .absolute(200)
 //            ),
 //            subitems: [
-//                singleItem,
-//                dubleItem
-//            ]
-//        )
+=
 //        let section = NSCollectionLayoutSection(group: group)
 //        let compositionLayout = UICollectionViewCompositionalLayout(section: section)
 //        return compositionLayout

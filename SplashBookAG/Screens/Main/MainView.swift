@@ -65,8 +65,7 @@ final class MainView: UIView {
 //    func setupCompositionalLayout() -> UICollectionViewCompositionalLayout {
 //        //Item
 //        let singleItem = NSCollectionLayoutItem(
-//            layoutSize: NSCollectionLayoutSize(
-//                widthDimension: .absolute(130),
+//             widthDimension: .absolute(130),
    
 
 }

@@ -67,8 +67,7 @@ final class MainView: UIView {
 //        let singleItem = NSCollectionLayoutItem(
 //            layoutSize: NSCollectionLayoutSize(
 //                widthDimension: .absolute(130),
-//                heightDimension: .absolute(200)
-//    
+   
 
 }
 

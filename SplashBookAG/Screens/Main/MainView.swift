@@ -63,9 +63,7 @@ final class MainView: UIView {
     }
     
 //    func setupCompositionalLayout() -> UICollectionViewCompositionalLayout {
-//        //Item
-//        let singleItem = NSCollectionLayoutItem(
-//             widthDi
+//  
    
 
 }

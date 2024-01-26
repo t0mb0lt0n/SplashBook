@@ -61,11 +61,6 @@ final class MainView: UIView {
         layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         return layout
     }
-    
-//    func setupCompositionalLayout() -> UICollectionViewCompositionalLayout {
-//  
-   
-
 }
 
 //MARK: - Constants

@@ -68,8 +68,7 @@ final class MainView: UIView {
 //            layoutSize: NSCollectionLayoutSize(
 //                widthDimension: .absolute(130),
 //                heightDimension: .absolute(200)
-//            )
-//      
+//    
 
 }
 

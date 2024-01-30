@@ -46,7 +46,6 @@ final class MainViewModel {
             switch result {
             case .success(let photos):
                 self.photos = photos.results
-                //self.photos = photos.map {}
                 //self.reloadClosure?()
                 print(self.photos.count)
                 self.currentPage += 1

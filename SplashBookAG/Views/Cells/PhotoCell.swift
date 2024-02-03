@@ -83,7 +83,10 @@ class PhotoCell: UICollectionViewCell {
             imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: Constants.imageViewBottomSpacing),
             
-            authorNameLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: Constants.authorNameBottomSpacing),
+            authorNameLabel.bottomAnchor.constraint(
+                equalTo: contentView.bottomAnchor,
+                constant: Constants.authorNameBottomSpacing
+            ),
             authorNameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Constants.authorNameLeadingSpacing),
             authorNameLabel.widthAnchor.constraint(equalToConstant: Constants.authorNameWidth),
             authorNameLabel.heightAnchor.constraint(equalToConstant: Constants.authorNameHeight),

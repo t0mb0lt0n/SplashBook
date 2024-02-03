@@ -16,6 +16,7 @@ final class MainViewModel {
     var isContentDownloaded: Bool = false {
         didSet {
             isContentDownloaded = false
+            reloadClosure?()
             print(self.isContentDownloaded)
         }
     }
@@ -44,7 +45,7 @@ final class MainViewModel {
             switch result {
             case .success(let photos):
                 self.photos = photos.results
-                self.reloadClosure?()
+                //self.reloadClosure?()
                 print(self.photos.count)
                 self.currentPage += 1
             case .failure(let error):

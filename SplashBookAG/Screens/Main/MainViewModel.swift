@@ -44,14 +44,14 @@ final class MainViewModel {
             switch result {
             case .success(let photos):
                 self.photos = photos.results
-                //self.reloadClosure?()
+                self.reloadClosure?()
+                self.isContentDownloaded = true
                 print(self.photos.count)
                 self.currentPage += 1
             case .failure(let error):
                 print(error.localizedDescription)
             }
         }
-        self.reloadClosure?()
     }
     
     func continueDownloading(_ isDownloading: Bool) {

@@ -45,7 +45,6 @@ final class MainViewModel {
             case .success(let photos):
                 self.photos = photos.results
                 self.reloadClosure?()
-                self.isContentDownloaded = true
                 print(self.photos.count)
                 self.currentPage += 1
             case .failure(let error):

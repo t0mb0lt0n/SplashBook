@@ -15,10 +15,8 @@ final class MainViewModel {
     var reloadClosure: (() -> Void)?
     var isContentDownloaded: Bool = false {
         didSet {
-            //reloadClosure?()
             isContentDownloaded = false
             print(self.isContentDownloaded)
- 
         }
     }
     
@@ -46,7 +44,6 @@ final class MainViewModel {
             switch result {
             case .success(let photos):
                 self.photos = photos.results
-                
                 //self.reloadClosure?()
                 print(self.photos.count)
                 self.currentPage += 1

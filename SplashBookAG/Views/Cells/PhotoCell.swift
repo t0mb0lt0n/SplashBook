@@ -19,7 +19,10 @@ class PhotoCell: UICollectionViewCell {
         let label = UILabel()
         label.text = .defaultAuthorName
         label.textColor = .white
-        label.font = .systemFont(ofSize: Constants.authorNameFontSize, weight: .semibold)
+        label.font = .systemFont(
+            ofSize: Constants.authorNameFontSize,
+            weight: .semibold
+        )
         return label
     }()
     

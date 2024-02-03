@@ -37,7 +37,6 @@ class PhotoCell: UICollectionViewCell {
     
     private let likeCountLabel: UILabel = {
         let label = UILabel()
-        //label.text = "10000"
         label.textColor = .systemOrange
         return label
     }()

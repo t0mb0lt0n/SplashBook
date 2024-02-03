@@ -55,5 +55,4 @@ struct HTTPRequest {
             throw NetworkFailure.URLEncoderError.encodingFailure
         }
     }
-
 }

@@ -46,7 +46,6 @@ class PhotoCell: UICollectionViewCell {
         super .init(frame: frame)
         setupCell()
         setupConstraints()
-        
     }
     
     override func prepareForReuse() {

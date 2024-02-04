@@ -34,7 +34,6 @@ final class MainViewModel {
     }
     
     func findPhotos() {
-        self.reloadClosure?()
         service.searchImages(
             for: Constants.request,
             page: 1,

@@ -139,6 +139,7 @@ extension PhotoCell {
         static let likeImageWidth: CGFloat = 14
         static let likeImageHeight: CGFloat = 14
         static let likeImageLeadingSpacing: CGFloat = 3
-        static let 
+        static let likeCountLabelWidth: CGFloat = 100
+        
     }
 }

@@ -71,7 +71,7 @@ class PhotoCell: UICollectionViewCell {
         backgroundColor = .green
     }
     
-    func setupCellSubviews(for image: UnsplashPhoto, completion: @escaping (Bool) -> Void? ) {
+    func setupCellSubviews(for image: UnsplashPhoto, completion: @escaping (Bool) -> Void?) {
         self.imageView.loadImageAsync(
             from: image.urls.small,
             completion: completion
@@ -136,5 +136,6 @@ extension PhotoCell {
         static let authorNameWidth: CGFloat = 120
         static let authorNameHeight: CGFloat = 14
         static let authorNameFontSize: CGFloat = 14
+        
     }
 }

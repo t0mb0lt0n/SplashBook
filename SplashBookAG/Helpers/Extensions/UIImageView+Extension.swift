@@ -68,7 +68,6 @@ extension UIImageView {
             }
             
             guard let data = data, let downloadedImage = UIImage(data: data) else { return }
-            
             ImageCache.shared.save(image: downloadedImage, forKey: urlString)
             
             if url == self?.currentURL {

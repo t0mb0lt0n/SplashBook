@@ -117,8 +117,8 @@ class PhotoCell: UICollectionViewCell {
                 constant: Constants.authorNameBottomSpacing
             ),
             likeCountLabel.trailingAnchor.constraint(
-                equalTo: contentView.trailingAnchor,
-                constant: Constants.likeImageTralingSpacing
+                equalTo: likeImage.trailingAnchor,
+                constant: Constants.likeCountLabelLeadingSpacing
             ),
             likeCountLabel.widthAnchor.constraint(equalToConstant: 50),
             likeCountLabel.heightAnchor.constraint(equalToConstant: 14),
@@ -138,7 +138,7 @@ extension PhotoCell {
         static let authorNameFontSize: CGFloat = 14
         static let likeImageWidth: CGFloat = 14
         static let likeImageHeight: CGFloat = 14
-        static let likeImageTralingSpacing: CGFloat = 100
+        static let likeImageTralingSpacing: CGFloat = -50
         static let likeCountLabelWidth: CGFloat = 100
         static let likeCountLabelHeight: CGFloat = 14
         static let likeCountLabelLeadingSpacing: CGFloat = 3

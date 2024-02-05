@@ -142,6 +142,6 @@ extension PhotoCell {
         static let likeCountLabelWidth: CGFloat = 100
         static let likeCountLabelHeight: CGFloat = 14
         static let likeCountLabelLeadingSpacing: CGFloat = 3
-        
+        static let likeCountLabelBottomSpacing: CGFloat = -5
     }
 }

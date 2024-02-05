@@ -121,7 +121,7 @@ class PhotoCell: UICollectionViewCell {
                 constant: Constants.likeCountLabelLeadingSpacing
             ),
             likeCountLabel.widthAnchor.constraint(equalToConstant: Constants.likeCountLabelWidth),
-            likeCountLabel.heightAnchor.constraint(equalToConstant: 14),
+            likeCountLabel.heightAnchor.constraint(equalToConstant: Constants.likeCountLabelHeight),
         ])
     }
 }

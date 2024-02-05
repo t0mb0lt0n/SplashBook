@@ -120,7 +120,7 @@ class PhotoCell: UICollectionViewCell {
                 equalTo: likeImage.trailingAnchor,
                 constant: Constants.likeCountLabelLeadingSpacing
             ),
-            likeCountLabel.widthAnchor.constraint(equalToConstant: 50),
+            likeCountLabel.widthAnchor.constraint(equalToConstant: Constants.likeCountLabelWidth),
             likeCountLabel.heightAnchor.constraint(equalToConstant: 14),
         ])
     }

@@ -131,7 +131,7 @@ class PhotoCell: UICollectionViewCell {
 extension PhotoCell {
     private enum Constants {
         static let imageViewBottomSpacing: CGFloat = 0
-        static let authorNameBottomSpacing: CGFloat = -5
+        static let authorNameBottomSpacing: CGFloat = -10
         static let authorNameLeadingSpacing: CGFloat = 0
         static let authorNameWidth: CGFloat = 120
         static let authorNameHeight: CGFloat = 14

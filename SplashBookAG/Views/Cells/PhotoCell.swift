@@ -110,7 +110,7 @@ class PhotoCell: UICollectionViewCell {
                 constant: Constants.likeImageTralingSpacing
             ),
             likeImage.widthAnchor.constraint(equalToConstant: Constants.likeImageWidth),
-            likeImage.heightAnchor.constraint(equalToConstant: 14),
+            likeImage.heightAnchor.constraint(equalToConstant: Constants.likeImageHeight),
             
             likeCountLabel.bottomAnchor.constraint(
                 equalTo: contentView.bottomAnchor,

@@ -40,6 +40,7 @@ class PhotoCell: UICollectionViewCell {
     
     private let likeCountLabel: UILabel = {
         let label = UILabel()
+        label.backgroundColor = .green
         label.textColor = .systemOrange
         return label
     }()
@@ -116,8 +117,8 @@ class PhotoCell: UICollectionViewCell {
                 equalTo: contentView.bottomAnchor,
                 constant: Constants.likeCountLabelBottomSpacing
             ),
-            likeCountLabel.leadingAnchor.constraint(
-                equalTo: likeImage.trailingAnchor,
+            likeCountLabel.trailingAnchor.constraint(
+                equalTo: contentView.trailingAnchor,
                 constant: Constants.likeCountLabelLeadingSpacing
             ),
             likeCountLabel.widthAnchor.constraint(equalToConstant: Constants.likeCountLabelWidth),
@@ -132,17 +133,17 @@ extension PhotoCell {
     private enum Constants {
         static let imageViewBottomSpacing: CGFloat = 0
         static let authorNameBottomSpacing: CGFloat = -10
-        static let authorNameLeadingSpacing: CGFloat = 0
+        static let authorNameLeadingSpacing: CGFloat = 5
         static let authorNameWidth: CGFloat = 120
         static let authorNameHeight: CGFloat = 14
         static let authorNameFontSize: CGFloat = 14
         static let likeImageWidth: CGFloat = 14
         static let likeImageHeight: CGFloat = 14
         static let likeImageTralingSpacing: CGFloat = -50
-        static let likeImageBottomSpacing: CGFloat = -5
-        static let likeCountLabelWidth: CGFloat = 100
+        static let likeImageBottomSpacing: CGFloat = -10
+        static let likeCountLabelWidth: CGFloat = 1
         static let likeCountLabelHeight: CGFloat = 14
-        static let likeCountLabelLeadingSpacing: CGFloat = 3
-        static let likeCountLabelBottomSpacing: CGFloat = -5
+        static let likeCountLabelLeadingSpacing: CGFloat = -5
+        static let likeCountLabelBottomSpacing: CGFloat = -10
     }
 }

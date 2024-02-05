@@ -40,7 +40,6 @@ class PhotoCell: UICollectionViewCell {
     
     private let likeCountLabel: UILabel = {
         let label = UILabel()
-        label.backgroundColor = .green
         label.textColor = .systemOrange
         return label
     }()
@@ -107,7 +106,7 @@ class PhotoCell: UICollectionViewCell {
                 constant: Constants.likeImageBottomSpacing
             ),
             likeImage.trailingAnchor.constraint(
-                equalTo: contentView.trailingAnchor,
+                equalTo: likeCountLabel.leadingAnchor,
                 constant: Constants.likeImageTralingSpacing
             ),
             likeImage.widthAnchor.constraint(equalToConstant: Constants.likeImageWidth),
@@ -139,9 +138,9 @@ extension PhotoCell {
         static let authorNameFontSize: CGFloat = 14
         static let likeImageWidth: CGFloat = 14
         static let likeImageHeight: CGFloat = 14
-        static let likeImageTralingSpacing: CGFloat = -50
+        static let likeImageTralingSpacing: CGFloat = -5
         static let likeImageBottomSpacing: CGFloat = -10
-        static let likeCountLabelWidth: CGFloat = 1
+        static let likeCountLabelWidth: CGFloat = 45
         static let likeCountLabelHeight: CGFloat = 14
         static let likeCountLabelLeadingSpacing: CGFloat = -5
         static let likeCountLabelBottomSpacing: CGFloat = -10

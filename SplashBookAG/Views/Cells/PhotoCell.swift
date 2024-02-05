@@ -137,8 +137,8 @@ extension PhotoCell {
         static let authorNameHeight: CGFloat = 14
         static let authorNameFontSize: CGFloat = 14
         static let likeImageWidth: CGFloat = 14
-        
+        static let likeImageHeight: CGFloat = 14
         static let likeImageLeadingSpacing: CGFloat = 3
-        static let
+        static let 
     }
 }

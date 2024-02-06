@@ -42,7 +42,7 @@ final class MainViewModel {
             for: Constants.request,
             page: currentPage,
             pageSize: Constants.pageSize
-        ) { result in
+        ) { [weak self] result in
             self.continueDownloading(true)
             
             switch result {

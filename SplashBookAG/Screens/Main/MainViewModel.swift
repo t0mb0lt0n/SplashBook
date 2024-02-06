@@ -47,7 +47,7 @@ final class MainViewModel {
             
             switch result {
             case .success(let downloadedPhotos):
-                self?.photos = downloadedPhotos.results
+                self?.photos.append(contentsOf: downloadedPhotos.results)
                 //self.reloadClosure?()
                 print("Number of downloaded images = \(String(describing: self?.photos.count))")
                 self?.currentPage += 1

@@ -13,6 +13,8 @@ final class MainView: UIView {
         return collectionView
     }()
     
+    var handlePage: (() -> Void)?
+    
     init() {
         super.init(frame: .zero)
         setupCollectionView()

@@ -37,9 +37,10 @@ final class MainViewModel {
     }
     
     func findPhotos() {
+        //guard hasMoreContent else { return }
         service.searchImages(
             for: Constants.request,
-            page: 1,
+            page: currentPage,
             pageSize: Constants.pageSize
         ) { result in
             self.continueDownloading(true)
@@ -66,8 +67,8 @@ final class MainViewModel {
 
 extension MainViewModel {
     private enum Constants {
-        static let request: String = "New York"
+        static let request: String = "tupolev"
         static let startPage = 1
-        static let pageSize = 3
+        static let pageSize = 16
     }
 }

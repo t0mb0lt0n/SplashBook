@@ -18,7 +18,7 @@ final class MainViewModel {
     var reloadClosure: (() -> Void)?
     var isContentDownloaded: Bool = false {
         didSet {
-            isContentDownloaded = false
+            //stillDownloading = true
             reloadClosure?()
             print(self.isContentDownloaded)
         }
@@ -38,6 +38,7 @@ final class MainViewModel {
     
     func findPhotos() {
         //guard hasMoreContent else { return }
+        continueDownloading(true)
         service.searchImages(
             for: Constants.request,
             page: currentPage,

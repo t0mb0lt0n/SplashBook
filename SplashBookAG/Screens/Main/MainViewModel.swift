@@ -49,7 +49,7 @@ final class MainViewModel {
             case .success(let photos):
                 self?.photos = photos.results
                 //self.reloadClosure?()
-                print("Number of downloaded images = \(self.photos.count)")
+                print("Number of downloaded images = \(String(describing: self?.photos.count))")
                 self?.currentPage += 1
             case .failure(let error):
                 print(error.localizedDescription)

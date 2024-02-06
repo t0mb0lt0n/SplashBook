@@ -43,7 +43,7 @@ final class MainViewModel {
             page: currentPage,
             pageSize: Constants.pageSize
         ) { [weak self] result in
-            self.continueDownloading(true)
+            self?.continueDownloading(false)
             
             switch result {
             case .success(let photos):

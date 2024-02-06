@@ -12,6 +12,9 @@ final class MainViewModel {
     private(set) var photos: [UnsplashPhoto] = .init()
     private(set) var stillDownloading = false
     private var currentPage = Constants.startPage
+    private var hasMoreContent: Bool {
+        photos.count % Constants.pageSize == 0
+    }
     var reloadClosure: (() -> Void)?
     var isContentDownloaded: Bool = false {
         didSet {
@@ -65,6 +68,6 @@ extension MainViewModel {
     private enum Constants {
         static let request: String = "New York"
         static let startPage = 1
-        static let pageSize = 2
+        static let pageSize = 3
     }
 }

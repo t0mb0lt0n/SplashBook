@@ -20,7 +20,7 @@ final class MainViewModel {
         didSet {
             //stillDownloading = true
             reloadClosure?()
-            print(self.isContentDownloaded)
+            print("isContentDownloaded = \(self.isContentDownloaded)")
         }
     }
     

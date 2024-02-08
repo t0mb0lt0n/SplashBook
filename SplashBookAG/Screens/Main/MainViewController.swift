@@ -10,6 +10,7 @@ import UIKit
 final class MainViewController: UIViewController {
     private lazy var mainView = view as! MainView
     private let viewModel: MainViewModel
+    var loadAttempt = 0
     
     init(viewModel: MainViewModel) {
         self.viewModel = viewModel
@@ -34,8 +35,9 @@ final class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupMainView()
+       // setupMainView()
         setupViewModel()
+        setupMainView()
         //viewModel.findPhotos()
         navigationController?.navigationBar.changeNavigationBarStyle(
             to: Constants.systemColorOrange
@@ -106,7 +108,19 @@ extension MainViewController: UICollectionViewDelegate {
     func collectionView(
         _ collectionView: UICollectionView,
         didSelectItemAt indexPath: IndexPath
-    ) {}
+    ) {
+        //self.setupMainView()
+        //print(viewModel.currentPage)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if (mainView.collectionView.contentOffset.y >=
+            (mainView.collectionView.contentSize.height - mainView.collectionView.bounds.size.height)) {
+            //viewModel.findPhotos()
+            loadAttempt += 1
+            print("load... \(loadAttempt)")
+        }
+    }
 }
 
 extension MainViewController {

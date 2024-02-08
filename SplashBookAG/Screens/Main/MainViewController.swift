@@ -23,7 +23,7 @@ final class MainViewController: UIViewController {
     }
     
     override func loadView() {
-        super.viewDidLoad()
+        super.loadView()
         view = MainView()
         viewModel.findPhotos()
     }
@@ -44,11 +44,11 @@ final class MainViewController: UIViewController {
     }
     
     private func setupMainView() {
-        //transfer delegates
         mainView.collectionView.dataSource = self
         mainView.collectionView.delegate = self
+        
         mainView.handlePage = { [weak self] in
-            guard self?.viewModel.isDownloading == false else { return }
+            guard self?.viewModel.isDownloading != false else { return }
             self?.viewModel.findPhotos()
             print("handle page")
         }

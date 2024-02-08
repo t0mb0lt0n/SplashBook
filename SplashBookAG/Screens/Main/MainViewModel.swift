@@ -20,7 +20,8 @@ final class MainViewModel {
         didSet {
             //stillDownloading = true
             reloadClosure?()
-            print("isContentDownloaded = \(self.isContentDownloaded)")
+            print("stillDownloading = \(self.stillDownloading)")
+            //print("currentPage = \(self.currentPage)")
         }
     }
     
@@ -49,7 +50,7 @@ final class MainViewModel {
             switch result {
             case .success(let downloadedPhotos):
                 self?.photos.append(contentsOf: downloadedPhotos.results)
-                //self.reloadClosure?()
+                self?.reloadClosure?()
                 print("Number of downloaded images = \(String(describing: self?.photos.count))")
                 self?.currentPage += 1
             case .failure(let error):

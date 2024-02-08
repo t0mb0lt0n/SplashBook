@@ -48,7 +48,7 @@ final class MainViewController: UIViewController {
         mainView.collectionView.delegate = self
         mainView.handlePage = { [weak self] in
             guard self?.viewModel.stillDownloading == false else { return }
-            self?.viewModel.findPhotos()
+            //self?.viewModel.findPhotos()
             print("handle page")
         }
     }
@@ -56,7 +56,7 @@ final class MainViewController: UIViewController {
     private func setupViewModel() {
         viewModel.reloadClosure = { [weak self] in
             self?.updateContent()
-            print("reload closure")
+            print("view controller update")
         }
     }
     

@@ -36,6 +36,7 @@ final class MainViewController: UIViewController {
         super.viewDidLoad()
         setupMainView()
         setupViewModel()
+        //viewModel.findPhotos()
         navigationController?.navigationBar.changeNavigationBarStyle(
             to: Constants.systemColorOrange
         )
@@ -47,8 +48,8 @@ final class MainViewController: UIViewController {
         mainView.collectionView.dataSource = self
         mainView.collectionView.delegate = self
         mainView.handlePage = { [weak self] in
-            guard self?.viewModel.stillDownloading == false else { return }
-            //self?.viewModel.findPhotos()
+            guard self?.viewModel.isDownloading == false else { return }
+            self?.viewModel.findPhotos()
             print("handle page")
         }
     }

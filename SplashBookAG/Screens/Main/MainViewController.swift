@@ -81,7 +81,6 @@ extension MainViewController: UICollectionViewDataSource {
         _ collectionView: UICollectionView,
         cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
-        
         let photo = viewModel.photos[indexPath.row]
         guard let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: "\(PhotoCell.self)",

@@ -128,7 +128,6 @@ extension MainViewController: UICollectionViewDelegate {
             print("download......")
         }
         
-//        //viewModel.findPhotos()
 //        let y = scrollView.contentOffset.y
     }
     

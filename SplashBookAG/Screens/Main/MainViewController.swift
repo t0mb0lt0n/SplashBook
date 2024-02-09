@@ -115,20 +115,12 @@ extension MainViewController: UICollectionViewDelegate {
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        if (mainView.collectionView.contentOffset.y >=
-//            (mainView.collectionView.contentSize.height - mainView.collectionView.bounds.size.height)) {
-//            viewModel.findPhotos()
-//            loadAttempt += 1
-//            print("load... \(loadAttempt)")
-//        }
-        if (mainView.collectionView.contentOffset.y > (mainView.collectionView.contentSize.height-500-scrollView.frame.size.height )) {
+        if (mainView.collectionView.contentOffset.y >=
+            (mainView.collectionView.contentSize.height - mainView.collectionView.bounds.size.height)) {
             //viewModel.findPhotos()
-            //loadAttempt += 1
-            //print("load... \(loadAttempt)")
-            print("download......")
+            //print("load...")
+            print("contentSize.height ",mainView.collectionView.contentSize.height)
         }
-        
-//        let y = scrollView.contentOffset.y
     }
 }
 

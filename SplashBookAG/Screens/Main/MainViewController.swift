@@ -121,16 +121,15 @@ extension MainViewController: UICollectionViewDelegate {
 //            loadAttempt += 1
 //            print("load... \(loadAttempt)")
 //        }
-        if (mainView.collectionView.contentOffset.y >= (mainView.collectionView.contentSize.height-scrollView.frame.size.height )) {
+        if (mainView.collectionView.contentOffset.y > (mainView.collectionView.contentSize.height-500-scrollView.frame.size.height )) {
             //viewModel.findPhotos()
-            loadAttempt += 1
-            print("load... \(loadAttempt)")
-            print(mainView.collectionView.contentOffset.y)
+            //loadAttempt += 1
+            //print("load... \(loadAttempt)")
+            print("download......")
         }
         
 //        //viewModel.findPhotos()
 //        let y = scrollView.contentOffset.y
-        print(mainView.collectionView.contentOffset.y)
     }
     
     //func 

@@ -45,7 +45,7 @@ final class MainViewModel {
             pageSize: Constants.pageSize
         ) { [weak self] result in
             self?.continueDownloading(false)
-            print("Current page is [\(String(describing: self?.currentPage))]")
+            print("Current page is \(String(describing: self?.currentPage))")
             switch result {
             case .success(let downloadedPhotos):
                 self?.photos.append(contentsOf: downloadedPhotos.results)
@@ -69,6 +69,6 @@ extension MainViewModel {
     private enum Constants {
         static let request: String = "city"
         static let startPage = 1
-        static let pageSize = 2
+        static let pageSize = 20
     }
 }

@@ -91,6 +91,7 @@ extension MainViewController: UICollectionViewDataSource {
         ) as? PhotoCell else {
             fatalError("Cell dequeue error")
         }
+        
         cell.setupCellSubviews(for: photo) { [weak self] isDownloaded in
             self?.viewModel.isContentDownloaded = isDownloaded
         }
@@ -114,12 +115,22 @@ extension MainViewController: UICollectionViewDelegate {
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        if (mainView.collectionView.contentOffset.y >=
+//            (mainView.collectionView.contentSize.height - mainView.collectionView.bounds.size.height)) {
+//            viewModel.findPhotos()
+//            loadAttempt += 1
+//            print("load... \(loadAttempt)")
+//        }
         if (mainView.collectionView.contentOffset.y >=
             (mainView.collectionView.contentSize.height - mainView.collectionView.bounds.size.height)) {
-            //viewModel.findPhotos()
+            viewModel.findPhotos()
             loadAttempt += 1
             print("load... \(loadAttempt)")
         }
+        
+//        //viewModel.findPhotos()
+//        let y = scrollView.contentOffset.y
+//        print(y)
     }
     
     //func 

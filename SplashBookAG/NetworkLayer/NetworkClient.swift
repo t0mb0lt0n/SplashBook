@@ -41,7 +41,7 @@ final class NetworkClient {
         completion: @escaping (Result<T, Error>) -> Void
     ) {
         self.session.dataTask(with: request) { data, response, error in
-            DispatchQueue.main.async {
+            DispatchQueue.main.asyncAfter(deadline: .now() + Double.random(in: 1...2)) {
                 if let error = error {
                     completion(.failure(error))
                 }

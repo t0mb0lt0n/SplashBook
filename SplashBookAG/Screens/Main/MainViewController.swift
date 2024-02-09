@@ -110,8 +110,7 @@ extension MainViewController: UICollectionViewDelegate {
         _ collectionView: UICollectionView,
         didSelectItemAt indexPath: IndexPath
     ) {
-        //self.setupMainView()
-        //print(viewModel.currentPage)
+        
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

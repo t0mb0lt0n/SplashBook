@@ -130,8 +130,6 @@ extension MainViewController: UICollectionViewDelegate {
         
 //        let y = scrollView.contentOffset.y
     }
-    
-    //func 
 }
 
 extension MainViewController {

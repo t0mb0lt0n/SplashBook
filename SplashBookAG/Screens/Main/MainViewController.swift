@@ -118,7 +118,7 @@ extension MainViewController: UICollectionViewDelegate {
             (mainView.collectionView.contentSize.height - mainView.collectionView.bounds.size.height)) {
             //viewModel.findPhotos()
             //print("load...")
-            print("contentSize.height ",mainView.collectionView.contentSize.height)
+            print("contentSize.height = ",mainView.collectionView.contentSize.height)
         }
     }
 }

@@ -10,7 +10,7 @@ import UIKit
 final class MainViewController: UIViewController {
     private lazy var mainView = view as! MainView
     private let viewModel: MainViewModel
-    var loadAttempt = 0
+    private var loadAttempt = 0
     
     init(viewModel: MainViewModel) {
         self.viewModel = viewModel
@@ -35,7 +35,6 @@ final class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       // setupMainView()
         setupViewModel()
         setupMainView()
         //viewModel.findPhotos()

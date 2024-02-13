@@ -11,7 +11,7 @@ final class MainViewModel {
     private let service: ImageService
     private(set) var photos: [UnsplashPhoto] = .init()
     private(set) var isDownloading = false
-     var currentPage = Constants.startPage
+    private var currentPage = Constants.startPage
     private var hasMoreContent: Bool {
         photos.count % Constants.pageSize == 0
     }

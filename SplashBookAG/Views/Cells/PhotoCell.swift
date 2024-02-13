@@ -68,7 +68,7 @@ class PhotoCell: UICollectionViewCell {
             contentView.addSubview(subview)
             subview.translatesAutoresizingMaskIntoConstraints = false
         }
-        backgroundColor = .green
+        //backgroundColor = .green
     }
     
     func setupCellSubviews(for image: UnsplashPhoto, completion: @escaping (Bool) -> Void?) {

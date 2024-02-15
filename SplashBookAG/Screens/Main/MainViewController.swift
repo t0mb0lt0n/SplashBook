@@ -26,7 +26,7 @@ final class MainViewController: UIViewController {
     override func loadView() {
         super.loadView()
         view = MainView()
-        viewModel.findPhotos()
+        //viewModel.findPhotos()
     }
     
     override func viewWillAppear(_ animated: Bool) {

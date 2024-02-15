@@ -66,7 +66,9 @@ final class MainView: UIView {
         layout.scrollDirection = .vertical
         layout.minimumLineSpacing = Constants.lineSpacing
         layout.minimumInteritemSpacing = Constants.interItemSpacing
-        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        layout.itemSize.height = 200
+        layout.itemSize.width = 200
+        //layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         return layout
     }
 }
@@ -78,7 +80,7 @@ extension MainView {
         static let borderSpacing: CGFloat = 1
         static let lineSpacing: CGFloat = 1
         static let interItemSpacing: CGFloat = 1
-        static let itemWidth: CGFloat = 200
-        static let itemHeight: CGFloat = 300
+        static let itemWidth: CGFloat = 300 //200
+        static let itemHeight: CGFloat = 300 // 300
     }
 }

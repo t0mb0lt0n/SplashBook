@@ -49,7 +49,7 @@ final class MainViewController: UIViewController {
         mainView.collectionView.delegate = self
         
         mainView.handlePage = { [weak self] in
-            guard self?.viewModel.isDownloading != false else { return }
+            guard self?.viewModel.isDownloading == false else { return }
             self?.viewModel.findPhotos()
             print("handle page")
         }
@@ -115,7 +115,7 @@ extension MainViewController: UICollectionViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if (mainView.collectionView.contentOffset.y >=
             (mainView.collectionView.contentSize.height - mainView.collectionView.bounds.size.height)) {
-            //viewModel.findPhotos()
+            viewModel.findPhotos()
             loadAttempt += 1
             print("load... attempt [\(loadAttempt)]")
             print("contentSize.height =",mainView.collectionView.contentSize.height)

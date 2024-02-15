@@ -121,14 +121,7 @@ extension MainViewController: UICollectionViewDelegate {
             print(mainView.collectionView.contentSize.height - mainView.collectionView.bounds.size.height)
             print("contentSize.height =",mainView.collectionView.contentSize.height)
         }
-    }
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if (mainView.collectionView.contentOffset.y >=
-            (mainView.collectionView.contentSize.height - mainView.collectionView.bounds.size.height)) {
-            //handlePage?()
-            loadAttempt += 1
- 
+    } 
 }
 
 extension MainViewController {

@@ -19,7 +19,7 @@ final class MainViewModel {
     var isContentDownloaded: Bool = false {
         didSet {
             //stillDownloading = true
-            reloadClosure?()
+            //reloadClosure?()
             print("stillDownloading = \(self.isDownloading)")
         }
     }

@@ -26,7 +26,7 @@ final class MainViewController: UIViewController {
     override func loadView() {
         super.loadView()
         view = MainView()
-        //viewModel.findPhotos()
+        viewModel.findPhotos()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -112,13 +112,23 @@ extension MainViewController: UICollectionViewDelegate {
         
     }
     
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        if (mainView.collectionView.contentOffset.y >
+//            (mainView.collectionView.contentSize.height - mainView.collectionView.bounds.size.height)) {
+//           // viewModel.findPhotos()
+//            loadAttempt += 1
+//            print("load... attempt [\(loadAttempt)]")
+//            print(mainView.collectionView.contentSize.height - mainView.collectionView.bounds.size.height)
+//            print("contentSize.height =",mainView.collectionView.contentSize.height)
+//        }
+//    }
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if (mainView.collectionView.contentOffset.y >=
             (mainView.collectionView.contentSize.height - mainView.collectionView.bounds.size.height)) {
-            viewModel.findPhotos()
+            //handlePage?()
             loadAttempt += 1
-            print("load... attempt [\(loadAttempt)]")
-            print("contentSize.height =",mainView.collectionView.contentSize.height)
+            print("pagination... [\(loadAttempt)]")
         }
     }
 }

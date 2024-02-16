@@ -122,7 +122,7 @@ extension MainViewController: UICollectionViewDelegate {
             (mainView.collectionView.contentSize.height - mainView.collectionView.bounds.size.height)) {
             handlePagination()
             loadAttempt += 1
-            print("load... attempt [\(loadAttempt)]")
+
            
         }
     } 

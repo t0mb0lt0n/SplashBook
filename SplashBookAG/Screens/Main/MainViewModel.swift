@@ -42,6 +42,7 @@ final class MainViewModel {
             page: currentPage,
             pageSize: Constants.pageSize
         ) { [weak self] result in
+            self?.reloadClosure?()
             self?.handleLoadingEvent(false)
             print("Current page is \(String(describing: self?.currentPage))")
             switch result {
@@ -54,6 +55,7 @@ final class MainViewModel {
                 print(error.localizedDescription)
             }
         }
+         reloadClosure?()
     }
     
     func handleLoadingEvent(_ isDownloading: Bool) {

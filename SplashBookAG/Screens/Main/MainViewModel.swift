@@ -10,7 +10,7 @@ import Foundation
 final class MainViewModel {
     private let service: ImageService
     private(set) var photos: [UnsplashPhoto] = .init()
-    private(set) var isDownloading = false
+    private(set) var isContentDownloading = false
     private var currentPage = Constants.startPage
     private var hasMoreContent: Bool {
         photos.count % Constants.pageSize == 0
@@ -20,7 +20,7 @@ final class MainViewModel {
         didSet {
             //stillDownloading = true
             //reloadClosure?()
-            print("stillDownloading = \(self.isDownloading)")
+            print("stillDownloading = \(self.isContentDownloading)")
         }
     }
     
@@ -44,7 +44,7 @@ final class MainViewModel {
             page: currentPage,
             pageSize: Constants.pageSize
         ) { [weak self] result in
-            self?.continueDownloading(false)
+            self?.handleLoadingEvent(false)
             print("Current page is \(String(describing: self?.currentPage))")
             switch result {
             case .success(let downloadedPhotos):
@@ -59,7 +59,7 @@ final class MainViewModel {
     }
     
     func handleLoadingEvent(_ isDownloading: Bool) {
-        self.isDownloading = isDownloading
+        self.isContentDownloading = isDownloading
     }
 }
 

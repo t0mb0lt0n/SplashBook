@@ -49,8 +49,8 @@ final class MainViewController: UIViewController {
         mainView.collectionView.delegate = self
         
         mainView.handlePage = { [weak self] in
-            guard self?.viewModel.isDownloading == false else { return }
-            //self?.viewModel.findPhotos()
+            guard self?.viewModel.isContentDownloading == false else { return }
+            self?.viewModel.findPhotos()
             print("handle page")
         }
     }

@@ -118,8 +118,7 @@ extension MainViewController: UICollectionViewDelegate {
            // viewModel.findPhotos()
             loadAttempt += 1
             print("load... attempt [\(loadAttempt)]")
-            print(mainView.collectionView.contentSize.height - mainView.collectionView.bounds.size.height)
-            print("contentSize.height =",mainView.collectionView.contentSize.height)
+           
         }
     } 
 }

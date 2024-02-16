@@ -63,7 +63,8 @@ final class MainViewController: UIViewController {
     }
     
     private func handlePagination() {
-        guard
+        guard viewModel.isContentDownloading == false else { return }
+        viewModel.findPhotos()
     }
     
     private func updateContent() {
@@ -119,7 +120,7 @@ extension MainViewController: UICollectionViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if (mainView.collectionView.contentOffset.y >
             (mainView.collectionView.contentSize.height - mainView.collectionView.bounds.size.height)) {
-            mainView.handlePage()
+            handlePagination()
             loadAttempt += 1
             print("load... attempt [\(loadAttempt)]")
            

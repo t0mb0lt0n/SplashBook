@@ -62,6 +62,10 @@ final class MainViewController: UIViewController {
         }
     }
     
+    private func handlePagination() {
+        guard
+    }
+    
     private func updateContent() {
         DispatchQueue.main.async {
             self.mainView.collectionView.reloadData()
@@ -115,7 +119,7 @@ extension MainViewController: UICollectionViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if (mainView.collectionView.contentOffset.y >
             (mainView.collectionView.contentSize.height - mainView.collectionView.bounds.size.height)) {
-           // viewModel.findPhotos()
+            mainView.handlePage()
             loadAttempt += 1
             print("load... attempt [\(loadAttempt)]")
            

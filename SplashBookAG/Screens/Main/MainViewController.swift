@@ -26,7 +26,7 @@ final class MainViewController: UIViewController {
     override func loadView() {
         super.loadView()
         view = MainView()
-        viewModel.findPhotos()
+        //viewModel.findPhotos()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -120,7 +120,7 @@ extension MainViewController: UICollectionViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if (mainView.collectionView.contentOffset.y >
             (mainView.collectionView.contentSize.height - mainView.collectionView.bounds.size.height)) {
-            handlePagination()
+            //handlePagination()
         }
     }
 }

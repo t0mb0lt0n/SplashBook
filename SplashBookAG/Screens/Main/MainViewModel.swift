@@ -67,6 +67,6 @@ extension MainViewModel {
     private enum Constants {
         static let request: String = "city"
         static let startPage = 1
-        static let pageSize = 10
+        static let pageSize = 5
     }
 }

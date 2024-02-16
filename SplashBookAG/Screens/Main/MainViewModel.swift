@@ -38,7 +38,7 @@ final class MainViewModel {
     
     func findPhotos() {
         //guard hasMoreContent else { return }
-        continueDownloading(true)
+        handleLoadingEvent(true)
         service.searchImages(
             for: Constants.request,
             page: currentPage,
@@ -58,7 +58,7 @@ final class MainViewModel {
         }
     }
     
-    func continueDownloading(_ isDownloading: Bool) {
+    func handleLoadingEvent(_ isDownloading: Bool) {
         self.isDownloading = isDownloading
     }
 }

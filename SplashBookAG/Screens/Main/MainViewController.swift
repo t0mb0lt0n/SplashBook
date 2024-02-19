@@ -98,7 +98,7 @@ extension MainViewController: UICollectionViewDataSource {
         }
         
         cell.setupCellSubviews(for: photo) { [weak self] isDownloaded in
-            gu
+            guard isDownloaded else { return }
             self?.updateContent()
         }
         return cell
@@ -123,7 +123,7 @@ extension MainViewController: UICollectionViewDelegate {
         if (mainView.collectionView.contentOffset.y >
             (mainView.collectionView.contentSize.height - mainView.collectionView.bounds.size.height)) {
             handlePagination()
-            updateContent()
+            //updateContent()
         }
     }
 }

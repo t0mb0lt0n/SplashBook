@@ -17,8 +17,7 @@ final class MainViewModel {
     }
     var reloadClosure: (() -> Void)?
     var isContentDownloaded: Bool = false {
-        didSet {
- 
+
     
     var numberOfSections: Int {
         1

@@ -20,8 +20,7 @@ final class MainViewModel {
         didSet {
             //guard reloadClosure() else { return } //unwrap
             print("stillDownloading = \(self.isContentDownloading)")
-        }
-    }
+
     
     var numberOfSections: Int {
         1

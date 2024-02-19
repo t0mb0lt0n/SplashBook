@@ -16,7 +16,6 @@ final class MainViewModel {
         photos.count % Constants.pageSize == 0
     }
     var reloadClosure: (() -> Void)?
-    var isContentDownloaded: Bool = false {
 
     
     var numberOfSections: Int {

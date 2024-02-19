@@ -98,7 +98,8 @@ extension MainViewController: UICollectionViewDataSource {
         }
         
         cell.setupCellSubviews(for: photo) { [weak self] isDownloaded in
-            self?.viewModel.isContentDownloaded = isDownloaded
+            //self?.viewModel.isContentDownloaded = isDownloaded
+            self?.updateContent()
         }
         return cell
     }

@@ -30,4 +30,10 @@ final class SearchView: UIView {
         }
     }
     
+    private func setupConstraints() {
+        NSLayoutConstraint.activate([
+            
+        ])
+    }
+    
 }

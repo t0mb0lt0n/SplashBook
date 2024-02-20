@@ -15,10 +15,18 @@ final class SearchView: UIView {
     
     init() {
         super .init(frame: .zero)
+        setupViews()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setupViews() {
+        [searchBar].forEach { subView in
+            subView.translatesAutoresizingMaskIntoConstraints = false
+            addSubview(subView)
+        }
     }
     
 }

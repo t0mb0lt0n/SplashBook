@@ -115,20 +115,20 @@
 		11444C592ACF3E3600E90830 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				11B68DF72B83D4D300331747 /* SearchScreen */,
-				11444C5C2ACF3FFC00E90830 /* MainScreen */,
+				11B68DF72B83D4D300331747 /* Search */,
+				11444C5C2ACF3FFC00E90830 /* Main */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
 		};
-		11444C5C2ACF3FFC00E90830 /* MainScreen */ = {
+		11444C5C2ACF3FFC00E90830 /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				11444C6C2ACF441C00E90830 /* MainView.swift */,
 				11444C5A2ACF3EBB00E90830 /* MainViewController.swift */,
 				11F368102AF0422900670733 /* MainViewModel.swift */,
 			);
-			path = MainScreen;
+			path = Main;
 			sourceTree = "<group>";
 		};
 		11444C5D2ACF401E00E90830 /* Helpers */ = {
@@ -227,14 +227,14 @@
 			path = NetworkLayer;
 			sourceTree = "<group>";
 		};
-		11B68DF72B83D4D300331747 /* SearchScreen */ = {
+		11B68DF72B83D4D300331747 /* Search */ = {
 			isa = PBXGroup;
 			children = (
 				11B68DF52B83D4C800331747 /* SearchView.swift */,
 				11B68DF82B83D5D300331747 /* SearchViewController.swift */,
 				11B68DFC2B85241A00331747 /* SearchViewModel.swift */,
 			);
-			path = SearchScreen;
+			path = Search;
 			sourceTree = "<group>";
 		};
 		11F368122AF17D5800670733 /* TabBars */ = {

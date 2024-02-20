@@ -16,6 +16,7 @@ final class SearchView: UIView {
     init() {
         super .init(frame: .zero)
         setupViews()
+        setupConstraints()
     }
     
     required init?(coder: NSCoder) {

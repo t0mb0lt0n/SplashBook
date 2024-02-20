@@ -8,9 +8,11 @@
 import UIKit
 
 class SearchViewController: UIViewController {
+    private lazy var mainView = view as! SearchView
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view = SearchView()
     }
     // MARK: - Navigation
 }

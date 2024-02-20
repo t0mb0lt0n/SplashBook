@@ -10,6 +10,7 @@ import UIKit
 final class SearchView: UIView {
     lazy var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
+        searchBar.placeholder = "search"
         return searchBar
     }()
     
@@ -32,7 +33,7 @@ final class SearchView: UIView {
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            searchBar.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 10)
+            searchBar.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 10),
             searchBar.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
         ])
     }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SearchViewModel: UIViewController {
+final class SearchViewModel {
 
    
     // MARK: - Navigation

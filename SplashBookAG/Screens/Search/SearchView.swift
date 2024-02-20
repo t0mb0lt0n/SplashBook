@@ -8,5 +8,8 @@
 import UIKit
 
 final class SearchView: UIView {
-    
+    lazy var searchBar: UISearchBar = {
+        let searchBar = UISearchBar()
+        return searchBar
+    }()
 }

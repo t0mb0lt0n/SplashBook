@@ -33,7 +33,7 @@ final class SearchView: UIView {
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             searchBar.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 10)
-            searchBar.
+            searchBar.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
         ])
     }
     

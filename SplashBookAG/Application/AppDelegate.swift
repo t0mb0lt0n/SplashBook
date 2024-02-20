@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         )
                     )
                 )
-            )]
+            ), SearchViewController()]
         )
         window?.overrideUserInterfaceStyle = .dark
         window?.makeKeyAndVisible()

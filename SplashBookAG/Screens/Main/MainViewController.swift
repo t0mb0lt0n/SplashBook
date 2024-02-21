@@ -31,9 +31,11 @@ final class MainViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        navigationController?.navigationBar.prefersLargeTitles = true
-//        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.systemOrange]
         setupNavigationBarStyle(isLarge: false, titleColor: .systemOrange)
+        navigationController?.navigationBar.changeNavigationBarStyle(
+            to: Constants.systemColorOrange
+        )
+        view.backgroundColor = .secondarySystemBackground
     }
     
     override func viewDidLoad() {

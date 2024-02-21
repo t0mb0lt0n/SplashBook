@@ -31,8 +31,9 @@ final class MainViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.systemOrange]
+//        navigationController?.navigationBar.prefersLargeTitles = true
+//        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.systemOrange]
+        setupNavigationBarStyle(isLarge: false, titleColor: .systemOrange)
     }
     
     override func viewDidLoad() {
@@ -67,7 +68,6 @@ final class MainViewController: UIViewController {
     private func handlePagination() {
         guard viewModel.isContentDownloading == false else { return }
         viewModel.findPhotos()
-        
     }
     
     private func updateContent() {

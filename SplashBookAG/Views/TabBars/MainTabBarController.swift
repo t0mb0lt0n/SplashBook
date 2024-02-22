@@ -11,7 +11,8 @@ final class MainTabBarController: UITabBarController {
     private var vcList: [UIViewController]
     
     init(with vcList: [UIViewController]) {
-        self.vcList = vcList
+        //self.vcList = vcList
+        viewControllers = vcList
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -27,6 +28,8 @@ final class MainTabBarController: UITabBarController {
             normalItemColor: .systemGray,
             selectedItemColor: .systemOrange
         )
+        let conrollers  = U
+        controll
     }
     
     private func setupTabBar(with viewControllers: [UIViewController]) {

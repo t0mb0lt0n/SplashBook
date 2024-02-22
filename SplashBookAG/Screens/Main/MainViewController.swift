@@ -29,6 +29,12 @@ final class MainViewController: UIViewController {
         //viewModel.findPhotos()
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupViewModel()
+        setupMainView()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupNavigationBarStyle(
@@ -41,12 +47,6 @@ final class MainViewController: UIViewController {
             selectedItemColor: .systemOrange
         )
         view.backgroundColor = .secondarySystemBackground
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupViewModel()
-        setupMainView()
     }
     
     private func setupMainView() {

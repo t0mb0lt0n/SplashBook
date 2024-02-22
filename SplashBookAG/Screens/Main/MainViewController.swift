@@ -37,6 +37,7 @@ final class MainViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        view.backgroundColor = .secondarySystemBackground
         setupNavigationBarStyle(
             isLarge: false,
             titleColor: .systemOrange
@@ -46,7 +47,6 @@ final class MainViewController: UIViewController {
             normalItemColor: .systemGray,
             selectedItemColor: .systemOrange
         )
-        view.backgroundColor = .secondarySystemBackground
     }
     
     private func setupMainView() {

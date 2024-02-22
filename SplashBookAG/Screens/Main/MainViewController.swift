@@ -46,6 +46,12 @@ final class MainViewController: UIViewController {
 //        navigationController?.navigationBar.changeNavigationBarStyle(
 //            to: Constants.systemColorOrange
 //        )
+//                setupTabBarStyle(
+//                    backgroundColor: .systemBackground,
+//                    normalItemColor: .systemGray,
+//                    selectedItemColor: .systemOrange
+//                )
+
         view.backgroundColor = .secondarySystemBackground
     }
     

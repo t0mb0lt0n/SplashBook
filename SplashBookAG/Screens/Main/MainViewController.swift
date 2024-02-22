@@ -132,11 +132,11 @@ extension MainViewController: UICollectionViewDelegate {
 }
 
 extension MainViewController {
-    private enum Constants {
-        static let systemColorOrange: UIColor = .systemOrange
-        static let systemColorDefaultWhite: UIColor = .white
-        static let systemImageCameraFill: String = "camera.fill"
-    }
+//    private enum Constants {
+//        static let systemColorOrange: UIColor = .systemOrange
+//        static let systemColorDefaultWhite: UIColor = .white
+//        static let systemImageCameraFill: String = "camera.fill"
+//    }
 }
 
 

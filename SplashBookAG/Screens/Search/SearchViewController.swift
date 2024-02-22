@@ -16,5 +16,13 @@ class SearchViewController: UIViewController {
         title = "Search photo"
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        setupNavigationBarStyle(
+            isLarge: true,
+            title: .searchPhotoTitle,
+            titleColor: .systemOrange
+        )
+    }
+    
     // MARK: - Navigation
 }

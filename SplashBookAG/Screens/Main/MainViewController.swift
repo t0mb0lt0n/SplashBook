@@ -15,7 +15,6 @@ final class MainViewController: UIViewController {
     init(viewModel: MainViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
-        //title = .editoralTitle
         tabBarItem.image = UIImage(systemName: Constants.systemImageCameraFill)
     }
     
@@ -44,6 +43,7 @@ final class MainViewController: UIViewController {
             titleColor: .systemOrange
         )
         setupTabBarStyle(
+            tabBarItemImage: UIImage(systemName: Constants.systemImageCameraFill)!,
             backgroundColor: .systemBackground,
             normalItemColor: .systemGray,
             selectedItemColor: .systemOrange
@@ -137,6 +137,7 @@ extension MainViewController {
         static let systemColorOrange: UIColor = .systemOrange
         static let systemColorDefaultWhite: UIColor = .white
         static let systemImageCameraFill: String = "camera.fill"
+        static let tabBarItemImage: UIImage? = UIImage(systemName: "camera.fill")
     }
 }
 

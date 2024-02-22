@@ -8,13 +8,12 @@
 import UIKit
 
 final class MainTabBarController: UITabBarController {
-    private var initialVCList: [UIViewController]
+    var initialVCList: [UIViewController]
     
     init(with vcList: [UIViewController]) {
-        self.vcList = vcList
+        initialVCList = vcList
         super.init(nibName: nil, bundle: nil)
-        viewControllers = vcList
-        print(viewControllers)
+        //viewControllers = vcList
     }
     
     required init?(coder: NSCoder) {
@@ -39,11 +38,11 @@ final class MainTabBarController: UITabBarController {
     
     private func setupTabBar() {
         var navigationControllers = [UINavigationController]()
-       // guard let unwrappedVCList = viewControllers else { return }
-        viewControllers?.forEach { vc in
+       // guard let unwrappe
+        initialVCList.forEach { vc in
             let navController = UINavigationController(rootViewController: vc)
             navigationControllers.append(navController)
         }
-        self.viewControllers = navigationControllers
+        viewControllers = navigationControllers
     }
 }

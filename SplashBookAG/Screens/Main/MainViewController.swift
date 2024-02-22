@@ -32,6 +32,11 @@ final class MainViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupNavigationBarStyle(isLarge: false, titleColor: .systemOrange)
+        setupTabBarStyle(
+            backgroundColor: .systemBackground,
+            normalItemColor: .systemGray,
+            selectedItemColor: .systemOrange
+        )
         view.backgroundColor = .secondarySystemBackground
     }
     
@@ -39,13 +44,6 @@ final class MainViewController: UIViewController {
         super.viewDidLoad()
         setupViewModel()
         setupMainView()
-        setupTabBarStyle(
-            backgroundColor: .systemBackground,
-            normalItemColor: .systemGray,
-            selectedItemColor: .systemOrange
-        )
-
-        view.backgroundColor = .secondarySystemBackground
     }
     
     private func setupMainView() {

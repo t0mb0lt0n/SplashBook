@@ -24,12 +24,10 @@ extension UIViewController {
     }
     
     final func setupTabBarStyle(
-        tabBarItemImage: UIImage,
         backgroundColor: UIColor,
         normalItemColor: UIColor,
         selectedItemColor: UIColor
     ) {
-        tabBarItem.image = tabBarItemImage
         let tabBarApperance = UITabBarAppearance()
         tabBarApperance.backgroundColor = backgroundColor.withAlphaComponent(0.1)
         let tabBarItemApperance = UITabBarItemAppearance()
@@ -39,12 +37,5 @@ extension UIViewController {
         tabBarItemApperance.selected.titleTextAttributes = [NSAttributedString.Key.foregroundColor: selectedItemColor]
         tabBarController?.tabBar.scrollEdgeAppearance = tabBarApperance
         tabBarController?.tabBar.scrollEdgeAppearance?.stackedLayoutAppearance = tabBarItemApperance
-    }
-    
-    final func setupTabBarItem(
-        
-    ) {
-        //tabBarItem.image = UIImage(systemName: Constants.systemImageCameraFill)
-
     }
 }

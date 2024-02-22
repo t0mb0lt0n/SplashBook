@@ -10,12 +10,11 @@ import UIKit
 final class MainViewController: UIViewController {
     private lazy var mainView = view as! MainView
     private let viewModel: MainViewModel
-    private var loadAttempt = 0
     
     init(viewModel: MainViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
-        tabBarItem.image = UIImage(systemName: Constants.systemImageCameraFill)
+        tabBarItem.image = Constants.tabBarItemImage
     }
     
     required init?(coder: NSCoder) {
@@ -43,7 +42,6 @@ final class MainViewController: UIViewController {
             titleColor: .systemOrange
         )
         setupTabBarStyle(
-            tabBarItemImage: UIImage(systemName: Constants.systemImageCameraFill)!,
             backgroundColor: .systemBackground,
             normalItemColor: .systemGray,
             selectedItemColor: .systemOrange
@@ -136,7 +134,6 @@ extension MainViewController {
     private enum Constants {
         static let systemColorOrange: UIColor = .systemOrange
         static let systemColorDefaultWhite: UIColor = .white
-        static let systemImageCameraFill: String = "camera.fill"
         static let tabBarItemImage: UIImage? = UIImage(systemName: "camera.fill")
     }
 }

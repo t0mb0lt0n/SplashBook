@@ -15,7 +15,7 @@ final class MainViewController: UIViewController {
     init(viewModel: MainViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
-        title = .editoralTitle
+        //title = .editoralTitle
         tabBarItem.image = UIImage(systemName: Constants.systemImageCameraFill)
     }
     
@@ -40,6 +40,7 @@ final class MainViewController: UIViewController {
         view.backgroundColor = .secondarySystemBackground
         setupNavigationBarStyle(
             isLarge: false,
+            title: .editoralTitle,
             titleColor: .systemOrange
         )
         setupTabBarStyle(
@@ -132,11 +133,11 @@ extension MainViewController: UICollectionViewDelegate {
 }
 
 extension MainViewController {
-//    private enum Constants {
-//        static let systemColorOrange: UIColor = .systemOrange
-//        static let systemColorDefaultWhite: UIColor = .white
-//        static let systemImageCameraFill: String = "camera.fill"
-//    }
+    private enum Constants {
+        static let systemColorOrange: UIColor = .systemOrange
+        static let systemColorDefaultWhite: UIColor = .white
+        static let systemImageCameraFill: String = "camera.fill"
+    }
 }
 
 

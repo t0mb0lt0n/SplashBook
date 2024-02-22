@@ -10,8 +10,10 @@ import UIKit
 extension UIViewController {
     final func setupNavigationBarStyle(
         isLarge: Bool,
+        title: String?,
         titleColor: UIColor
     ) {
+        self.title = title
         navigationController?.navigationBar.largeTitleTextAttributes = [
             NSAttributedString.Key.foregroundColor: titleColor
         ]
@@ -35,5 +37,11 @@ extension UIViewController {
         tabBarItemApperance.selected.titleTextAttributes = [NSAttributedString.Key.foregroundColor: selectedItemColor]
         tabBarController?.tabBar.scrollEdgeAppearance = tabBarApperance
         tabBarController?.tabBar.scrollEdgeAppearance?.stackedLayoutAppearance = tabBarItemApperance
+    }
+    
+    final func setupTabBarItem(
+        
+    ) {
+        
     }
 }

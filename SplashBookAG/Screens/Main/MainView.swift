@@ -36,7 +36,7 @@ final class MainView: UIView {
             forCellWithReuseIdentifier: "\(PhotoCell.self)"
         )
         collectionView.alwaysBounceVertical = true
-        collectionView.backgroundColor = .secondarySystemBackground
+        collectionView.backgroundColor = .black
     }
     
     private func setupViews() {
@@ -57,7 +57,7 @@ final class MainView: UIView {
                 equalTo: safeAreaLayoutGuide.trailingAnchor,
                 constant: Constants.borderSpacing
             ),
-            collectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -100),
         ])
     }
     

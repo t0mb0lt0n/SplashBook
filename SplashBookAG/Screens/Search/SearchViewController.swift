@@ -22,6 +22,11 @@ class SearchViewController: UIViewController {
             title: .searchPhotoTitle,
             titleColor: .systemOrange
         )
+        setupTabBarStyle(
+            backgroundColor: .systemBackground,
+            normalItemColor: .systemGray,
+            selectedItemColor: .systemOrange
+        )
     }
     
     // MARK: - Navigation

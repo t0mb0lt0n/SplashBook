@@ -42,7 +42,7 @@ final class MainViewController: UIViewController {
             titleColor: .systemOrange
         )
         setupTabBarStyle(
-            backgroundColor: .systemBackground,
+            backgroundColor: .black,
             normalItemColor: .systemGray,
             selectedItemColor: .systemOrange
         )

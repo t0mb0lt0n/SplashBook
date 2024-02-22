@@ -21,6 +21,7 @@ extension UIViewController {
             NSAttributedString.Key.foregroundColor: titleColor
         ]
         navigationController?.navigationBar.prefersLargeTitles = isLarge
+        navigationController?.navigationBar.backgroundColor = .black
     }
     
     final func setupTabBarStyle(
@@ -29,10 +30,15 @@ extension UIViewController {
         selectedItemColor: UIColor
     ) {
         let tabBarApperance = UITabBarAppearance()
-        tabBarApperance.backgroundColor = backgroundColor.withAlphaComponent(0.1)
+        //tabBarApperance.backgroundColor = backgroundColor.withAlphaComponent(0.1)
+        tabBarApperance.backgroundColor = .black
+
         let tabBarItemApperance = UITabBarItemAppearance()
+        //tabBarApperance.configureWithTransparentBackground()
+        tabBarApperance.backgroundColor = .black
         tabBarItemApperance.normal.iconColor = normalItemColor
         tabBarItemApperance.selected.iconColor = selectedItemColor
+        tabBarApperance.configureWithTransparentBackground()
         tabBarItemApperance.normal.titleTextAttributes = [NSAttributedString.Key.foregroundColor: normalItemColor]
         tabBarItemApperance.selected.titleTextAttributes = [NSAttributedString.Key.foregroundColor: selectedItemColor]
         tabBarController?.tabBar.scrollEdgeAppearance = tabBarApperance

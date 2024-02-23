@@ -40,5 +40,4 @@ final class SearchView: UIView {
             searchBar.heightAnchor.constraint(equalToConstant: 100),
         ])
     }
-    
 }

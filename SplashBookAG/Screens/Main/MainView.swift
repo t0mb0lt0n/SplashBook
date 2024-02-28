@@ -36,7 +36,7 @@ final class MainView: UIView {
             forCellWithReuseIdentifier: "\(PhotoCell.self)"
         )
         collectionView.alwaysBounceVertical = true
-        collectionView.backgroundColor = .black
+        collectionView.backgroundColor = .systemBackground
     }
     
     private func setupViews() {

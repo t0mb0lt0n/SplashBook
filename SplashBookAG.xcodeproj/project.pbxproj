@@ -31,7 +31,6 @@
 		11C4EFBD2B236A97005CEDAC /* UnsplashUserProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C4EFBC2B236A97005CEDAC /* UnsplashUserProfileImage.swift */; };
 		11F368112AF0422900670733 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F368102AF0422900670733 /* MainViewModel.swift */; };
 		11F368142AF17DD000670733 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F368132AF17DD000670733 /* MainTabBarController.swift */; };
-		11F368162AF1893900670733 /* UITabBarController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F368152AF1893900670733 /* UITabBarController+Extension.swift */; };
 		11F3681A2AF2F1AD00670733 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F368192AF2F1AD00670733 /* String+Extension.swift */; };
 		11F3681C2AFAC02700670733 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F3681B2AFAC02700670733 /* ImageService.swift */; };
 		11F3681E2AFC141700670733 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F3681D2AFC141700670733 /* HTTPMethod.swift */; };
@@ -65,7 +64,6 @@
 		11C4EFBC2B236A97005CEDAC /* UnsplashUserProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashUserProfileImage.swift; sourceTree = "<group>"; };
 		11F368102AF0422900670733 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		11F368132AF17DD000670733 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
-		11F368152AF1893900670733 /* UITabBarController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+Extension.swift"; sourceTree = "<group>"; };
 		11F368192AF2F1AD00670733 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		11F3681B2AFAC02700670733 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		11F3681D2AFC141700670733 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -202,7 +200,6 @@
 			isa = PBXGroup;
 			children = (
 				11B68DFE2B8663FC00331747 /* UIViewController+Extension.swift */,
-				11F368152AF1893900670733 /* UITabBarController+Extension.swift */,
 				11F368192AF2F1AD00670733 /* String+Extension.swift */,
 				11B7C3152B28D4BE002330E4 /* UINavigationBar+Extension.swift */,
 				1101BDA12B30DA57002C071D /* UIImageView+Extension.swift */,
@@ -344,7 +341,6 @@
 				1101BDA22B30DA57002C071D /* UIImageView+Extension.swift in Sources */,
 				11F3681C2AFAC02700670733 /* ImageService.swift in Sources */,
 				11F368112AF0422900670733 /* MainViewModel.swift in Sources */,
-				11F368162AF1893900670733 /* UITabBarController+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

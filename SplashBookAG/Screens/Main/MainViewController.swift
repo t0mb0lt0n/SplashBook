@@ -14,7 +14,9 @@ final class MainViewController: UIViewController {
     init(viewModel: MainViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
-        tabBarItem.image = Constants.tabBarItemImage
+        navigationController?.tabBarItem.image = Constants.tabBarItemImage
+        let item = UITabBarItem(title: .editoralTitle, image: UIImage(systemName: "camera.fill"), tag: 0)
+        tabBarItem = item
     }
     
     required init?(coder: NSCoder) {
@@ -39,11 +41,11 @@ final class MainViewController: UIViewController {
             title: .editoralTitle,
             titleColor: .systemOrange
         )
-        setupTabBarStyle(
-            backgroundColor: .black,
-            normalItemColor: .systemGray,
-            selectedItemColor: .systemOrange
-        )
+//        setupTabBarStyle(
+//            backgroundColor: .black,
+//            normalItemColor: .systemGray,
+//            selectedItemColor: .systemOrange
+//        )
     }
     
     private func setupMainView() {

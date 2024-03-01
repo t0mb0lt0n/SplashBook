@@ -14,6 +14,7 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         view = SearchView()
         title = "Search photo"
+        tabBarItem.image = UIImage(systemName: "camera.fill")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -22,11 +23,11 @@ class SearchViewController: UIViewController {
             title: .searchPhotoTitle,
             titleColor: .systemOrange
         )
-        setupTabBarStyle(
-            backgroundColor: .systemBackground,
-            normalItemColor: .systemGray,
-            selectedItemColor: .systemOrange
-        )
+//        setupTabBarStyle(
+//            backgroundColor: .systemBackground,
+//            normalItemColor: .red,
+//            selectedItemColor: .red
+//        )
     }
     
     // MARK: - Navigation

@@ -17,15 +17,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     ) -> Bool {
         window = UIWindow()
         window?.rootViewController = MainTabBarController(
-            with: [MainViewController(
-                viewModel: .init(
-                    service: ImageServiceImpl(
-                        networkClient: NetworkClient(
-                            session: .init(configuration: .default)
+            with: [
+                MainViewController(
+                    viewModel: .init(
+                        service: ImageServiceImpl(
+                            networkClient: NetworkClient(
+                                session: .init(configuration: .default)
+                            )
                         )
                     )
-                )
-            ), SearchViewController()]
+                ),
+                SearchViewController()
+            ]
         )
         window?.overrideUserInterfaceStyle = .dark
         window?.makeKeyAndVisible()

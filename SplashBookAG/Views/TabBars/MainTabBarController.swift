@@ -22,14 +22,44 @@ final class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTabBar()
+        setupTabBarStyle(
+            backgroundColor: .black,
+            normalItemColor: .systemGray,
+            selectedItemColor: .systemOrange
+        )
+    }
+    
+    final func setupTabBarStyle(
+        backgroundColor: UIColor,
+        normalItemColor: UIColor,
+        selectedItemColor: UIColor
+    ) {
+        let tabBarApperance = UITabBarAppearance()
+        tabBarApperance.backgroundColor = .systemBackground
+        let tabBarItemApperance = UITabBarItemAppearance()
+        tabBarItemApperance.normal.iconColor = normalItemColor
+        tabBarItemApperance.selected.iconColor = selectedItemColor
+        tabBarApperance.configureWithTransparentBackground()
+        tabBarItemApperance.normal.titleTextAttributes = [NSAttributedString.Key.foregroundColor: normalItemColor]
+        tabBarItemApperance.selected.titleTextAttributes = [NSAttributedString.Key.foregroundColor: selectedItemColor]
+        tabBar.scrollEdgeAppearance = tabBarApperance
+        tabBar.scrollEdgeAppearance?.stackedLayoutAppearance = tabBarItemApperance
+    }
+    
+    private func setupVCForTabBar(
+        _ vc: UINavigationController, tabBarItemName: String, tabBarImage: String) -> UINavigationController {
+        
     }
     
     private func setupTabBar() {
         var navigationControllers = [UINavigationController]()
         initialVCList.forEach { vc in
             let navController = UINavigationController(rootViewController: vc)
+            let item = UITabBarItem(title: vc.title, image: UIImage(systemName: "camera.fill"), tag: 0)
+            navController.tabBarItem = item
             navigationControllers.append(navController)
         }
+        
         viewControllers = navigationControllers
     }
 }

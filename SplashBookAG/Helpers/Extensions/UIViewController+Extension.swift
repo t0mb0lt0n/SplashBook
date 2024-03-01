@@ -23,5 +23,12 @@ extension UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = isLarge
     }
     
+    //init tabbarImage VC
+    static let img: UIImage? = UIImage(systemName: "camera.fill")
     
+    enum Constantss {
+        static let systemColorOrange: UIColor = .systemOrange
+        static let systemColorDefaultWhite: UIColor = .white
+        static let tabBarItemImage: UIImage? = UIImage(systemName: "camera.fill")
+    }
 }

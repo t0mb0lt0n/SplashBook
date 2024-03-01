@@ -27,11 +27,6 @@ final class MainTabBarController: UITabBarController {
             normalItemColor: .systemGray,
             selectedItemColor: .systemOrange
         )
-//        setupNavigationBarStyle(
-//            isLarge: true,
-//            title: .searchPhotoTitle,
-//            titleColor: .systemOrange
-//        )
     }
     
     final func setupTabBarStyle(
@@ -50,37 +45,11 @@ final class MainTabBarController: UITabBarController {
         tabBar.scrollEdgeAppearance = tabBarApperance
         tabBar.scrollEdgeAppearance?.stackedLayoutAppearance = tabBarItemApperance
     }
-
-    
-    private func setupVCForTabBar(
-        _ vc: UIViewController,
-        tabBarItemName: String?,
-        tabBarImage: UIImage?
-    ) -> UINavigationController {
-        let item = UITabBarItem(
-            title: tabBarItemName,
-            image: vc.tabBarItem.image,
-            tag: 0
-        )
-//        setupNavigationBarStyle(
-//            isLarge: true,
-//            title: .searchPhotoTitle,
-//            titleColor: .systemOrange
-//        )
-        let navController = UINavigationController(rootViewController: vc)
-        navController.tabBarItem = item
-        return navController
-    }
     
     private func setupTabBar() {
         var navigationControllers = [UINavigationController]()
         initialVCList.forEach { vc in
-            let navController = setupVCForTabBar(vc, tabBarItemName: vc.title, tabBarImage: vc.tabBarItem.image)
-            setupNavigationBarStyle(
-                isLarge: true,
-                title: .searchPhotoTitle,
-                titleColor: .systemOrange
-            )
+            let navController = UINavigationController(rootViewController: vc)
             navigationControllers.append(navController)
         }
         viewControllers = navigationControllers

@@ -16,8 +16,7 @@ final class MainViewController: UIViewController {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
         title = .editoralTitle
-        tabBarItem.image = Constants.tabBarItemImage
-
+        tabBarItem.image = Constantss.tabBarItemImage
     }
     
     required init?(coder: NSCoder) {
@@ -128,15 +127,6 @@ extension MainViewController: UICollectionViewDelegate {
 
 extension MainViewController {
     private enum Constants {
-        static let systemColorOrange: UIColor = .systemOrange
-        static let systemColorDefaultWhite: UIColor = .white
-        static let tabBarItemImage: UIImage? = UIImage(systemName: "camera.fill")
-    }
-    
-    enum Constantss {
-        enum Titles: String {
-            case editoralTitle = "Editoral"
-        }
         static let systemColorOrange: UIColor = .systemOrange
         static let systemColorDefaultWhite: UIColor = .white
         static let tabBarItemImage: UIImage? = UIImage(systemName: "camera.fill")

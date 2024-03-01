@@ -18,5 +18,4 @@ extension UITabBarController {
 //        let tabBarItemApperance = UITabBarItemAppearance()
 //        tabBarItemApperance.normal.iconColor = normalItemColor
 //        tabBarItemApperance.selected.iconColor = selectedItemColor
-//        tabBarItemApperance.normal.titleTextAttributes = [NSAttributedString.Key.foregroundColor: normalItemColor]
-//}
+

@@ -21,7 +21,7 @@ extension UIViewController {
             NSAttributedString.Key.foregroundColor: titleColor
         ]
         navigationController?.navigationBar.prefersLargeTitles = isLarge
-        navigationController?.navigationBar.backgroundColor = .secondarySystemBackground
+        navigationController?.navigationBar.backgroundColor = .systemBackground
     }
     
     final func setupTabBarStyle(

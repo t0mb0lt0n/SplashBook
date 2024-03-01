@@ -22,11 +22,11 @@ final class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTabBar()
-//        setupTabBarStyle(
-//            backgroundColor: .black,
-//            normalItemColor: .systemGray,
-//            selectedItemColor: .systemOrange
-//        )
+        setupTabBarStyle(
+            backgroundColor: .black,
+            normalItemColor: .systemGray,
+            selectedItemColor: .systemOrange
+        )
 //        setupNavigationBarStyle(
 //            isLarge: true,
 //            title: .searchPhotoTitle,
@@ -73,7 +73,7 @@ final class MainTabBarController: UITabBarController {
     
     private func setupVCForTabBar(
         _ vc: UIViewController,
-        tabBarItemName: String,
+        tabBarItemName: String?,
         tabBarImage: String
     ) -> UINavigationController {
         vc.title = tabBarItemName
@@ -96,15 +96,11 @@ final class MainTabBarController: UITabBarController {
     private func setupTabBar() {
         var navigationControllers = [UINavigationController]()
         initialVCList.forEach { vc in
-            //let navController = setupVCForTabBar(vc, tabBarItemName: "camera.fill", tabBarImage: "camera.fill")
-            let navController = UINavigationController(rootViewController: vc)
+            let navController = setupVCForTabBar(vc, tabBarItemName: vc.title, tabBarImage: "camera.fill")
+            //let navController = UINavigationController(rootViewController: vc)
             let item = UITabBarItem(title: vc.navigationItem.title, image: UIImage(systemName: "camera.fill"), tag: 0)
+            //let navController = UINavigationController(rootViewController: vc)
             navController.tabBarItem = item
-            setupTabBarStyle(
-                backgroundColor: .black,
-                normalItemColor: .systemGray,
-                selectedItemColor: .systemOrange
-            )
             navigationControllers.append(navController)
             
         }

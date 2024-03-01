@@ -19,13 +19,27 @@ final class MainTabBarController: UITabBarController {
         fatalError("init(coder:) has not been implemented")
     }
     
+//    override func loadView() {
+//        super .loadView()
+//        setupTabBarStyle(
+//            backgroundColor: .black,
+//            normalItemColor: .systemGray,
+//            selectedItemColor: .systemOrange
+//        )
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTabBar()
+        //setupTabBar()
         setupTabBarStyle(
             backgroundColor: .black,
             normalItemColor: .systemGray,
             selectedItemColor: .systemOrange
+        )
+        setupNavigationBarStyle(
+            isLarge: true,
+            title: .searchPhotoTitle,
+            titleColor: .systemOrange
         )
     }
     
@@ -34,6 +48,8 @@ final class MainTabBarController: UITabBarController {
         normalItemColor: UIColor,
         selectedItemColor: UIColor
     ) {
+        let navController1 = setupVCForTabBar(initialVCList[0], tabBarItemName: "camera.fill", tabBarImage: "camera.fill")
+        let navController2 = setupVCForTabBar(initialVCList[1], tabBarItemName: "camera.fill", tabBarImage: "camera.fill")
         let tabBarApperance = UITabBarAppearance()
         tabBarApperance.backgroundColor = .systemBackground
         let tabBarItemApperance = UITabBarItemAppearance()
@@ -44,6 +60,17 @@ final class MainTabBarController: UITabBarController {
         tabBarItemApperance.selected.titleTextAttributes = [NSAttributedString.Key.foregroundColor: selectedItemColor]
         tabBar.scrollEdgeAppearance = tabBarApperance
         tabBar.scrollEdgeAppearance?.stackedLayoutAppearance = tabBarItemApperance
+        //        setupNavigationBarStyle(
+        //            isLarge: true,
+        //            title: .searchPhotoTitle,
+        //            titleColor: .systemOrange
+        //        )
+        //        setupTabBarStyle(
+        //            backgroundColor: .systemBackground,
+        //            normalItemColor: .red,
+        //            selectedItemColor: .red
+        //        )
+        viewControllers = [navController1, navController2]
     }
     
     private func setupVCForTabBar(
@@ -52,28 +79,34 @@ final class MainTabBarController: UITabBarController {
         tabBarImage: String
     ) -> UINavigationController {
         vc.title = tabBarItemName
+        //vc.
         let item = UITabBarItem(
             title: tabBarItemName,
             image: UIImage(systemName: "camera.fill"),
             tag: 0
+        )
+        setupNavigationBarStyle(
+            isLarge: true,
+            title: .searchPhotoTitle,
+            titleColor: .systemOrange
         )
         let navController = UINavigationController(rootViewController: vc)
         navController.tabBarItem = item
         return navController
     }
     
-    private func setupTabBar() {
-        var navigationControllers = [UINavigationController]()
-//        initialVCList.forEach { vc in
-//            let navController = setupVCForTabBar(vc, tabBarItemName: "camera.fill", tabBarImage: "camera.fill")
-//            //let item = UITabBarItem(title: vc.title, image: UIImage(systemName: "camera.fill"), tag: 0)
-//            //navController.tabBarItem = item
-//            navigationControllers.append(navController)
-//        }
-        
-        let navController1 = setupVCForTabBar(initialVCList[0], tabBarItemName: "camera.fill", tabBarImage: "camera.fill")
-        let navController2 = setupVCForTabBar(initialVCList[1], tabBarItemName: "camera.fill", tabBarImage: "camera.fill")
-        
-        viewControllers = [navController2, navController1]
-    }
+//    private func setupTabBar() {
+//        //var navigationControllers = [UINavigationController]()
+////        initialVCList.forEach { vc in
+////            let navController = setupVCForTabBar(vc, tabBarItemName: "camera.fill", tabBarImage: "camera.fill")
+////            //let item = UITabBarItem(title: vc.title, image: UIImage(systemName: "camera.fill"), tag: 0)
+////            //navController.tabBarItem = item
+////            navigationControllers.append(navController)
+////        }
+//
+//        let navController1 = setupVCForTabBar(initialVCList[0], tabBarItemName: "camera.fill", tabBarImage: "camera.fill")
+//        let navController2 = setupVCForTabBar(initialVCList[1], tabBarItemName: "camera.fill", tabBarImage: "camera.fill")
+//
+//        //viewControllers = [navController1, navController2]
+//    }
 }

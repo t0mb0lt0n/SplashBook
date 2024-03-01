@@ -14,9 +14,6 @@ final class MainViewController: UIViewController {
     init(viewModel: MainViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
-        navigationController?.tabBarItem.image = Constants.tabBarItemImage
-        let item = UITabBarItem(title: .editoralTitle, image: UIImage(systemName: "camera.fill"), tag: 0)
-        tabBarItem = item
     }
     
     required init?(coder: NSCoder) {
@@ -129,7 +126,7 @@ extension MainViewController {
     private enum Constants {
         static let systemColorOrange: UIColor = .systemOrange
         static let systemColorDefaultWhite: UIColor = .white
-        static let tabBarItemImage: UIImage? = UIImage(systemName: "camera.fill")
+        //static let tabBarItemImage: UIImage? = UIImage(systemName: "camera.fill")
     }
 }
 

@@ -13,17 +13,17 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view = SearchView()
-        title = "Search photo"
+        //title = "Search photo"
         //tabBarItem.image = UIImage(systemName: "camera.fill")
        
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        setupNavigationBarStyle(
-            isLarge: true,
-            title: .searchPhotoTitle,
-            titleColor: .systemOrange
-        )
+//        setupNavigationBarStyle(
+//            isLarge: true,
+//            title: .searchPhotoTitle,
+//            titleColor: .systemOrange
+//        )
 //        setupTabBarStyle(
 //            backgroundColor: .systemBackground,
 //            normalItemColor: .red,

@@ -13,7 +13,7 @@ extension UIViewController {
         title: String?,
         titleColor: UIColor
     ) {
-        self.title = title
+        //self.title = title
         navigationController?.navigationBar.largeTitleTextAttributes = [
             NSAttributedString.Key.foregroundColor: titleColor
         ]

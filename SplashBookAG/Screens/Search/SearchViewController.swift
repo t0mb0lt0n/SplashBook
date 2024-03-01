@@ -14,7 +14,6 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         view = SearchView()
         title = "Search photo"
-        mainView.backgroundColor = .systemOrange
     }
     
     override func viewWillAppear(_ animated: Bool) {

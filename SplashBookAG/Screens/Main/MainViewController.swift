@@ -24,7 +24,6 @@ final class MainViewController: UIViewController {
     override func loadView() {
         super.loadView()
         view = MainView()
-        //viewModel.findPhotos()
     }
     
     override func viewDidLoad() {
@@ -35,7 +34,6 @@ final class MainViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //view.backgroundColor = .systemBackground
         setupNavigationBarStyle(
             isLarge: false,
             title: .editoralTitle,

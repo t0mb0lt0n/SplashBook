@@ -8,8 +8,4 @@
 import UIKit
 
 extension UITabBarController {
-//    final func setupTabBarStyle(
-//        backgroundColor: UIColor,
-//        normalItemColor: UIColor,
-//        selectedItemColor: UIColor
 

@@ -29,9 +29,7 @@ extension UIViewController {
         selectedItemColor: UIColor
     ) {
         let tabBarApperance = UITabBarAppearance()
-        //tabBarApperance.backgroundColor = backgroundColor.withAlphaComponent(0.1)
         tabBarApperance.backgroundColor = .systemBackground
-
         let tabBarItemApperance = UITabBarItemAppearance()
         tabBarItemApperance.normal.iconColor = normalItemColor
         tabBarItemApperance.selected.iconColor = selectedItemColor

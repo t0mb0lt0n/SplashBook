@@ -19,8 +19,4 @@ extension UITabBarController {
 //        tabBarItemApperance.normal.iconColor = normalItemColor
 //        tabBarItemApperance.selected.iconColor = selectedItemColor
 //        tabBarItemApperance.normal.titleTextAttributes = [NSAttributedString.Key.foregroundColor: normalItemColor]
-//        tabBarItemApperance.selected.titleTextAttributes = [NSAttributedString.Key.foregroundColor: selectedItemColor]
-//        tabBar.scrollEdgeAppearance = tabBarApperance
-//        tabBar.scrollEdgeAppearance?.stackedLayoutAppearance = tabBarItemApperance
-//    }
-}
+//}

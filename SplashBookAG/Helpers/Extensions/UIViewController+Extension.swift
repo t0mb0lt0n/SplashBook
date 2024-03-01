@@ -23,20 +23,5 @@ extension UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = isLarge
     }
     
-//    final func setupTabBarStyle(
-//        backgroundColor: UIColor,
-//        normalItemColor: UIColor,
-//        selectedItemColor: UIColor
-//    ) {
-//        let tabBarApperance = UITabBarAppearance()
-//        tabBarApperance.backgroundColor = .systemBackground
-//        let tabBarItemApperance = UITabBarItemAppearance()
-//        tabBarItemApperance.normal.iconColor = normalItemColor
-//        tabBarItemApperance.selected.iconColor = selectedItemColor
-//        tabBarApperance.configureWithTransparentBackground()
-//        tabBarItemApperance.normal.titleTextAttributes = [NSAttributedString.Key.foregroundColor: normalItemColor]
-//        tabBarItemApperance.selected.titleTextAttributes = [NSAttributedString.Key.foregroundColor: selectedItemColor]
-//        tabBarController?.tabBar.scrollEdgeAppearance = tabBarApperance
-//        tabBarController?.tabBar.scrollEdgeAppearance?.stackedLayoutAppearance = tabBarItemApperance
-//    }
+
 }

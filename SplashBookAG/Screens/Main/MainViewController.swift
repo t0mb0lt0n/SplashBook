@@ -29,15 +29,16 @@ final class MainViewController: UIViewController {
         super.viewDidLoad()
         setupViewModel()
         setupMainView()
+        navigationItem.title = "dsfsd"
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setupNavigationBarStyle(
-            isLarge: false,
-            title: .editoralTitle,
-            titleColor: .systemOrange
-        )
+//        setupNavigationBarStyle(
+//            isLarge: false,
+//            title: .editoralTitle,
+//            titleColor: .systemOrange
+//        )
     }
     
     private func setupMainView() {

@@ -13,7 +13,7 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view = SearchView()
-        //title = "Search photo"
+        navigationItem.title = "fssd"
         //tabBarItem.image = UIImage(systemName: "camera.fill")
        
     }

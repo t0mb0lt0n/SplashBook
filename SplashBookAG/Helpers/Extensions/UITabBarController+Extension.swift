@@ -16,6 +16,5 @@ extension UITabBarController {
 //        let tabBarApperance = UITabBarAppearance()
 //        tabBarApperance.backgroundColor = backgroundColor.withAlphaComponent(0.1)
 //        let tabBarItemApperance = UITabBarItemAppearance()
-//        tabBarItemApperance.normal.iconColor = normalItemColor
-//        tabBarItemApperance.selected.iconColor = selectedItemColor
+
 

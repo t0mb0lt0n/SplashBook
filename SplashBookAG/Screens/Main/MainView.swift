@@ -57,7 +57,7 @@ final class MainView: UIView {
                 equalTo: safeAreaLayoutGuide.trailingAnchor,
                 constant: Constants.borderSpacing
             ),
-            collectionView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -100),
+            collectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
         ])
     }
     

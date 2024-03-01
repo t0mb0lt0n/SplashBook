@@ -35,7 +35,7 @@ final class MainViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        view.backgroundColor = .secondarySystemBackground
+        view.backgroundColor = .systemBackground
         setupNavigationBarStyle(
             isLarge: false,
             title: .editoralTitle,

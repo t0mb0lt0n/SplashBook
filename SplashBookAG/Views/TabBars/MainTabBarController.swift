@@ -47,19 +47,33 @@ final class MainTabBarController: UITabBarController {
     }
     
     private func setupVCForTabBar(
-        _ vc: UINavigationController, tabBarItemName: String, tabBarImage: String) -> UINavigationController {
-        
+        _ vc: UIViewController,
+        tabBarItemName: String,
+        tabBarImage: String
+    ) -> UINavigationController {
+        vc.title = tabBarItemName
+        let item = UITabBarItem(
+            title: tabBarItemName,
+            image: UIImage(systemName: "camera.fill"),
+            tag: 0
+        )
+        let navController = UINavigationController(rootViewController: vc)
+        navController.tabBarItem = item
+        return navController
     }
     
     private func setupTabBar() {
         var navigationControllers = [UINavigationController]()
-        initialVCList.forEach { vc in
-            let navController = UINavigationController(rootViewController: vc)
-            let item = UITabBarItem(title: vc.title, image: UIImage(systemName: "camera.fill"), tag: 0)
-            navController.tabBarItem = item
-            navigationControllers.append(navController)
-        }
+//        initialVCList.forEach { vc in
+//            let navController = setupVCForTabBar(vc, tabBarItemName: "camera.fill", tabBarImage: "camera.fill")
+//            //let item = UITabBarItem(title: vc.title, image: UIImage(systemName: "camera.fill"), tag: 0)
+//            //navController.tabBarItem = item
+//            navigationControllers.append(navController)
+//        }
         
-        viewControllers = navigationControllers
+        let navController1 = setupVCForTabBar(initialVCList[0], tabBarItemName: "camera.fill", tabBarImage: "camera.fill")
+        let navController2 = setupVCForTabBar(initialVCList[1], tabBarItemName: "camera.fill", tabBarImage: "camera.fill")
+        
+        viewControllers = [navController2, navController1]
     }
 }

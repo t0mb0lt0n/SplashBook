@@ -14,7 +14,8 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         view = SearchView()
         title = "Search photo"
-        tabBarItem.image = UIImage(systemName: "camera.fill")
+        //tabBarItem.image = UIImage(systemName: "camera.fill")
+       
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -41,11 +41,6 @@ final class MainViewController: UIViewController {
             title: .editoralTitle,
             titleColor: .systemOrange
         )
-//        setupTabBarStyle(
-//            backgroundColor: .black,
-//            normalItemColor: .systemGray,
-//            selectedItemColor: .systemOrange
-//        )
     }
     
     private func setupMainView() {

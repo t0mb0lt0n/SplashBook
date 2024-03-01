@@ -10,7 +10,7 @@ import UIKit
 final class MainViewController: UIViewController {
     private lazy var mainView = view as! MainView
     private let viewModel: MainViewModel
-    let titleName = Constantss.tabBarItemImage
+   // let  = Constantss.tabBarItemImage
     
     init(viewModel: MainViewModel) {
         self.viewModel = viewModel

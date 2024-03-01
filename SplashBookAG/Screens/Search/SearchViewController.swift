@@ -13,6 +13,7 @@ class SearchViewController: UIViewController {
     init() {
         super.init(nibName: nil, bundle: nil)
         title = .searchPhotoTitle
+        tabBarItem.image = Constants.tabBarItemImage
     }
     
     required init?(coder: NSCoder) {
@@ -23,26 +24,24 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view = SearchView()
-        //title = "vc1"
-        //tabBarItem.image = UIImage(systemName: "camera.fill")
-       
     }
     
     override func loadView() {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-//        setupNavigationBarStyle(
-//            isLarge: true,
-//            title: .searchPhotoTitle,
-//            titleColor: .systemOrange
-//        )
-//        setupTabBarStyle(
-//            backgroundColor: .systemBackground,
-//            normalItemColor: .red,
-//            selectedItemColor: .red
-//        )
+        setupNavigationBarStyle(
+            isLarge: true,
+            title: .searchPhotoTitle,
+            titleColor: .systemOrange
+        )
     }
     
     // MARK: - Navigation
+}
+
+extension SearchViewController {
+    private enum Constants {
+        static let tabBarItemImage: UIImage? = UIImage(systemName: "square")
+    }
 }

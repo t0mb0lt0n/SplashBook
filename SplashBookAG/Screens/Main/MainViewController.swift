@@ -10,13 +10,13 @@ import UIKit
 final class MainViewController: UIViewController {
     private lazy var mainView = view as! MainView
     private let viewModel: MainViewModel
-   // let  = Constantss.tabBarItemImage
+    let iconName = Constantss.tabBarItemImage
     
     init(viewModel: MainViewModel) {
         self.viewModel = viewModel
-        //self.title = "vc1"
         super.init(nibName: nil, bundle: nil)
         title = .editoralTitle
+        tabBarItem.image = Constants.tabBarItemImage
 
     }
     
@@ -27,7 +27,6 @@ final class MainViewController: UIViewController {
     override func loadView() {
         super.loadView()
         view = MainView()
-        //title = "vc1"
     }
     
     override func viewDidLoad() {
@@ -38,11 +37,11 @@ final class MainViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        setupNavigationBarStyle(
-//            isLarge: false,
-//            title: .editoralTitle,
-//            titleColor: .systemOrange
-//        )
+        setupNavigationBarStyle(
+            isLarge: false,
+            title: .editoralTitle,
+            titleColor: .systemOrange
+        )
     }
     
     private func setupMainView() {
@@ -131,7 +130,7 @@ extension MainViewController {
     private enum Constants {
         static let systemColorOrange: UIColor = .systemOrange
         static let systemColorDefaultWhite: UIColor = .white
-        //static let tabBarItemImage: UIImage? = UIImage(systemName: "camera.fill")
+        static let tabBarItemImage: UIImage? = UIImage(systemName: "camera.fill")
     }
     
     enum Constantss {

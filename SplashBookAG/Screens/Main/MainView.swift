@@ -17,7 +17,7 @@ final class MainView: UIView {
     
     init() {
         super.init(frame: .zero)
-        backgroundColor = .secondarySystemBackground
+        backgroundColor = .systemBackground
         setupCollectionView()
         setupViews()
         setupConstraints()

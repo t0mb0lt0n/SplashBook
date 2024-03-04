@@ -23,8 +23,9 @@ final class SearchView: UIView {
     
     var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
-        searchBar.placeholder = "search"
+        searchBar.placeholder = .searchBarPlaceholder
         searchBar.searchBarStyle = .minimal
+        searchBar.searchTextField.clearButtonMode = .always
         searchBar.searchTextField.clearButtonMode = .always
         return searchBar
     }()

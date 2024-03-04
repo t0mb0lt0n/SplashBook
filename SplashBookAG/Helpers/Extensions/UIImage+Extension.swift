@@ -8,6 +8,8 @@
 import UIKit
 
 extension UIImage {
-    static let editoralTabBarItemImage: UIImage? = UIImage(systemName: "camera.fill")
-    static let searchTabBarItemImage: UIImage? = UIImage(systemName: "magnifyingglass")
+    static let editoralTabBarItemImage: UIImage? = .init(systemName: "camera.fill")
+    static let searchTabBarItemImage: UIImage? = .init(systemName: "magnifyingglass")
+    static let searchImage: UIImage? = .init(systemName: "magnifyingglass")
+    static let photoImage: UIImage? = .init(systemName: "photo")
 }

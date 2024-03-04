@@ -8,11 +8,14 @@
 import UIKit
 
 final class SearchView: UIView {
-    lazy var searchLabel: UILabel {
-        let label = UILabel()
-        
-        return label
+    lazy var searchLabel: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = .searchImage
+        return imageView
     }()
+    
+    lazy var 
+    
     var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.placeholder = "search"

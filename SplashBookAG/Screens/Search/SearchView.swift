@@ -8,13 +8,17 @@
 import UIKit
 
 final class SearchView: UIView {
-    lazy var searchLabel: UIImageView = {
+    lazy var searchImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = .searchImage
         return imageView
     }()
     
-    lazy var 
+    lazy var photoImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = .photoImage
+        return imageView
+    }()
     
     var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
@@ -36,7 +40,10 @@ final class SearchView: UIView {
     }
     
     private func setupViews() {
-        [searchBar].forEach { subView in
+        [searchBar,
+         photoImageView,
+         searchImageView,
+        ].forEach { subView in
             subView.translatesAutoresizingMaskIntoConstraints = false
             addSubview(subView)
         }
@@ -46,7 +53,9 @@ final class SearchView: UIView {
         NSLayoutConstraint.activate([
             searchBar.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             searchBar.leadingAnchor.constraint(equalTo: leadingAnchor),
-            searchBar.trailingAnchor.constraint(equalTo: trailingAnchor)
+            searchBar.trailingAnchor.constraint(equalTo: trailingAnchor),
+            
+            
         ])
     }
 }

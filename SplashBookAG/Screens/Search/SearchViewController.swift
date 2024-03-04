@@ -9,11 +9,17 @@ import UIKit
 
 class SearchViewController: UIViewController {
     private lazy var mainView = view as! SearchView
+    private let viewModel: SearchViewModel
     
-    init() {
+    init(
+        with tabBarItemImage: UIImage?,
+        vcTitle: String,
+        viewModel: SearchViewModel
+    ){
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
         title = .searchPhotoTitle
-        tabBarItem.image = Constants.tabBarItemImage
+        tabBarItem.image = .searchTabBarItemImage
     }
     
     required init?(coder: NSCoder) {

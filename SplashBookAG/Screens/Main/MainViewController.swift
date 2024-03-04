@@ -15,7 +15,7 @@ final class MainViewController: UIViewController {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
         title = .editoralTitle
-        tabBarItem.image = BasicCostants.TabBarImages.tabBarItemImage
+        tabBarItem.image = .editoralTabBarItemImage
     }
     
     init(

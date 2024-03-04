@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         )
                     )
                 ),
-                SearchViewController()
+                SearchViewController(with: .searchTabBarItemImage, vcTitle: .searchPhotoTitle, viewModel: .init())
             ]
         )
         window?.overrideUserInterfaceStyle = .dark

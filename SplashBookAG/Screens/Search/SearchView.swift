@@ -10,20 +10,22 @@ import UIKit
 final class SearchView: UIView {
     lazy var searchImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = .searchImage
+        imageView.image = nil
+        
         return imageView
     }()
     
     lazy var photoImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = .photoImage
+        imageView.image = .photoStackImage
         return imageView
     }()
     
     var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.placeholder = "search"
-        searchBar.backgroundColor = .green
+        searchBar.searchBarStyle = .minimal
+        searchBar.searchTextField.clearButtonMode = .always
         return searchBar
     }()
     
@@ -60,8 +62,8 @@ final class SearchView: UIView {
             searchImageView.widthAnchor.constraint(equalToConstant: Constants.searchImageViewWidth),
             searchImageView.heightAnchor.constraint(equalToConstant: Constants.searchImageViewHeight),
             
-            photoImageView.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor, constant: 100),
-            photoImageView.centerYAnchor.constraint(equalTo: safeAreaLayoutGuide.centerYAnchor),
+            photoImageView.centerXAnchor.constraint(equalTo: searchImageView.centerXAnchor, constant: -7),
+            photoImageView.centerYAnchor.constraint(equalTo: searchImageView.centerYAnchor, constant: -10),
             photoImageView.widthAnchor.constraint(equalToConstant: Constants.photoImageViewWidth),
             photoImageView.heightAnchor.constraint(equalToConstant: Constants.photoImageViewHeight),
         ])
@@ -70,9 +72,10 @@ final class SearchView: UIView {
 
 extension SearchView {
     private enum Constants {
-        static let searchImageViewWidth: CGFloat = 100
+        static let searchImageViewWidth: CGFloat = 110
         static let searchImageViewHeight: CGFloat = 100
-        static let photoImageViewHeight: CGFloat = 100
-        static let photoImageViewWidth: CGFloat = 150
+        static let photoImageViewHeight: CGFloat = 100//35
+        static let photoImageViewWidth: CGFloat = 130//45
+        
     }
 }

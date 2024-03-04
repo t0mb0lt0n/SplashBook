@@ -9,6 +9,7 @@ extension String {
     static let editoralTitle: String = "Editoral"
     static let searchPhotoTitle: String = "Search photo"
     static let defaultAuthorName: String = "Author Name"
+    static let searchBarPlaceholder: String = "Search photos"
 }
 
 

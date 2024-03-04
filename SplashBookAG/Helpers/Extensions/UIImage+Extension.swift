@@ -11,11 +11,15 @@ extension UIImage {
     static let editoralTabBarItemImage: UIImage? = .init(systemName: "camera.fill")
     static let searchTabBarItemImage: UIImage? = .init(systemName: "magnifyingglass")
     static let searchImage: UIImage? = .init(systemName: "magnifyingglass")?.withTintColor(
-        .systemOrange,
+        .secondarySystemBackground,
         renderingMode: .alwaysOriginal
     )
     static let photoImage: UIImage? = .init(systemName: "photo")?.withTintColor(
-        .systemOrange,
+        .secondarySystemBackground,
+        renderingMode: .alwaysOriginal
+    )
+    static let photoStackImage: UIImage? = .init(systemName: "photo.on.rectangle.angled")?.withTintColor(
+        .secondarySystemBackground,
         renderingMode: .alwaysOriginal
     )
 }

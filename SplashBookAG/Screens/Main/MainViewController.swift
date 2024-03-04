@@ -10,13 +10,25 @@ import UIKit
 final class MainViewController: UIViewController {
     private lazy var mainView = view as! MainView
     private let viewModel: MainViewModel
-    let iconName = Constantss.tabBarItemImage
+    //let iconName = Constantss.tabBarItemImage
     
-    init(viewModel: MainViewModel) {
+    init(viewModel: MainViewModel, tabBarImage: UIImage) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
         title = .editoralTitle
-        tabBarItem.image = Constantss.tabBarItemImage
+        //tabBarItem.image = Constantss.tabBarItemImage
+        tabBarItem.image = BasicCostants.TabBarImages.tabBarItemImage
+    }
+    
+    init(
+        with tabBarImage: UIImage,
+        vcTitle: String,
+        viewModel: MainViewModel
+    ) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+        title = vcTitle
+        tabBarItem.image = tabBarImage
     }
     
     required init?(coder: NSCoder) {

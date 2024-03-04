@@ -35,16 +35,18 @@ final class SearchView: UIView {
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            searchBar.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 0),
-            searchBar.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
-            searchBar.widthAnchor.constraint(equalToConstant: 500),
-            searchBar.heightAnchor.constraint(equalToConstant: 100),
+            searchBar.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            searchBar.leadingAnchor.constraint(equalTo: leadingAnchor),
+            searchBar.trailingAnchor.constraint(equalTo: trailingAnchor),
+//            searchBar.widthAnchor.constraint(equalToConstant: safeAreaLayoutGuide.leadingAnchor),
+            //searchBar.heightAnchor.constraint(equalToConstant: Constants.searchBarHeight),
         ])
     }
 }
 
 extension SearchView {
     private enum Constants {
-        sta
+        static let searchBarWidth: CGFloat = 0.0
+        static let searchBarHeight: CGFloat = 500.0
     }
 }

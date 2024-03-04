@@ -46,7 +46,5 @@ class SearchViewController: UIViewController {
 }
 
 extension SearchViewController {
-    private enum Constants {
-        static let tabBarItemImage: UIImage? = UIImage(systemName: "square")
-    }
+    
 }

@@ -14,6 +14,10 @@ extension UIImage {
         .secondarySystemBackground,
         renderingMode: .alwaysOriginal
     )
+    static let uiimage: UIImage = {
+        let image = UIImage()
+        return image
+    }()
     static let photoImage: UIImage? = .init(systemName: "photo")?.withTintColor(
         .secondarySystemBackground,
         renderingMode: .alwaysOriginal

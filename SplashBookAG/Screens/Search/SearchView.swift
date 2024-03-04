@@ -18,6 +18,8 @@ final class SearchView: UIView {
     lazy var photoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = .photoStackImage
+        let imageConfiguration = UIImage.SymbolConfiguration(pointSize: 300)
+        //imageView.image?.configuration = imageConfiguration
         return imageView
     }()
     

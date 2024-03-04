@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = MainTabBarController(
             with: [
                 MainViewController(
+                    with: , vcTitle: <#T##String#>, viewModel: <#T##MainViewModel#>
                     viewModel: .init(
                         service: ImageServiceImpl(
                             networkClient: NetworkClient(

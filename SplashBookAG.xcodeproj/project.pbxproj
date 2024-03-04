@@ -20,6 +20,7 @@
 		1191B7172B224D150020F7B9 /* UnsplashSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1191B7162B224D150020F7B9 /* UnsplashSearchResponse.swift */; };
 		1191F2312AFD78EA007CB246 /* URLEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1191F2302AFD78EA007CB246 /* URLEncoder.swift */; };
 		11958DE92B14E86B0089D784 /* NetworkFailure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11958DE82B14E86B0089D784 /* NetworkFailure.swift */; };
+		119CD7E52B95F4B400BDE845 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119CD7E42B95F4B400BDE845 /* UIImage+Extension.swift */; };
 		11B68DF62B83D4C800331747 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B68DF52B83D4C800331747 /* SearchView.swift */; };
 		11B68DF92B83D5D300331747 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B68DF82B83D5D300331747 /* SearchViewController.swift */; };
 		11B68DFD2B85241A00331747 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B68DFC2B85241A00331747 /* SearchViewModel.swift */; };
@@ -53,6 +54,7 @@
 		1191B7162B224D150020F7B9 /* UnsplashSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashSearchResponse.swift; sourceTree = "<group>"; };
 		1191F2302AFD78EA007CB246 /* URLEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLEncoder.swift; sourceTree = "<group>"; };
 		11958DE82B14E86B0089D784 /* NetworkFailure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFailure.swift; sourceTree = "<group>"; };
+		119CD7E42B95F4B400BDE845 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		11B68DF52B83D4C800331747 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		11B68DF82B83D5D300331747 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		11B68DFC2B85241A00331747 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 		11444C692ACF429000E90830 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				119CD7E42B95F4B400BDE845 /* UIImage+Extension.swift */,
 				11B68DFE2B8663FC00331747 /* UIViewController+Extension.swift */,
 				11F368192AF2F1AD00670733 /* String+Extension.swift */,
 				11B7C3152B28D4BE002330E4 /* UINavigationBar+Extension.swift */,
@@ -336,6 +339,7 @@
 				1101BDA42B33410B002C071D /* ImageCache.swift in Sources */,
 				11B68DFD2B85241A00331747 /* SearchViewModel.swift in Sources */,
 				1191F2312AFD78EA007CB246 /* URLEncoder.swift in Sources */,
+				119CD7E52B95F4B400BDE845 /* UIImage+Extension.swift in Sources */,
 				1191B7172B224D150020F7B9 /* UnsplashSearchResponse.swift in Sources */,
 				116332AF2B1A5B7F00A938EB /* NetworkClient.swift in Sources */,
 				1101BDA22B30DA57002C071D /* UIImageView+Extension.swift in Sources */,

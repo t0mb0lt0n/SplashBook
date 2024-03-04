@@ -42,3 +42,9 @@ final class SearchView: UIView {
         ])
     }
 }
+
+extension SearchView {
+    private enum Constants {
+        sta
+    }
+}

@@ -63,8 +63,8 @@ final class SearchView: UIView {
             searchImageView.widthAnchor.constraint(equalToConstant: Constants.searchImageViewWidth),
             searchImageView.heightAnchor.constraint(equalToConstant: Constants.searchImageViewHeight),
             
-            photoImageView.centerXAnchor.constraint(equalTo: searchImageView.centerXAnchor, constant: -7),
-            photoImageView.centerYAnchor.constraint(equalTo: searchImageView.centerYAnchor, constant: -10),
+            photoImageView.centerXAnchor.constraint(equalTo: searchImageView.centerXAnchor),
+            photoImageView.centerYAnchor.constraint(equalTo: searchImageView.centerYAnchor),
             photoImageView.widthAnchor.constraint(equalToConstant: Constants.photoImageViewWidth),
             photoImageView.heightAnchor.constraint(equalToConstant: Constants.photoImageViewHeight),
         ])

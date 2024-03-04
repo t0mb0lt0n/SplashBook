@@ -15,5 +15,7 @@ extension UIImage {
         renderingMode: .alwaysOriginal
     )
     static let photoImage: UIImage? = .init(systemName: "photo")?.withTintColor(
-        .systemOrange, renderingMode: .alwaysOriginal)
+        .systemOrange,
+        renderingMode: .alwaysOriginal
+    )
 }

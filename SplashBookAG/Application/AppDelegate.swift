@@ -19,7 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = MainTabBarController(
             with: [
                 MainViewController(
-                    with: , vcTitle: <#T##String#>, viewModel: <#T##MainViewModel#>
+                    with: .editoralTabBarItemImage,
+                    vcTitle: .editoralTitle,
                     viewModel: .init(
                         service: ImageServiceImpl(
                             networkClient: NetworkClient(

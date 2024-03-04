@@ -19,7 +19,7 @@ final class MainViewController: UIViewController {
     }
     
     init(
-        with tabBarImage: UIImage,
+        with tabBarImage: UIImage?,
         vcTitle: String,
         viewModel: MainViewModel
     ) {

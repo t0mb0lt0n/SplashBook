@@ -8,7 +8,6 @@
 import UIKit
 
 extension UIImage {
-    enum BasicConstants {
-        static let editoralTabBarItemImage: UIImage? = UIImage(systemName: "camera.fill")
-    }
+    static let editoralTabBarItemImage: UIImage? = UIImage(systemName: "camera.fill")
+    static let searchTabBarItemImage: UIImage? = UIImage(systemName: "magnifyingglass")
 }

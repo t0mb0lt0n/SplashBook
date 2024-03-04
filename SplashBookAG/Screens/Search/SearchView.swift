@@ -8,12 +8,18 @@
 import UIKit
 
 final class SearchView: UIView {
-    lazy var searchBar: UISearchBar = {
+    lazy var searchLabel: UILabel {
+        let label = UILabel()
+        
+        return label
+    }()
+    var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.placeholder = "search"
         searchBar.backgroundColor = .green
         return searchBar
     }()
+    
     
     init() {
         super .init(frame: .zero)
@@ -37,9 +43,7 @@ final class SearchView: UIView {
         NSLayoutConstraint.activate([
             searchBar.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             searchBar.leadingAnchor.constraint(equalTo: leadingAnchor),
-            searchBar.trailingAnchor.constraint(equalTo: trailingAnchor),
-//            searchBar.widthAnchor.constraint(equalToConstant: safeAreaLayoutGuide.leadingAnchor),
-            //searchBar.heightAnchor.constraint(equalToConstant: Constants.searchBarHeight),
+            searchBar.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
     }
 }

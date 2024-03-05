@@ -25,7 +25,6 @@
 		11B68DF92B83D5D300331747 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B68DF82B83D5D300331747 /* SearchViewController.swift */; };
 		11B68DFD2B85241A00331747 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B68DFC2B85241A00331747 /* SearchViewModel.swift */; };
 		11B68DFF2B8663FC00331747 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B68DFE2B8663FC00331747 /* UIViewController+Extension.swift */; };
-		11B7C3162B28D4BE002330E4 /* UINavigationBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7C3152B28D4BE002330E4 /* UINavigationBar+Extension.swift */; };
 		11C4EFB72B2367B2005CEDAC /* UnsplashPhotoLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C4EFB62B2367B2005CEDAC /* UnsplashPhotoLinks.swift */; };
 		11C4EFB92B2368EB005CEDAC /* UnsplashPhotoURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C4EFB82B2368EB005CEDAC /* UnsplashPhotoURLs.swift */; };
 		11C4EFBB2B236969005CEDAC /* UnsplashUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C4EFBA2B236969005CEDAC /* UnsplashUser.swift */; };
@@ -59,7 +58,6 @@
 		11B68DF82B83D5D300331747 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		11B68DFC2B85241A00331747 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		11B68DFE2B8663FC00331747 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
-		11B7C3152B28D4BE002330E4 /* UINavigationBar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Extension.swift"; sourceTree = "<group>"; };
 		11C4EFB62B2367B2005CEDAC /* UnsplashPhotoLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashPhotoLinks.swift; sourceTree = "<group>"; };
 		11C4EFB82B2368EB005CEDAC /* UnsplashPhotoURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashPhotoURLs.swift; sourceTree = "<group>"; };
 		11C4EFBA2B236969005CEDAC /* UnsplashUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashUser.swift; sourceTree = "<group>"; };
@@ -204,7 +202,6 @@
 				119CD7E42B95F4B400BDE845 /* UIImage+Extension.swift */,
 				11B68DFE2B8663FC00331747 /* UIViewController+Extension.swift */,
 				11F368192AF2F1AD00670733 /* String+Extension.swift */,
-				11B7C3152B28D4BE002330E4 /* UINavigationBar+Extension.swift */,
 				1101BDA12B30DA57002C071D /* UIImageView+Extension.swift */,
 			);
 			path = Extensions;
@@ -325,7 +322,6 @@
 				11F3681A2AF2F1AD00670733 /* String+Extension.swift in Sources */,
 				11B68DF62B83D4C800331747 /* SearchView.swift in Sources */,
 				11444C5B2ACF3EBB00E90830 /* MainViewController.swift in Sources */,
-				11B7C3162B28D4BE002330E4 /* UINavigationBar+Extension.swift in Sources */,
 				11F368202AFC183200670733 /* HTTPRequest.swift in Sources */,
 				11C4EFBB2B236969005CEDAC /* UnsplashUser.swift in Sources */,
 				11444C732AD06C6B00E90830 /* PhotoCell.swift in Sources */,

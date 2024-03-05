@@ -11,7 +11,6 @@ final class SearchView: UIView {
     lazy var searchImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = nil
-        
         return imageView
     }()
     

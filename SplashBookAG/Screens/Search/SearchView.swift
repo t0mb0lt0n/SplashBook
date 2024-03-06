@@ -8,23 +8,18 @@
 import UIKit
 
 final class SearchView: UIView {
-    lazy var searchImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = nil
-        return imageView
-    }()
-    
     lazy var photoImageView: UIImageView = {
         let imageView = UIImageView()
-        let imageConfiguration = UIImage.SymbolConfiguration(pointSize: Constants.imageSize)
-        
-        imageView.image = UIImage(
-            systemName: .searchBackgroundImage,
-            withConfiguration: imageConfiguration
-        )?.withTintColor(
-            .secondarySystemBackground,
-            renderingMode: .alwaysOriginal
-        )
+//        let imageConfiguration = UIImage.SymbolConfiguration(pointSize: Constants.imageSize)
+//
+//        imageView.image = UIImage(
+//            systemName: .searchBackgroundImage,
+//            withConfiguration: imageConfiguration
+//        )?.withTintColor(
+//            .secondarySystemBackground,
+//            renderingMode: .alwaysOriginal
+//        )
+        imageView.image = .searchBackgroundImage
         return imageView
     }()
     
@@ -34,7 +29,6 @@ final class SearchView: UIView {
         searchBar.searchBarStyle = .minimal
         return searchBar
     }()
-    
     
     init() {
         super .init(frame: .zero)
@@ -50,7 +44,6 @@ final class SearchView: UIView {
     private func setupViews() {
         [searchBar,
          photoImageView,
-         searchImageView,
         ].forEach { subView in
             subView.translatesAutoresizingMaskIntoConstraints = false
             addSubview(subView)

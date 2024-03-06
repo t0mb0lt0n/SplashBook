@@ -75,11 +75,6 @@ final class SearchView: UIView {
 
 extension SearchView {
     private enum Constants {
-        static let imageSize: CGFloat = 150
-        //static let searchImageViewWidth: CGFloat = 110
-        //static let searchImageViewHeight: CGFloat = 100
-        //static let photoImageViewHeight: CGFloat = 100//35
-        //static let photoImageViewWidth: CGFloat = 130//45
-        
+        static let imageSize: CGFloat = 100        
     }
 }

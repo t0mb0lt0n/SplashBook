@@ -60,9 +60,6 @@ final class SearchView: UIView {
             searchBar.leadingAnchor.constraint(equalTo: leadingAnchor),
             searchBar.trailingAnchor.constraint(equalTo: trailingAnchor),
             
-            searchImageView.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
-            searchImageView.centerYAnchor.constraint(equalTo: safeAreaLayoutGuide.centerYAnchor),
-            
             photoImageView.centerXAnchor.constraint(equalTo: searchImageView.centerXAnchor),
             photoImageView.centerYAnchor.constraint(equalTo: searchImageView.centerYAnchor),
         ])

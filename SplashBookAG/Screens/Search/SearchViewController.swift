@@ -50,4 +50,8 @@ extension SearchViewController: UISearchBarDelegate {
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         mainView.searchBar.setShowsCancelButton(true, animated: true)
     }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        mainView.searchBar.text?.removeAll()
+    }
 }

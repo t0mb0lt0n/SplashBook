@@ -39,7 +39,7 @@ class SearchViewController: UIViewController {
         setupNavigationBarStyle(
             isLarge: true,
             title: .searchPhotoTitle,
-            titleColor: .systemOrange
+            titleColor: nil
         )
     }
     
@@ -53,5 +53,7 @@ extension SearchViewController: UISearchBarDelegate {
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         mainView.searchBar.text?.removeAll()
+        mainView.searchBar.setShowsCancelButton(false, animated: true)
+        mainView.searchBar.resignFirstResponder()
     }
 }

@@ -49,7 +49,7 @@ final class MainViewController: UIViewController {
         setupNavigationBarStyle(
             isLarge: false,
             title: .editoralTitle,
-            titleColor: .systemOrange
+            titleColor: nil
         )
     }
     

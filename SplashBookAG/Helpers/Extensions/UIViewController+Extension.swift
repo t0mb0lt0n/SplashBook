@@ -11,15 +11,16 @@ extension UIViewController {
     final func setupNavigationBarStyle(
         isLarge: Bool,
         title: String?,
-        titleColor: UIColor
+        titleColor: UIColor?
     ) {
         self.title = title
+        navigationController?.navigationBar.prefersLargeTitles = isLarge
+        guard let titleColor else { return }
         navigationController?.navigationBar.largeTitleTextAttributes = [
             NSAttributedString.Key.foregroundColor: titleColor
         ]
         navigationController?.navigationBar.titleTextAttributes = [
             NSAttributedString.Key.foregroundColor: titleColor
         ]
-        navigationController?.navigationBar.prefersLargeTitles = isLarge
     }
 }

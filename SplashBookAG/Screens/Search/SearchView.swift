@@ -18,11 +18,14 @@ final class SearchView: UIView {
         let searchBar = UISearchBar()
         searchBar.placeholder = .searchBarPlaceholder
         searchBar.searchBarStyle = .minimal
-        searchBar.searchTextField.clearButtonMode = .never
-        //searchBar.showsCancelButton = true
-        //searchBar.tintColor = .systemOrange
-        //searchBar.setShowsCancelButton(true, animated: true)
-//        UIBarButtonItem.appearance(whenContainedInInstancesOf: []).setTitleTextAttributes([.foregroundColor : UIColor.systemOrange], for: .normal)
+        searchBar.searchTextField.clearButtonMode = .whileEditing
+        searchBar.keyboardAppearance = .dark
+        UIBarButtonItem.appearance(
+            whenContainedInInstancesOf: [UISearchBar.self]
+        ).setTitleTextAttributes(
+                [.foregroundColor : UIColor.systemOrange],
+                for: .normal
+        )
         return searchBar
     }()
     

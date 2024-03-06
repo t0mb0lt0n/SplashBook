@@ -16,9 +16,12 @@ final class SearchView: UIView {
     
     lazy var photoImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = .photoStackImage
+        let image: UIImage? = .photoStackImage
         let imageConfiguration = UIImage.SymbolConfiguration(pointSize: 300)
-        //imageView.image?.configuration = imageConfiguration
+        imageView.image = UIImage(systemName: .searchBackgroundImage, withConfiguration: imageConfiguration)?.withTintColor(
+            .secondarySystemBackground,
+            renderingMode: .alwaysOriginal
+        )
         return imageView
     }()
     
@@ -26,8 +29,6 @@ final class SearchView: UIView {
         let searchBar = UISearchBar()
         searchBar.placeholder = .searchBarPlaceholder
         searchBar.searchBarStyle = .minimal
-        searchBar.searchTextField.clearButtonMode = .always
-        searchBar.searchTextField.clearButtonMode = .always
         return searchBar
     }()
     
@@ -61,23 +62,24 @@ final class SearchView: UIView {
             
             searchImageView.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
             searchImageView.centerYAnchor.constraint(equalTo: safeAreaLayoutGuide.centerYAnchor),
-            searchImageView.widthAnchor.constraint(equalToConstant: Constants.searchImageViewWidth),
-            searchImageView.heightAnchor.constraint(equalToConstant: Constants.searchImageViewHeight),
+            //searchImageView.widthAnchor.constraint(equalToConstant: Constants.searchImageViewWidth),
+            //searchImageView.heightAnchor.constraint(equalToConstant: Constants.searchImageViewHeight),
             
             photoImageView.centerXAnchor.constraint(equalTo: searchImageView.centerXAnchor),
             photoImageView.centerYAnchor.constraint(equalTo: searchImageView.centerYAnchor),
-            photoImageView.widthAnchor.constraint(equalToConstant: Constants.photoImageViewWidth),
-            photoImageView.heightAnchor.constraint(equalToConstant: Constants.photoImageViewHeight),
+            //photoImageView.widthAnchor.constraint(equalToConstant: Constants.photoImageViewWidth),
+            //photoImageView.heightAnchor.constraint(equalToConstant: Constants.photoImageViewHeight),
         ])
     }
 }
 
 extension SearchView {
     private enum Constants {
-        static let searchImageViewWidth: CGFloat = 110
-        static let searchImageViewHeight: CGFloat = 100
-        static let photoImageViewHeight: CGFloat = 100//35
-        static let photoImageViewWidth: CGFloat = 130//45
+        static let imageSize: CGFloat = 
+        //static let searchImageViewWidth: CGFloat = 110
+        //static let searchImageViewHeight: CGFloat = 100
+        //static let photoImageViewHeight: CGFloat = 100//35
+        //static let photoImageViewWidth: CGFloat = 130//45
         
     }
 }

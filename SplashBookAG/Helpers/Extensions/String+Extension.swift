@@ -10,6 +10,7 @@ extension String {
     static let searchPhotoTitle: String = "Search"
     static let defaultAuthorName: String = "Author Name"
     static let searchBarPlaceholder: String = "Search in Unsplash"
+    static let searchBackgroundImage: String = "photo.on.rectangle.angled"
 }
 
 

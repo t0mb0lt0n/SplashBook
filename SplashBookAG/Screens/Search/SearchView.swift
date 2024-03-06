@@ -16,9 +16,12 @@ final class SearchView: UIView {
     
     lazy var photoImageView: UIImageView = {
         let imageView = UIImageView()
-        let image: UIImage? = .photoStackImage
         let imageConfiguration = UIImage.SymbolConfiguration(pointSize: Constants.imageSize)
-        imageView.image = UIImage(systemName: .searchBackgroundImage, withConfiguration: imageConfiguration)?.withTintColor(
+        
+        imageView.image = UIImage(
+            systemName: .searchBackgroundImage,
+            withConfiguration: imageConfiguration
+        )?.withTintColor(
             .secondarySystemBackground,
             renderingMode: .alwaysOriginal
         )
@@ -60,8 +63,8 @@ final class SearchView: UIView {
             searchBar.leadingAnchor.constraint(equalTo: leadingAnchor),
             searchBar.trailingAnchor.constraint(equalTo: trailingAnchor),
             
-            photoImageView.centerXAnchor.constraint(equalTo: searchImageView.centerXAnchor),
-            photoImageView.centerYAnchor.constraint(equalTo: searchImageView.centerYAnchor),
+            photoImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            photoImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
         ])
     }
 }

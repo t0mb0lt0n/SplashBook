@@ -67,14 +67,12 @@ final class SearchView: UIView {
             
             photoImageView.centerXAnchor.constraint(equalTo: searchImageView.centerXAnchor),
             photoImageView.centerYAnchor.constraint(equalTo: searchImageView.centerYAnchor),
-            //photoImageView.widthAnchor.constraint(equalToConstant: Constants.photoImageViewWidth),
-            //photoImageView.heightAnchor.constraint(equalToConstant: Constants.photoImageViewHeight),
         ])
     }
 }
 
 extension SearchView {
     private enum Constants {
-        static let imageSize: CGFloat = 100        
+        static let imageSize: CGFloat = 100
     }
 }

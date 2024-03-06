@@ -17,7 +17,7 @@ final class SearchView: UIView {
     lazy var photoImageView: UIImageView = {
         let imageView = UIImageView()
         let image: UIImage? = .photoStackImage
-        let imageConfiguration = UIImage.SymbolConfiguration(pointSize: 300)
+        let imageConfiguration = UIImage.SymbolConfiguration(pointSize: Constants.imageSize)
         imageView.image = UIImage(systemName: .searchBackgroundImage, withConfiguration: imageConfiguration)?.withTintColor(
             .secondarySystemBackground,
             renderingMode: .alwaysOriginal
@@ -75,7 +75,7 @@ final class SearchView: UIView {
 
 extension SearchView {
     private enum Constants {
-        static let imageSize: CGFloat = 
+        static let imageSize: CGFloat = 150
         //static let searchImageViewWidth: CGFloat = 110
         //static let searchImageViewHeight: CGFloat = 100
         //static let photoImageViewHeight: CGFloat = 100//35

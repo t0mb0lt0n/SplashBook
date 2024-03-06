@@ -29,6 +29,7 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view = SearchView()
+        mainView.searchBar.delegate = self
     }
     
     override func loadView() {
@@ -45,6 +46,8 @@ class SearchViewController: UIViewController {
     // MARK: - Navigation
 }
 
-extension SearchViewController {
-    
+extension SearchViewController: UISearchBarDelegate {
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        mainView.searchBar.setShowsCancelButton(true, animated: true)
+    }
 }

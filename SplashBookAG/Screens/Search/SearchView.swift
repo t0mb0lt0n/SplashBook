@@ -10,15 +10,6 @@ import UIKit
 final class SearchView: UIView {
     lazy var photoImageView: UIImageView = {
         let imageView = UIImageView()
-//        let imageConfiguration = UIImage.SymbolConfiguration(pointSize: Constants.imageSize)
-//
-//        imageView.image = UIImage(
-//            systemName: .searchBackgroundImage,
-//            withConfiguration: imageConfiguration
-//        )?.withTintColor(
-//            .secondarySystemBackground,
-//            renderingMode: .alwaysOriginal
-//        )
         imageView.image = .searchBackgroundImage
         return imageView
     }()
@@ -27,6 +18,10 @@ final class SearchView: UIView {
         let searchBar = UISearchBar()
         searchBar.placeholder = .searchBarPlaceholder
         searchBar.searchBarStyle = .minimal
+        //searchBar.showsCancelButton = true
+        //searchBar.tintColor = .systemOrange
+        //searchBar.setShowsCancelButton(true, animated: true)
+//        UIBarButtonItem.appearance(whenContainedInInstancesOf: []).setTitleTextAttributes([.foregroundColor : UIColor.systemOrange], for: .normal)
         return searchBar
     }()
     
@@ -63,7 +58,4 @@ final class SearchView: UIView {
 }
 
 extension SearchView {
-    private enum Constants {
-        static let imageSize: CGFloat = 100
-    }
 }

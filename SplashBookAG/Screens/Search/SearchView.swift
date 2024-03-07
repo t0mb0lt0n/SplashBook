@@ -69,7 +69,7 @@ final class SearchView: UIView {
             photoImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
             
             activityIndicator.centerXAnchor.constraint(equalTo: centerXAnchor),
-            activityIndicator.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 100),
+            activityIndicator.centerYAnchor.constraint(equalTo: centerYAnchor),
 
         ])
     }

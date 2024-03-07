@@ -14,6 +14,14 @@ final class SearchView: UIView {
         return imageView
     }()
     
+    lazy var activityIndicator: UIActivityIndicatorView = {
+        let activityIndicator = UIActivityIndicatorView()
+        activityIndicator.startAnimating()
+        let transform = CGAffineTransform.init(scaleX: Constants.activityIndicatorScale, y: Constants.activityIndicatorScale)
+        activityIndicator.transform = transform
+        return activityIndicator
+    }()
+    
     var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.placeholder = .searchBarPlaceholder
@@ -43,6 +51,7 @@ final class SearchView: UIView {
     private func setupViews() {
         [searchBar,
          photoImageView,
+         activityIndicator
         ].forEach { subView in
             subView.translatesAutoresizingMaskIntoConstraints = false
             addSubview(subView)
@@ -57,9 +66,16 @@ final class SearchView: UIView {
             
             photoImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
             photoImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            
+            activityIndicator.centerXAnchor.constraint(equalTo: centerXAnchor),
+            activityIndicator.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 100),
+
         ])
     }
 }
 
 extension SearchView {
+    private enum Constants {
+        static let activityIndicatorScale: CGFloat = 2
+    }
 }

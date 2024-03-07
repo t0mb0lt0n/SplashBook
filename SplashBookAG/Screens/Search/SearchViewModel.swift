@@ -8,8 +8,15 @@
 import UIKit
 
 final class SearchViewModel {
+    private let service: ImageService
+    
+    
+    
     
     // MARK: - Navigation
-
-
+    
+    init(with service: ImageService) {
+        self.service = service
+    }
+    
 }

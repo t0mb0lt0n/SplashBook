@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 SearchViewController(
                     with: .searchTabBarItemImage,
                     vcTitle: .searchPhotoTitle,
-                    viewModel: .init()
+                    viewModel: .init(with: ImageServiceImpl(networkClient: NetworkClient(session: .init(configuration: .default))))
                 )
             ]
         )

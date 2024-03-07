@@ -16,7 +16,7 @@ final class SearchView: UIView {
     
     lazy var activityIndicator: UIActivityIndicatorView = {
         let activityIndicator = UIActivityIndicatorView()
-        activityIndicator.startAnimating()
+        //activityIndicator.startAnimating()
         let transform = CGAffineTransform.init(scaleX: Constants.activityIndicatorScale, y: Constants.activityIndicatorScale)
         activityIndicator.transform = transform
         return activityIndicator
@@ -28,6 +28,7 @@ final class SearchView: UIView {
         searchBar.searchBarStyle = .minimal
         searchBar.searchTextField.clearButtonMode = .whileEditing
         searchBar.keyboardAppearance = .dark
+        searchBar.returnKeyType = .search
         UIBarButtonItem.appearance(
             whenContainedInInstancesOf: [UISearchBar.self]
         ).setTitleTextAttributes(

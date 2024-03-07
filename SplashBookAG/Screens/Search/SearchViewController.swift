@@ -49,11 +49,17 @@ class SearchViewController: UIViewController {
 extension SearchViewController: UISearchBarDelegate {
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         mainView.searchBar.setShowsCancelButton(true, animated: true)
+        //mainView.searchBar.endEditing(false)
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         mainView.searchBar.text?.removeAll()
         mainView.searchBar.setShowsCancelButton(false, animated: true)
         mainView.searchBar.resignFirstResponder()
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        mainView.searchBar.endEditing(true)
+        mainView.activityIndicator.startAnimating()
     }
 }

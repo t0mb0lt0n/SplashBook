@@ -47,7 +47,7 @@ final class MainViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupNavigationBarStyle(
-            isLarge: false,
+            isLarge: true,
             title: .editoralTitle,
             titleColor: nil
         )

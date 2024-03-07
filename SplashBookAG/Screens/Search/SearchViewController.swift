@@ -56,10 +56,14 @@ extension SearchViewController: UISearchBarDelegate {
         mainView.searchBar.text?.removeAll()
         mainView.searchBar.setShowsCancelButton(false, animated: true)
         mainView.searchBar.resignFirstResponder()
+        mainView.activityIndicator.stopAnimating()
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        mainView.searchBar.text?.removeAll()
         mainView.searchBar.endEditing(true)
+        mainView.searchBar.setShowsCancelButton(false, animated: true)
         mainView.activityIndicator.startAnimating()
+        mainView.photoImageView.removeFromSuperview()
     }
 }

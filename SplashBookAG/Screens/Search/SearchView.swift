@@ -16,7 +16,10 @@ final class SearchView: UIView {
     
     lazy var activityIndicator: UIActivityIndicatorView = {
         let activityIndicator = UIActivityIndicatorView()
-        let transform = CGAffineTransform.init(scaleX: Constants.activityIndicatorScale, y: Constants.activityIndicatorScale)
+        let transform = CGAffineTransform.init(
+            scaleX: Constants.activityIndicatorScale,
+            y: Constants.activityIndicatorScale
+        )
         activityIndicator.transform = transform
         return activityIndicator
     }()
@@ -70,7 +73,6 @@ final class SearchView: UIView {
             
             activityIndicator.centerXAnchor.constraint(equalTo: centerXAnchor),
             activityIndicator.centerYAnchor.constraint(equalTo: centerYAnchor),
-
         ])
     }
 }

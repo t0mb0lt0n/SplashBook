@@ -9,7 +9,7 @@ import UIKit
 
 final class SearchViewModel {
     private let service: ImageService
-    
+    var showLoading: ((Bool) -> Void)?
     
     
     
@@ -17,6 +17,10 @@ final class SearchViewModel {
     
     init(with service: ImageService) {
         self.service = service
+    }
+    
+    func testHandler() {
+        self.showLoading?(true)
     }
     
 }

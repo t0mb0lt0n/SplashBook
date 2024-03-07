@@ -30,6 +30,8 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         view = SearchView()
         mainView.searchBar.delegate = self
+        setupViewModel()
+        viewModel.testHandler()
     }
     
     override func loadView() {
@@ -41,6 +43,13 @@ class SearchViewController: UIViewController {
             title: .searchPhotoTitle,
             titleColor: nil
         )
+    }
+    
+    private func setupViewModel() {
+        viewModel.showLoading = { [weak self] isLoading in
+            guard isLoading else { return }
+            self?.mainView.activityIndicator.startAnimating()
+        }
     }
     
     // MARK: - Navigation

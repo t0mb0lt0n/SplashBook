@@ -47,7 +47,10 @@ extension UIImageView {
         }
     }
     
-    final func loadImageAsync(from urlString: String?, completion: @escaping (Bool) -> Void?) {
+    final func loadImageAsync(
+        from urlString: String?,
+        completion: @escaping (Bool) -> Void?
+    ) {
         currentTask?.cancel()
         currentTask = nil
         

@@ -15,6 +15,16 @@ final class MainView: UIView {
     
     var handlePage: (() -> Void)?
     
+    lazy var activityIndicator: UIActivityIndicatorView = {
+        let activityIndicator = UIActivityIndicatorView()
+        let transform = CGAffineTransform.init(
+            scaleX: Constants.activityIndicatorScale,
+            y: Constants.activityIndicatorScale
+        )
+        activityIndicator.transform = transform
+        return activityIndicator
+    }()
+    
     init() {
         super.init(frame: .zero)
         backgroundColor = .systemBackground
@@ -41,7 +51,9 @@ final class MainView: UIView {
     }
     
     private func setupViews() {
-        [collectionView].forEach { subView in
+        [collectionView,
+        activityIndicator
+        ].forEach { subView in
             subView.translatesAutoresizingMaskIntoConstraints = false
             addSubview(subView)
         }
@@ -78,6 +90,7 @@ final class MainView: UIView {
 
 extension MainView {
     private enum Constants {
+        static let activityIndicatorScale: CGFloat = 2
         static let borderSpacing: CGFloat = 1
         static let lineSpacing: CGFloat = 1
         static let interItemSpacing: CGFloat = 1

@@ -12,6 +12,7 @@ final class MainViewModel {
     private(set) var photos: [UnsplashPhoto] = .init()
     private(set) var isContentDownloading = false
     private var currentPage = Constants.startPage
+    var hideContent: (() -> Void)?
     var reloadClosure: (() -> Void)?
     private var hasMoreContent: Bool {
         photos.count % Constants.pageSize == 0

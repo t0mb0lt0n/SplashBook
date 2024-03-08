@@ -10,6 +10,7 @@ import UIKit
 final class MainView: UIView {
     lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView()
+        collectionView.isHidden = true
         return collectionView
     }()
     
@@ -22,7 +23,7 @@ final class MainView: UIView {
             y: Constants.activityIndicatorScale
         )
         activityIndicator.transform = transform
-        activityIndicator.startAnimating()
+        //activityIndicator.startAnimating()
         return activityIndicator
     }()
     
@@ -39,6 +40,7 @@ final class MainView: UIView {
     }
     
     private func setupCollectionView() {
+        //collectionView.isHidden = true
         collectionView = UICollectionView(
             frame: .zero,
             collectionViewLayout: setupFlowLayout()
@@ -49,6 +51,7 @@ final class MainView: UIView {
         )
         collectionView.alwaysBounceVertical = true
         collectionView.backgroundColor = .systemBackground
+        collectionView.isHidden = true
     }
     
     private func setupViews() {

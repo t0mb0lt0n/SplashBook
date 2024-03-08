@@ -58,7 +58,7 @@ final class MainViewController: UIViewController {
         mainView.collectionView.delegate = self
         
         mainView.handlePage = { [weak self] in
-            guard self.viewModel.isContentDownloading else { return }
+            guard self?.viewModel.isContentDownloading == false else { return }
             self?.viewModel.findPhotos()
             print("handle page")
         }
@@ -68,6 +68,13 @@ final class MainViewController: UIViewController {
         viewModel.reloadClosure = { [weak self] in
             self?.updateContent()
             print("view controller update")
+        }
+        viewModel.showLoading = { [weak self] in
+            if $0 {
+                self?.mainView.activityIndicator.startAnimating()
+            } else {
+                self?.mainView.activityIndicator.stopAnimating()
+            }
         }
     }
     
@@ -105,9 +112,10 @@ extension MainViewController: UICollectionViewDataSource {
             fatalError("Cell dequeue error")
         }
         
-        cell.setupCellSubviews(for: photo) { [weak self] isDownloaded in
-            guard isDownloaded else { return }
+        cell.setupCellSubviews(for: photo) { [weak self] isContentDownloaded in
+            guard isContentDownloaded else { return }
             self?.updateContent()
+            self?.mainView.collectionView.isHidden = false
         }
         return cell
     }

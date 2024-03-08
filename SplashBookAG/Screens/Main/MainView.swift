@@ -23,7 +23,6 @@ final class MainView: UIView {
             y: Constants.activityIndicatorScale
         )
         activityIndicator.transform = transform
-        //activityIndicator.startAnimating()
         return activityIndicator
     }()
     

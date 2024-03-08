@@ -36,6 +36,7 @@ final class MainViewController: UIViewController {
     override func loadView() {
         super.loadView()
         view = MainView()
+        mainView.collectionView.isHidden = true
     }
     
     override func viewDidLoad() {
@@ -145,9 +146,9 @@ extension MainViewController: UICollectionViewDelegate {
 
 extension MainViewController {
     private enum Constants {
-        static let systemColorOrange: UIColor = .systemOrange
-        static let systemColorDefaultWhite: UIColor = .white
-        static let tabBarItemImage: UIImage? = UIImage(systemName: "camera.fill")
+//        static let systemColorOrange: UIColor = .systemOrange
+//        static let systemColorDefaultWhite: UIColor = .white
+//        static let tabBarItemImage: UIImage? = UIImage(systemName: "camera.fill")
     }
 }
 

@@ -39,7 +39,6 @@ final class MainView: UIView {
     }
     
     private func setupCollectionView() {
-        //collectionView.isHidden = true
         collectionView = UICollectionView(
             frame: .zero,
             collectionViewLayout: setupFlowLayout()
@@ -50,7 +49,7 @@ final class MainView: UIView {
         )
         collectionView.alwaysBounceVertical = true
         collectionView.backgroundColor = .systemBackground
-        collectionView.isHidden = true
+        //collectionView.isHidden = true
     }
     
     private func setupViews() {
@@ -82,12 +81,13 @@ final class MainView: UIView {
     
     private func setupFlowLayout() -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
+        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         layout.scrollDirection = .vertical
         layout.minimumLineSpacing = Constants.lineSpacing
         layout.minimumInteritemSpacing = Constants.interItemSpacing
         //layout.itemSize.height = 200
         //layout.itemSize.width = 200
-        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+       // layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         return layout
     }
 }

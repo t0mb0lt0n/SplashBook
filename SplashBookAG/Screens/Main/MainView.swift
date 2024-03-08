@@ -22,6 +22,7 @@ final class MainView: UIView {
             y: Constants.activityIndicatorScale
         )
         activityIndicator.transform = transform
+        activityIndicator.startAnimating()
         return activityIndicator
     }()
     
@@ -71,6 +72,9 @@ final class MainView: UIView {
                 constant: Constants.borderSpacing
             ),
             collectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+            
+            activityIndicator.centerXAnchor.constraint(equalTo: centerXAnchor),
+            activityIndicator.centerYAnchor.constraint(equalTo: centerYAnchor),
         ])
     }
     

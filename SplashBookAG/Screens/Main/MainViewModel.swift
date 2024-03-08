@@ -14,9 +14,7 @@ final class MainViewModel {
     private var currentPage = Constants.startPage
     var hideContent: (() -> Void)?
     var reloadClosure: (() -> Void)?
-    private var hasMoreContent: Bool {
-        photos.count % Constants.pageSize == 0
-    }
+    
     var numberOfSections: Int {
         1
     }

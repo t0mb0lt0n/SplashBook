@@ -72,7 +72,7 @@ final class MainViewController: UIViewController {
     }
     
     private func handlePagination() {
-        guard viewModel.isContentDownloading == false else { return }
+        guard !viewModel.isContentDownloading else { return }
         viewModel.findPhotos()
     }
     

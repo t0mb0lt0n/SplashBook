@@ -114,10 +114,15 @@ extension MainViewController: UICollectionViewDataSource {
         }
         
         cell.setupCellSubviews(for: photo) { [weak self] isContentDownloaded in
-            guard isContentDownloaded else { return }
+            DispatchQueue.main.async {
+                self?.updateContent()
+            }
             self?.updateContent()
-            self?.mainView.collectionView.isHidden = false
+            guard isContentDownloaded else { return }
+            //self?.updateContent()
+            //self?.mainView.collectionView.isHidden = false
         }
+        mainView.collectionView.isHidden = false
         return cell
     }
     
@@ -141,14 +146,6 @@ extension MainViewController: UICollectionViewDelegate {
             (mainView.collectionView.contentSize.height - mainView.collectionView.bounds.size.height)) {
             handlePagination()
         }
-    }
-}
-
-extension MainViewController {
-    private enum Constants {
-//        static let systemColorOrange: UIColor = .systemOrange
-//        static let systemColorDefaultWhite: UIColor = .white
-//        static let tabBarItemImage: UIImage? = UIImage(systemName: "camera.fill")
     }
 }
 

@@ -8,11 +8,18 @@
 import UIKit
 
 final class SearchView: UIView {
+    var collectionView: UICollectionView = {
+        let collectionView = UICollectionView()
+        
+        return collectionView
+    }()
+    
     lazy var photoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = .searchBackgroundImage
         return imageView
     }()
+    
     
     lazy var activityIndicator: UIActivityIndicatorView = {
         let activityIndicator = UIActivityIndicatorView()

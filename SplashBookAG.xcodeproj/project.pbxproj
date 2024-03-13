@@ -102,7 +102,7 @@
 			children = (
 				11444C682ACF427000E90830 /* Services */,
 				11444C672ACF425E00E90830 /* Models */,
-				11444C652ACF423400E90830 /* Views */,
+				11444C652ACF423400E90830 /* CustomViews */,
 				11444C592ACF3E3600E90830 /* Screens */,
 				11444C5D2ACF401E00E90830 /* Helpers */,
 				11444C6B2ACF434B00E90830 /* NetworkLayer */,
@@ -158,13 +158,13 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		11444C652ACF423400E90830 /* Views */ = {
+		11444C652ACF423400E90830 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
 				11F368122AF17D5800670733 /* TabBars */,
 				11444C662ACF424F00E90830 /* Cells */,
 			);
-			path = Views;
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		11444C662ACF424F00E90830 /* Cells */ = {

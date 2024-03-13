@@ -31,6 +31,18 @@ final class SearchView: UIView {
         return activityIndicator
     }()
     
+    private func setupCollectionView() {
+        collectionView = UICollectionView(
+            frame: .zero,
+            collectionViewLayout: UICollectionViewLayout
+        )
+    }
+    
+    private func setupFlowLayout() -> UICollectionViewFlowLayout {
+        let layout = UICollectionViewFlowLayout()
+        layout.estimatedItemSize = 
+    }
+    
     var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.placeholder = .searchBarPlaceholder

@@ -35,6 +35,7 @@
 		11F3681C2AFAC02700670733 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F3681B2AFAC02700670733 /* ImageService.swift */; };
 		11F3681E2AFC141700670733 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F3681D2AFC141700670733 /* HTTPMethod.swift */; };
 		11F368202AFC183200670733 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F3681F2AFC183200670733 /* HTTPRequest.swift */; };
+		11F5D59C2BA3905100FA2F6B /* ReusableCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F5D59B2BA3905100FA2F6B /* ReusableCollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		11F3681B2AFAC02700670733 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		11F3681D2AFC141700670733 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		11F3681F2AFC183200670733 /* HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
+		11F5D59B2BA3905100FA2F6B /* ReusableCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,18 +163,11 @@
 		11444C652ACF423400E90830 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				11F368122AF17D5800670733 /* TabBars */,
-				11444C662ACF424F00E90830 /* Cells */,
-			);
-			path = CustomViews;
-			sourceTree = "<group>";
-		};
-		11444C662ACF424F00E90830 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
+				11F5D59B2BA3905100FA2F6B /* ReusableCollectionView.swift */,
+				11F368132AF17DD000670733 /* MainTabBarController.swift */,
 				11444C722AD06C6B00E90830 /* PhotoCell.swift */,
 			);
-			path = Cells;
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		11444C672ACF425E00E90830 /* Models */ = {
@@ -235,14 +230,6 @@
 				11B68DFC2B85241A00331747 /* SearchViewModel.swift */,
 			);
 			path = Search;
-			sourceTree = "<group>";
-		};
-		11F368122AF17D5800670733 /* TabBars */ = {
-			isa = PBXGroup;
-			children = (
-				11F368132AF17DD000670733 /* MainTabBarController.swift */,
-			);
-			path = TabBars;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,6 +308,7 @@
 				1191B7152B224CFC0020F7B9 /* UnsplashPhoto.swift in Sources */,
 				11F3681A2AF2F1AD00670733 /* String+Extension.swift in Sources */,
 				11B68DF62B83D4C800331747 /* SearchView.swift in Sources */,
+				11F5D59C2BA3905100FA2F6B /* ReusableCollectionView.swift in Sources */,
 				11444C5B2ACF3EBB00E90830 /* MainViewController.swift in Sources */,
 				11F368202AFC183200670733 /* HTTPRequest.swift in Sources */,
 				11C4EFBB2B236969005CEDAC /* UnsplashUser.swift in Sources */,

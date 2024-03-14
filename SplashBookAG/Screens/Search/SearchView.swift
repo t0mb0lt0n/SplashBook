@@ -32,16 +32,16 @@ final class SearchView: UIView {
     }()
     
     private func setupCollectionView() {
-        collectionView = UICollectionView(
-            frame: .zero,
-            collectionViewLayout: UICollectionViewLayout
-        )
+//        collectionView = UICollectionView(
+//            frame: .zero,
+//            //collectionViewLayout: UICollectionViewLayout
+//        )
     }
     
-    private func setupFlowLayout() -> UICollectionViewFlowLayout {
-        let layout = UICollectionViewFlowLayout()
-        layout.estimatedItemSize = 
-    }
+//    private func setupFlowLayout() -> UICollectionViewFlowLayout {
+//        let layout = UICollectionViewFlowLayout()
+//        //layout.estimatedItemSize =
+//    }
     
     var searchBar: UISearchBar = {
         let searchBar = UISearchBar()

@@ -8,7 +8,6 @@
 import UIKit
 
 class UnsplashCollectionView: UICollectionView {
-    
     init() {
         super .init(
             frame: .zero,

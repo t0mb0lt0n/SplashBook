@@ -8,11 +8,6 @@
 import UIKit
 
 final class MainView: UIView {
-//    lazy var collectionView: UICollectionView = {
-//        let collectionView = UICollectionView()
-//        collectionView.isHidden = true
-//        return collectionView
-//    }()
     let collectionView = ReusableCollectionView()
     
     var handlePage: (() -> Void)?
@@ -30,7 +25,6 @@ final class MainView: UIView {
     init() {
         super.init(frame: .zero)
         backgroundColor = .systemBackground
-        //setupCollectionView()
         setupViews()
         setupConstraints()
     }

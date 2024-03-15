@@ -73,9 +73,5 @@ extension MainView {
     private enum Constants {
         static let activityIndicatorScale: CGFloat = 2
         static let borderSpacing: CGFloat = 1
-        static let lineSpacing: CGFloat = 1
-        static let interItemSpacing: CGFloat = 1
-        static let itemWidth: CGFloat = 300 //200
-        static let itemHeight: CGFloat = 300 // 300
     }
 }

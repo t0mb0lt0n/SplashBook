@@ -7,20 +7,19 @@
 
 import UIKit
 
- class ReusableCollectionView: UICollectionView {
-     
-     init() {
-         super .init(
+class ReusableCollectionView: UICollectionView {
+    
+    init() {
+        super .init(
             frame: .zero,
             collectionViewLayout: UICollectionViewFlowLayout()
-         )
-         setupCollectionView()
-     }
-     
-     required init?(coder: NSCoder) {
-         fatalError("init(coder:) has not been implemented")
-     }
-     
+        )
+        setupCollectionView()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     func setupCollectionView() {
         alwaysBounceVertical = true

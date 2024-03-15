@@ -1,5 +1,5 @@
 //
-//  ReusableCollectionView.swift
+//  UnsplashCollectionView.swift
 //  SplashBookAG
 //
 //  Created by Alexander on 14.03.2024.

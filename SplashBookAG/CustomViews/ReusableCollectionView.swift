@@ -23,7 +23,12 @@ import UIKit
      
     
     func setupCollectionView() {
-        register(PhotoCell.self, forCellWithReuseIdentifier: "\(PhotoCell.self)")
+        alwaysBounceVertical = true
+        backgroundColor = .systemBackground
+        register(
+            PhotoCell.self,
+            forCellWithReuseIdentifier: "\(PhotoCell.self)"
+        )
         collectionViewLayout = setupFlowLayout()
     }
     

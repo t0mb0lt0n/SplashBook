@@ -7,10 +7,27 @@
 
 import UIKit
 
-final class ReusableCollectionView: UICollectionView {
+ class ReusableCollectionView: UICollectionView {
+//     let initialFlowLayout: UICollectionViewFlowLayout = {
+//         let layout = self.setupFlowLayout()
+//         self.setupFlowLayout()
+//         return layout
+//
+//     }()
+     
+     init() {
+         super .init(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+         setupCollectionView()
+     }
+     
+     required init?(coder: NSCoder) {
+         fatalError("init(coder:) has not been implemented")
+     }
+     
+    
     func setupCollectionView() {
-        register(UINib?, forCellWithReuseIdentifier: <#T##String#>)
-        self.collectionViewLayout
+        register(PhotoCell.self, forCellWithReuseIdentifier: "\(PhotoCell.self)")
+        collectionViewLayout = setupFlowLayout()
     }
     
     private func setupFlowLayout() -> UICollectionViewFlowLayout {
@@ -19,12 +36,13 @@ final class ReusableCollectionView: UICollectionView {
         layout.scrollDirection = .vertical
         layout.minimumLineSpacing = Constants.lineSpacing
         layout.minimumInteritemSpacing = Constants.interItemSpacing
-        
         return layout
     }
-    
-
-
 }
 
-extension 
+extension ReusableCollectionView {
+    private enum Constants {
+        static let lineSpacing: CGFloat = 1
+        static let interItemSpacing: CGFloat = 1
+    }
+}

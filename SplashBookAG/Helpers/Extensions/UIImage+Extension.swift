@@ -16,6 +16,7 @@ extension UIImage {
         .secondarySystemBackground,
         renderingMode: .alwaysOriginal
     )
+    
     static let searchBackgroundImage: UIImage? = {
         let imageConfiguration = UIImage.SymbolConfiguration(pointSize: Constants.imageSize)
         let image = UIImage(
@@ -27,11 +28,17 @@ extension UIImage {
         )
         return image
     }()
-    static let photoImage: UIImage? = .init(systemName: "photo")?.withTintColor(
+    
+    static let photoImage: UIImage? = .init(
+        systemName: "photo"
+    )?.withTintColor(
         .secondarySystemBackground,
         renderingMode: .alwaysOriginal
     )
-    static let photoStackImage: UIImage? = .init(systemName: "photo.on.rectangle.angled")?.withTintColor(
+    
+    static let photoStackImage: UIImage? = .init(
+        systemName: "photo.on.rectangle.angled"
+    )?.withTintColor(
         .secondarySystemBackground,
         renderingMode: .alwaysOriginal
     )

@@ -7,14 +7,24 @@
 
 import UIKit
 
-class ReusableCollectionView: UICollectionView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+final class ReusableCollectionView: UICollectionView {
+    func setupCollectionView() {
+        register(UINib?, forCellWithReuseIdentifier: <#T##String#>)
+        self.collectionViewLayout
     }
-    */
+    
+    private func setupFlowLayout() -> UICollectionViewFlowLayout {
+        let layout = UICollectionViewFlowLayout()
+        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        layout.scrollDirection = .vertical
+        layout.minimumLineSpacing = Constants.lineSpacing
+        layout.minimumInteritemSpacing = Constants.interItemSpacing
+        
+        return layout
+    }
+    
+
 
 }
+
+extension 

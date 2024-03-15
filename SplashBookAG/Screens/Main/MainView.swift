@@ -51,6 +51,17 @@ final class MainView: UIView {
         collectionView.backgroundColor = .systemBackground
     }
     
+    private func setupFlowLayout() -> UICollectionViewFlowLayout {
+        let layout = UICollectionViewFlowLayout()
+        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        layout.scrollDirection = .vertical
+        layout.minimumLineSpacing = Constants.lineSpacing
+        layout.minimumInteritemSpacing = Constants.interItemSpacing
+        //layout.itemSize.height = 200
+        //layout.itemSize.width = 200
+        return layout
+    }
+    
     private func setupViews() {
         [collectionView,
         activityIndicator
@@ -76,17 +87,6 @@ final class MainView: UIView {
             activityIndicator.centerXAnchor.constraint(equalTo: centerXAnchor),
             activityIndicator.centerYAnchor.constraint(equalTo: centerYAnchor),
         ])
-    }
-    
-    private func setupFlowLayout() -> UICollectionViewFlowLayout {
-        let layout = UICollectionViewFlowLayout()
-        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
-        layout.scrollDirection = .vertical
-        layout.minimumLineSpacing = Constants.lineSpacing
-        layout.minimumInteritemSpacing = Constants.interItemSpacing
-        //layout.itemSize.height = 200
-        //layout.itemSize.width = 200
-        return layout
     }
 }
 

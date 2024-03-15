@@ -46,5 +46,7 @@ extension ReusableCollectionView {
     private enum Constants {
         static let lineSpacing: CGFloat = 1
         static let interItemSpacing: CGFloat = 1
+        static let itemWidth: CGFloat = 300 //200
+        static let itemHeight: CGFloat = 300 // 300
     }
 }

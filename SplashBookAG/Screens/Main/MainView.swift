@@ -39,30 +39,6 @@ final class MainView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-//    private func setupCollectionView() {
-//        collectionView = UICollectionView(
-//            frame: .zero,
-//            collectionViewLayout: setupFlowLayout()
-//        )
-//        collectionView.register(
-//            PhotoCell.self,
-//            forCellWithReuseIdentifier: "\(PhotoCell.self)"
-//        )
-//        collectionView.alwaysBounceVertical = true
-//        collectionView.backgroundColor = .systemBackground
-//    }
-    
-    private func setupFlowLayout() -> UICollectionViewFlowLayout {
-        let layout = UICollectionViewFlowLayout()
-        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
-        layout.scrollDirection = .vertical
-        layout.minimumLineSpacing = Constants.lineSpacing
-        layout.minimumInteritemSpacing = Constants.interItemSpacing
-        //layout.itemSize.height = 200
-        //layout.itemSize.width = 200
-        return layout
-    }
-    
     private func setupViews() {
         [collectionView,
         activityIndicator

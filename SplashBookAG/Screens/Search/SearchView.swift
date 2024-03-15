@@ -8,12 +8,6 @@
 import UIKit
 
 final class SearchView: UIView {
-//    var collectionView: UICollectionView = {
-//        let collectionView = UICollectionView()
-//        
-//        return collectionView
-//    }()
-    
     let collectionView = ReusableCollectionView()
     
     lazy var photoImageView: UIImageView = {
@@ -21,7 +15,6 @@ final class SearchView: UIView {
         imageView.image = .searchBackgroundImage
         return imageView
     }()
-    
     
     lazy var activityIndicator: UIActivityIndicatorView = {
         let activityIndicator = UIActivityIndicatorView()
@@ -32,19 +25,7 @@ final class SearchView: UIView {
         activityIndicator.transform = transform
         return activityIndicator
     }()
-    
-    private func setupCollectionView() {
-//        collectionView = UICollectionView(
-//            frame: .zero,
-//            //collectionViewLayout: UICollectionViewLayout
-//        )
-    }
-    
-//    private func setupFlowLayout() -> UICollectionViewFlowLayout {
-//        let layout = UICollectionViewFlowLayout()
-//        //layout.estimatedItemSize =
-//    }
-    
+
     var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.placeholder = .searchBarPlaceholder

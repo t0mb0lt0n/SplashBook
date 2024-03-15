@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ReusableCollectionView: UICollectionView {
+class UnsplashCollectionView: UICollectionView {
     
     init() {
         super .init(
@@ -41,7 +41,7 @@ class ReusableCollectionView: UICollectionView {
     }
 }
 
-extension ReusableCollectionView {
+extension UnsplashCollectionView {
     private enum Constants {
         static let lineSpacing: CGFloat = 1
         static let interItemSpacing: CGFloat = 1

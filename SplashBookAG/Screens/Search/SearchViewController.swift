@@ -51,8 +51,6 @@ class SearchViewController: UIViewController {
             self?.mainView.activityIndicator.startAnimating()
         }
     }
-    
-    // MARK: - Navigation
 }
 
 //MARK: - UISearchBarDelegate

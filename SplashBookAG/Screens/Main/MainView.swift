@@ -8,7 +8,7 @@
 import UIKit
 
 final class MainView: UIView {
-    let collectionView = ReusableCollectionView()
+    let collectionView = UnsplashCollectionView()
     
     var handlePage: (() -> Void)?
     

@@ -8,7 +8,7 @@
 import UIKit
 
 final class SearchView: UIView {
-    let collectionView = ReusableCollectionView()
+    let collectionView = UnsplashCollectionView()
     
     lazy var photoImageView: UIImageView = {
         let imageView = UIImageView()

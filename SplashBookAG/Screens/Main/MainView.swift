@@ -8,11 +8,12 @@
 import UIKit
 
 final class MainView: UIView {
-    lazy var collectionView: UICollectionView = {
-        let collectionView = UICollectionView()
-        collectionView.isHidden = true
-        return collectionView
-    }()
+//    lazy var collectionView: UICollectionView = {
+//        let collectionView = UICollectionView()
+//        collectionView.isHidden = true
+//        return collectionView
+//    }()
+    let collectionView = ReusableCollectionView()
     
     var handlePage: (() -> Void)?
     
@@ -29,7 +30,7 @@ final class MainView: UIView {
     init() {
         super.init(frame: .zero)
         backgroundColor = .systemBackground
-        setupCollectionView()
+        //setupCollectionView()
         setupViews()
         setupConstraints()
     }
@@ -38,18 +39,18 @@ final class MainView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setupCollectionView() {
-        collectionView = UICollectionView(
-            frame: .zero,
-            collectionViewLayout: setupFlowLayout()
-        )
-        collectionView.register(
-            PhotoCell.self,
-            forCellWithReuseIdentifier: "\(PhotoCell.self)"
-        )
-        collectionView.alwaysBounceVertical = true
-        collectionView.backgroundColor = .systemBackground
-    }
+//    private func setupCollectionView() {
+//        collectionView = UICollectionView(
+//            frame: .zero,
+//            collectionViewLayout: setupFlowLayout()
+//        )
+//        collectionView.register(
+//            PhotoCell.self,
+//            forCellWithReuseIdentifier: "\(PhotoCell.self)"
+//        )
+//        collectionView.alwaysBounceVertical = true
+//        collectionView.backgroundColor = .systemBackground
+//    }
     
     private func setupFlowLayout() -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()

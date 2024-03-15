@@ -8,11 +8,13 @@
 import UIKit
 
 final class SearchView: UIView {
-    var collectionView: UICollectionView = {
-        let collectionView = UICollectionView()
-        
-        return collectionView
-    }()
+//    var collectionView: UICollectionView = {
+//        let collectionView = UICollectionView()
+//        
+//        return collectionView
+//    }()
+    
+    let collectionView = ReusableCollectionView()
     
     lazy var photoImageView: UIImageView = {
         let imageView = UIImageView()

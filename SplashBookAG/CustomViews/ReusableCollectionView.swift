@@ -8,15 +8,12 @@
 import UIKit
 
  class ReusableCollectionView: UICollectionView {
-//     let initialFlowLayout: UICollectionViewFlowLayout = {
-//         let layout = self.setupFlowLayout()
-//         self.setupFlowLayout()
-//         return layout
-//
-//     }()
      
      init() {
-         super .init(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+         super .init(
+            frame: .zero,
+            collectionViewLayout: UICollectionViewFlowLayout()
+         )
          setupCollectionView()
      }
      

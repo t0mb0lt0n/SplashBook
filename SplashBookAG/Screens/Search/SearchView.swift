@@ -79,6 +79,8 @@ final class SearchView: UIView {
     }
 }
 
+// MARK: - Constants
+
 extension SearchView {
     private enum Constants {
         static let activityIndicatorScale: CGFloat = 2

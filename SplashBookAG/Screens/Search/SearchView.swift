@@ -75,6 +75,18 @@ final class SearchView: UIView {
             
             activityIndicator.centerXAnchor.constraint(equalTo: centerXAnchor),
             activityIndicator.centerYAnchor.constraint(equalTo: centerYAnchor),
+            
+            collectionView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            collectionView.leadingAnchor.constraint(
+                equalTo: safeAreaLayoutGuide.leadingAnchor,
+                constant: Constants.borderSpacing
+            ),
+            collectionView.trailingAnchor.constraint(
+                equalTo: safeAreaLayoutGuide.trailingAnchor,
+                constant: Constants.borderSpacing
+            ),
+            collectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+
         ])
     }
 }
@@ -84,5 +96,6 @@ final class SearchView: UIView {
 extension SearchView {
     private enum Constants {
         static let activityIndicatorScale: CGFloat = 2
+        static let borderSpacing: CGFloat = 1
     }
 }

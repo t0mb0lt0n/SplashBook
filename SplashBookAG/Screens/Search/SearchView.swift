@@ -57,7 +57,8 @@ final class SearchView: UIView {
     private func setupViews() {
         [searchBar,
          photoImageView,
-         activityIndicator
+         activityIndicator,
+         collectionView
         ].forEach { subView in
             subView.translatesAutoresizingMaskIntoConstraints = false
             addSubview(subView)

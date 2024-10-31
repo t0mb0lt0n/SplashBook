@@ -68,7 +68,7 @@ final class MainViewController: UIViewController {
     private func setupViewModel() {
         viewModel.reloadClosure = { [weak self] in
             self?.updateContent()
-            print("view controller update")
+            print("view controller updated")
         }
         viewModel.showLoading = { [weak self] in
             if $0 {
@@ -143,7 +143,8 @@ extension MainViewController: UICollectionViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if (mainView.collectionView.contentOffset.y >
-            (mainView.collectionView.contentSize.height - mainView.collectionView.bounds.size.height)) {
+            (mainView.collectionView.contentSize.height - mainView.collectionView.bounds.size.height)
+        ) {
             handlePagination()
         }
     }

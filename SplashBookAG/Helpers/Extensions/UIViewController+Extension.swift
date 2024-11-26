@@ -13,9 +13,13 @@ extension UIViewController {
         title: String?,
         titleColor: UIColor?
     ) {
-        self.title = title
         navigationController?.navigationBar.prefersLargeTitles = isLarge
-        guard let titleColor else { return }
+        guard
+            let title,
+            let titleColor
+        else
+        { return }
+        self.title = title
         navigationController?.navigationBar.largeTitleTextAttributes = [
             NSAttributedString.Key.foregroundColor: titleColor
         ]

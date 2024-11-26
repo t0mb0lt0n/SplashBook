@@ -51,8 +51,8 @@ class PhotoCell: UICollectionViewCell {
     }
     
     override func prepareForReuse() {
-        imageView.image = nil
         super.prepareForReuse()
+        imageView.image = nil
     }
     
     required init?(coder: NSCoder) {

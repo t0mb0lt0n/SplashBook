@@ -110,7 +110,8 @@ extension MainViewController: UICollectionViewDataSource {
             withReuseIdentifier: "\(PhotoCell.self)",
             for: indexPath
         ) as? PhotoCell else {
-            fatalError("Cell dequeue error")
+            assertionFailure(.cellError)
+            return UICollectionViewCell()
         }
         
         cell.setupCellSubviews(for: photo) { [weak self] isContentDownloaded in
@@ -124,10 +125,6 @@ extension MainViewController: UICollectionViewDataSource {
         }
         mainView.collectionView.isHidden = false
         return cell
-    }
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        1
     }
 }
 

@@ -8,10 +8,13 @@
 import UIKit
 
 extension UIImage {
-    static let editoralTabBarItemImage: UIImage? = .init(systemName: "camera.fill")
-    static let searchTabBarItemImage: UIImage? = .init(systemName: "magnifyingglass")
+    private enum Constants {
+        static let imageSize: CGFloat = 100.0
+    }
+    static let editoralTabBarItemImage: UIImage? = .init(systemName: .editoralTabBarItemIcon)
+    static let searchTabBarItemImage: UIImage? = .init(systemName: .searchIcon)
     static let searchImage: UIImage? = .init(
-        systemName: "magnifyingglass"
+        systemName: .searchBackgroundImage
     )?.withTintColor(
         .secondarySystemBackground,
         renderingMode: .alwaysOriginal
@@ -30,22 +33,16 @@ extension UIImage {
     }()
     
     static let photoImage: UIImage? = .init(
-        systemName: "photo"
+        systemName: .photoStackIcon
     )?.withTintColor(
         .secondarySystemBackground,
         renderingMode: .alwaysOriginal
     )
     
     static let photoStackImage: UIImage? = .init(
-        systemName: "photo.on.rectangle.angled"
+        systemName: .photoStackIcon
     )?.withTintColor(
         .secondarySystemBackground,
         renderingMode: .alwaysOriginal
     )
-}
-
-extension UIImage {
-    private enum Constants {
-        static let imageSize: CGFloat = 100
-    }
 }

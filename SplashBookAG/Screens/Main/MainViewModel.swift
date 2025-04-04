@@ -8,6 +8,11 @@
 import Foundation
 
 final class MainViewModel {
+    private enum Constants {
+        static let startPage: Int = 1
+        static let pageSize: Int = 5
+    }
+
     private let service: ImageService
     private(set) var photos: [UnsplashPhoto] = .init()
     private(set) var isContentDownloading = false
@@ -15,7 +20,6 @@ final class MainViewModel {
     private var currentPage = Constants.startPage
     var hideContent: (() -> Void)?
     var reloadClosure: (() -> Void)?
-    
     var numberOfSections: Int {
         1
     }
@@ -33,7 +37,7 @@ final class MainViewModel {
         showLoading?(true)
         handleLoadingEvent(true)
         service.searchImages(
-            for: Constants.request,
+            for: .initialRequest,
             page: currentPage,
             pageSize: Constants.pageSize
         ) { [weak self] result in
@@ -56,15 +60,5 @@ final class MainViewModel {
     
     func handleLoadingEvent(_ isDownloading: Bool) {
         self.isContentDownloading = isDownloading
-    }
-}
-
-//MARK: - Constants
-
-extension MainViewModel {
-    private enum Constants {
-        static let request: String = "city"
-        static let startPage = 1
-        static let pageSize = 5
     }
 }
